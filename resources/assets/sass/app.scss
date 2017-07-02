@@ -21,9 +21,10 @@
 @import "base/buttons";
 
 // Layout Partials
-
+@import "layout/nav";
 
 // Pages Partials
+@import "pages/welcome";
 
 // Themes Partials
 @import "themes/global";

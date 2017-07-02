@@ -8425,7 +8425,7 @@ a {
 }
 
 a:hover {
-  color: #dbb545;
+  color: #018174;
 }
 
 .nav > li > a:hover,
@@ -8437,7 +8437,7 @@ a:hover {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #dbb545;
+  color: #018174;
   background-color: #231f20;
   border: 1px solid #231f20;
   border-bottom-color: transparent;
@@ -8445,7 +8445,7 @@ a:hover {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dbb545;
+  border-bottom: 1px solid #018174;
 }
 
 table {
@@ -8476,23 +8476,53 @@ table .name {
 }
 
 .btn-success {
-  background: #dbb545;
-  border: #dbb545;
+  background: #018174;
+  border: #018174;
   color: white;
 }
 
 .btn-success:hover {
-  background: #cfa528;
+  background: #015950;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .btn-success:active {
-  background: #866b1a;
+  background: #000202;
 }
 
 .btn-default {
   background-color: #ffffff;
   border: #ffffff;
+}
+
+.navbar-default {
+  background-color: #FF406C;
+  border-color: #018174;
+  border-bottom: 5px solid #018174;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.pricing {
+  text-align: center;
+  border: 1px solid #647884;
+}
+
+.pricing h3 {
+  font-size: 2em;
+  background-color: #FF406C;
+  color: #ffffff;
+  padding-top: 20px;
+}
+
+.pricing ul {
+  list-style: none;
 }
 
