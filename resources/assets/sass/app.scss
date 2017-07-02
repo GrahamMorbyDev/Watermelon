@@ -1,9 +1,31 @@
+//SASS set up and where to find things
+// /framework - contains bootstrap, foundation etc
+// /base - contains global styles, such as resets, typography, colors etc
+// /layout - contains styling for larger layouts - nav, header, footer
+// /pages - contains page-specific styles
+// /themes - contains styling for any different themes
+// /utils - contains global mixins, third party styles
+// /vendors - contains third party mixins or styles
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Utils Partials
+@import "utils/mixins";
+
+// Base Partials
+@import "base/colors";
+@import "base/typography";
+@import "base/tables";
+@import "base/buttons";
+
+// Layout Partials
+
+
+// Pages Partials
+
+// Themes Partials
+@import "themes/global";
+
+// Vendor Partials
