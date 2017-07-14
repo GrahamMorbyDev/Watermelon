@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@AdminHome');
 
 Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');
