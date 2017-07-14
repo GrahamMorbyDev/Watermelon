@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+// admin views
+Route::get('/admin', 'AdminController@AdminHome');
+
+Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
