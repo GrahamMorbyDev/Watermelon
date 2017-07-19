@@ -29,10 +29,5 @@ Route::middleware(['admin'])->group( function() {
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-// admin views
-//Route::get('/admin', 'AdminController@AdminHome');
-//
-//Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
-//
-//Route::get('/admin/users', 'AdminController@ShowUsers');
+Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');

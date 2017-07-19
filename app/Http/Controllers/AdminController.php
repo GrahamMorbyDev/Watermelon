@@ -21,4 +21,23 @@ class AdminController extends Controller
     public function ShowUsers() {
         $users = User::all(); return view('admin/users', compact('users'));
     }
+
+    // Upload single Video
+    public function UploadSingleVideo() {
+        $title = $_POST['title'];
+        $release = $_POST['realeasedate'];
+        $description = $_POST['videodescription'];
+
+        //image
+        $fileimage = $_POST['featuredimage'];
+        $dirimage = base_path('public/uploads/featuredvideoimages');
+        file_put_contents("$dirimage/$fileimage", $fileimage);
+
+        //video
+        $filevideo = $_POST['videofile'];
+        $dirvideo = base_path('public/uploads/videos');
+        file_put_contents("$dirvideo/$filevideo", $filevideo);
+
+        echo $title . $release . $description;
+    }
 }
