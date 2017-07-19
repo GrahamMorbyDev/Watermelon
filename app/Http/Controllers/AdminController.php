@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,5 +15,10 @@ class AdminController extends Controller
     // Upload Video Page
     public function UploadVideo() {
         return view('admin/uploadvideo');
+    }
+
+    // Upload Video Page
+    public function ShowUsers() {
+        $users = User::all(); return view('admin/users', compact('users'));
     }
 }

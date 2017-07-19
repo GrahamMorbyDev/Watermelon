@@ -19,7 +19,7 @@
                 <li>Add Blog Post</li>
                 <li>All Blog posts</li>
                 <hr>
-                <li>All users</li>
+                <li><a href="{{URL::asset('/admin/users') }}">All users</a></li>
             </ul>
         </div>
     </div>

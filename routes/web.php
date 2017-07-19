@@ -11,17 +11,28 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
+Route::middleware(['admin'])->group( function() {
+// admin views
+    Route::get('/admin', 'AdminController@AdminHome');
+
+    Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+
+    Route::get('/admin/users', 'AdminController@ShowUsers');
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-
 // admin views
-Route::get('/admin', 'AdminController@AdminHome');
-
-Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+//Route::get('/admin', 'AdminController@AdminHome');
+//
+//Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+//
+//Route::get('/admin/users', 'AdminController@ShowUsers');
