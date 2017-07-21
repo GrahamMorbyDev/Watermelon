@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Video;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -23,10 +24,7 @@ class AdminController extends Controller
     }
 
     // Upload single Video
-    public function UploadSingleVideo() {
-        $title = $_POST['title'];
-        $release = $_POST['realeasedate'];
-        $description = $_POST['videodescription'];
+    public function UploadSingleVideo(Request $request) {
 
         //image
         $fileimage = $_POST['featuredimage'];
@@ -34,10 +32,11 @@ class AdminController extends Controller
         file_put_contents("$dirimage/$fileimage", $fileimage);
 
         //video
-        $filevideo = $_POST['videofile'];
+        $filevideo = $_POST['filename'];
         $dirvideo = base_path('public/uploads/videos');
         file_put_contents("$dirvideo/$filevideo", $filevideo);
 
-        echo $title . $release . $description;
+        Video::create($request->all());
+
     }
 }
