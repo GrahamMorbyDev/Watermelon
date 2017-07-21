@@ -1,0 +1,13 @@
+.pricing {
+  text-align: center;
+border: 1px solid $hoki;
+  h3 {
+    font-size: em(32);
+    background-color: $matisse;
+    color: $white;
+    padding-top: 20px;
+  }
+  ul {
+    list-style: none;
+  }
+}

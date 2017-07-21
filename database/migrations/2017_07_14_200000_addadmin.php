@@ -16,7 +16,7 @@ class Addadmin extends Migration
         //
         Schema::table('users', function (Blueprint $table)
         {
-            $table->boolean('isadmin');
+            $table->boolean('isadmin')->default(0);
         });
     }
 

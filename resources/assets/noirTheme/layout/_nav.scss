@@ -1,0 +1,11 @@
+.navbar-default {
+  background-color: $matisse;
+  border-color: $gold;
+  border-bottom: 5px solid $gold;
+}
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+}
+.navbar-default .navbar-brand {
+  color: $white;
+}

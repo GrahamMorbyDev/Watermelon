@@ -1,0 +1,77 @@
+// Font import
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700');
+
+// Body font set
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: $hoki;
+  font-weight: 300;
+}
+
+// Headings base styles
+h1, h2, h3, h4, h5 ,h6 {
+  @include fontStyles(bold, $hoki, inherit);
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  padding: 0 0 30px 0;
+}
+
+//Headings font size
+h1, .h1 {
+  font-size: em(32);
+}
+h2, .h2 {
+  font-size: em(24);
+}
+h3, .h3 {
+  font-size: em(18);
+}
+h4, .h4 {
+  font-size: em(16);
+}
+h5, .h5 {
+  font-size: em(13);
+}
+h6, .h6 {
+  font-size: em(11);
+}
+// Colored Play Buttons
+.fa-green-flag {
+  color: $green;
+  font-size: em(32);
+  text-align: center;
+}
+.fa-red-flag {
+  color: $red;
+  font-size: em(32);
+  text-align: center;
+}
+.fa-amber-flag {
+  color: $amber;
+  font-size: em(32);
+  text-align: center;
+}
+
+// Hyper Links & Nav Tabs
+a {
+  color: $denim;
+  text-decoration: none;
+  &:hover {
+    color: $gold;
+  }
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: $denim;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: $gold;
+  background-color: $denim;
+  border: 1px solid $denim;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.nav-tabs {
+  border-bottom: 1px solid $gold;
+}
