@@ -9,9 +9,9 @@
     <!-- header finish -->
 
    <!-- Info to start -->
-  <div class="container">
+  <div class="container globalPadding">
       <div class="col-lg-12">
-          <h1 class="neon">Welcome to Watermelon Members</h1>
+          <h1 class="neon">Welcome to Watermelon</h1>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when
               looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
               of letters, as opposed to using 'Content here, content here', making it look like readable English. Many

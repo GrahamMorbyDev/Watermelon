@@ -8352,8 +8352,9 @@ button.close {
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #647884;
+  color: #ffffff;
   font-weight: 300;
+  background-color: black;
 }
 
 h1,
@@ -8363,7 +8364,7 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: #647884;
+  color: #ffffff;
   line-height: inherit;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 0.96px;
@@ -8649,17 +8650,19 @@ table .name {
 
 .pricing {
   text-align: center;
-  border: 1px solid #647884;
 }
 
 .pricing h3 {
   font-size: 2em;
-  background-color: #FF406C;
   color: #ffffff;
   padding-top: 20px;
 }
 
 .pricing ul {
   list-style: none;
+}
+
+.globalPadding {
+  padding: 20px;
 }
 
