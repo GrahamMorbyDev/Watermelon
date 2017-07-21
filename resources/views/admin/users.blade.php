@@ -1,7 +1,3 @@
-<?php
-use App\User;
-
-?>
 @extends('layouts/admin')
 @section('content')
     <div class="row">
