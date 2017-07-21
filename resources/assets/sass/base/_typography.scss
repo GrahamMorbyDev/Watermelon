@@ -5,13 +5,15 @@
 // Body font set
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $hoki;
+  color: $white;
   font-weight: 300;
+  background-color: black;
+
 }
 
 // Headings base styles
 h1, h2, h3, h4, h5 ,h6 {
-  @include fontStyles(bold, $hoki, inherit);
+  @include fontStyles(bold, $white, inherit);
   font-family: 'Amatic SC', cursive;
   letter-spacing: 0.96px;
   text-transform: uppercase;
