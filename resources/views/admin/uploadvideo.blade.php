@@ -7,7 +7,7 @@
     </div>
 </div>
 <div class="row">
-    <form action="{{URL::asset('/uploadsinglevideo')}}" method="post">
+    <form action="{{URL::asset('/uploadsinglevideo')}}" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <label for="title">Video Title</label>
