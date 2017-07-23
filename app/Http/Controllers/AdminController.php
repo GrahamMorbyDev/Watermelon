@@ -7,6 +7,7 @@ use App\User;
 use App\Video;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -25,12 +26,7 @@ class AdminController extends Controller
     // Upload Video Page
     public function ShowUsers()
     {
-        $users = User::all();
-//        foreach ($users as $user)
-//        {
-//            $user->address = $user->getAddress($user->getAttribute('id'));
-//        }
-//        var_dump($users);
+        $users = User::paginate(15);
         return view('admin/users', compact('users'));
     }
 

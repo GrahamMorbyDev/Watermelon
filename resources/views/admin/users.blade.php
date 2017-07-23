@@ -122,4 +122,5 @@
             @endforeach
         </div>
     </div>
+    {{$users->links()}}
 @stop
