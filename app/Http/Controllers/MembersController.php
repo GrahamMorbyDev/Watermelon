@@ -12,4 +12,9 @@ class MembersController extends Controller
 
         return view('members/videoList' , ['videos' => $videos]);
     }
+
+    public function video($id) {
+        $video = DB::table('videos')->where('id' , $id)->find();
+        return view('members/video', ['video' => $video]);
+    }
 }

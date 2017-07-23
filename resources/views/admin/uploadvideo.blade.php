@@ -30,5 +30,7 @@
         <button class="btn btn-success" >Submit</button>
     </form>
 </div>
-
+<script type="text/javascript">
+    CKEDITOR.replace( 'description' );
+</script>
 @stop

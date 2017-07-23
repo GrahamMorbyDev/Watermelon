@@ -34,4 +34,7 @@ Route::middleware(['admin'])->group( function() {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
 Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');
+
+//Members Section
 Route::get('/members/videos', 'MembersController@videos');
+Route::get('/members/video/{$id}', 'MembersController@video');

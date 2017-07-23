@@ -11,6 +11,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="{{ asset('js/parallax.js')}}"></script>
+    <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

@@ -8,6 +8,10 @@
   @include button-bg($gold, $gold);
   color: white;
 }
+.btn-warning {
+  @include button-bg($matisse, $matisse);
+  color: white;
+}
 .btn-default {
   background-color: $white;
   border: $white;

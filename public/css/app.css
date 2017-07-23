@@ -8629,6 +8629,22 @@ table .name {
   background: #000202;
 }
 
+.btn-warning {
+  background: #FF406C;
+  border: #FF406C;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #ff174d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:active {
+  background: #c0002c;
+}
+
 .btn-default {
   background-color: #ffffff;
   border: #ffffff;
