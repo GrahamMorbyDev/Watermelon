@@ -25,6 +25,9 @@ Route::middleware(['admin'])->group( function() {
     Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
 
     Route::get('/admin/users', 'AdminController@ShowUsers');
+
+    Route::post('/update/user', 'AdminController@updateUser');
+    Route::post('/delete/user', 'AdminController@deleteUser');
 });
 
 

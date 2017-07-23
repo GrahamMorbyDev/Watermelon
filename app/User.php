@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -30,5 +31,14 @@ class User extends Authenticatable
     public function isAdmin()
     {
         return $this->isadmin;
+    }
+
+    public function getAddress()
+    {
+        $address = new Address();
+        return $address->where('user_id', $this->id)->first();
+//        return Address::where('user_id', $this->id)->first();
+
+//        return Address::all();
     }
 }
