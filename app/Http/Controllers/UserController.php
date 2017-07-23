@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\User;
+use App\Video;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     public function updateUser(Request $request)
     {

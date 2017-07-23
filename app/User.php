@@ -33,12 +33,12 @@ class User extends Authenticatable
         return $this->isadmin;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAddress()
     {
         $address = new Address();
         return $address->where('user_id', $this->id)->first();
-//        return Address::where('user_id', $this->id)->first();
-
-//        return Address::all();
     }
 }

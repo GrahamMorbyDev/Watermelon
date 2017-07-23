@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/blog', 'BlogController@showArticleList');
+
 Auth::routes();
 Route::middleware(['admin'])->group( function() {
 // admin views
