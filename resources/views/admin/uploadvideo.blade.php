@@ -14,7 +14,7 @@
             <input type="text" class="form-control" id="title" name="title" placeholder="video title">
         </div>
         <div class="form-group">
-            <label for="description">Video Description</label>
+            <label for="description"Video Description</label>
             <textarea class="form-control" id="description" name="description" rows="3"></textarea>
         </div>
         <div class="form-group">

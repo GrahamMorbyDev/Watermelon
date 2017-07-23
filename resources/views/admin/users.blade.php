@@ -1,15 +1,5 @@
 @extends('layouts/admin')
 @section('content')
-    <div class="flash-message">
-        @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-            @if(Session::has('alert-' . $msg))
-
-                <div class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                </div>
-            @endif
-        @endforeach
-    </div> <!-- end .flash-message -->
     <div class="row">
         <div class="col-lg-12">
             @foreach($users as $user)
