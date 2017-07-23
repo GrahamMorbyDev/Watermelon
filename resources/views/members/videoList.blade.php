@@ -18,5 +18,6 @@
             @endforeach
         </div>
     </div>
+    {{$videos->links()}};
 
 @stop

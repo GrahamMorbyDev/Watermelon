@@ -10,7 +10,7 @@ class MembersController extends Controller
 {
     //Show Videos
     public function videos() {
-        $videos = DB::table('videos')->get();
+        $videos = DB::table('videos')->paginate();
 
         return view('members/videoList' , ['videos' => $videos]);
     }
