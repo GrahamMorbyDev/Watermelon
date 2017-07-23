@@ -48,3 +48,4 @@ Route::get('members/video/{id}', 'MembersController@show');
 
 //Image
 Route::get('/members/imagessets' , 'MembersController@imagessets');
+Route::get('members/imagessets/{setname}' , 'MembersController@showimages');

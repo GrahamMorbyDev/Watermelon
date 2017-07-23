@@ -27,7 +27,11 @@ class MembersController extends Controller
         ->select(DB::raw('distinct(setname) , name'))
         ->groupBy('setname')
         ->get();
-
         return view('members/imagesets' , ['images' => $images]);
+    }
+
+    public function showimages($setname) {
+        $imageset = DB::table('images')->where('setname' , $setname)->get();
+        return view('members.imageset' , compact('imageset'));
     }
 }

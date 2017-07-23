@@ -10,7 +10,7 @@
                     <img src="{{URL::asset("storage/" . $image->name)}}" alt="" class="img-responsive">
                     <hr>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-success">View Now</a>
+                        <a href="{{URL::asset('members/imagessets/' . $image->setname)}}" class="btn btn-success">View Now</a>
                         <a href="#" class="btn btn-warning">Download</a>
                     </div>
                 </div>
