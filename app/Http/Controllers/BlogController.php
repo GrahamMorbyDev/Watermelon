@@ -15,9 +15,16 @@ class BlogController extends Controller
 {
     public function showArticleList()
     {
+        $blogs = new Blogs();
+        $blogs = $blogs->paginate(1, ['id', 'title', 'featuredimage']);
+        return view('/blogList', compact('blogs'));
+    }
+
+    public function showBlog($id)
+    {
         $blog = new Blogs();
-        $blog = $blog->paginate(1, ['id', 'title', 'featuredimage']);
-        return view('/blog', compact('blog'));
+        $blog = $blog->where('id', $id)->first();
+        return view('blog', compact('blog'));
     }
 
     public function createBlog(Request $request)
@@ -49,7 +56,8 @@ class BlogController extends Controller
         if ($request->file('featuredimage'))
         {
             $imagePath = $request->file('featuredimage')->store('blogimages');
-        } else {
+        } else
+        {
             $imagePath = $blog->featuredimage;
         }
 
