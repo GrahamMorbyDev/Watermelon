@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Video;
+use App\Images;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
@@ -45,6 +46,28 @@ class AdminController extends Controller
             'featuredimage' => $imagepath,
             'filename' => $videopath
         ]);
+
+        return redirect()->back()->with('alert-success', 'Uploaded successfully');
+
+    }
+
+    // Upload Image set
+    public function Uploadimage()
+    {
+        return view('admin/uploadimages');
+    }
+    //Upload image sets to DB
+    public function UploadImageSet(Request $request)
+    {
+     $files = $request->file('name');
+     foreach($files as $file){
+         $imagepath = $file->store('imagesets');
+         Images::create([
+             'setname' => $request->get('setname'),
+             'name' => $imagepath
+         ]);
+     }
+        return redirect()->back()->with('alert-success', 'Uploaded successfully');
 
     }
 }

@@ -19,22 +19,27 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::middleware(['admin'])->group( function() {
-// admin views
+    // admin views
     Route::get('/admin', 'AdminController@AdminHome');
 
+    //Video Routes
     Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
+    Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');
 
+    //Image Routes
+    Route::get('/admin/uploadimages' , 'AdminController@Uploadimage');
+    Route::post('/admin/uploadimageset' , 'AdminController@UploadImageSet');
+
+    // User Routes
     Route::get('/admin/users', 'AdminController@ShowUsers');
-
     Route::post('/update/user', 'UserController@updateUser');
     Route::post('/delete/user', 'UserController@deleteUser');
 });
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
-Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');
+
 
 //Members Section
 Route::get('/members/videos', 'MembersController@videos');
-Route::get('/members/video/{$id}', 'MembersController@video');
+Route::get('members/video/{id}', 'MembersController@show');
