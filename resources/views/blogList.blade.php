@@ -10,8 +10,7 @@
                     <p>{!!html_entity_decode($blog->description)!!}</p>
                     <hr>
                     <div class="btn-group">
-                        <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success">Watch Now</a>
-                        <a href="#" class="btn btn-warning">Download</a>
+                        <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success">View</a>
                     </div>
                 </div>
             @endforeach

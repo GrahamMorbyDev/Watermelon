@@ -16,7 +16,7 @@ class BlogController extends Controller
     public function showArticleList()
     {
         $blogs = new Blogs();
-        $blogs = $blogs->paginate(1, ['id', 'title', 'featuredimage']);
+        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage']);
         return view('/blogList', compact('blogs'));
     }
 
