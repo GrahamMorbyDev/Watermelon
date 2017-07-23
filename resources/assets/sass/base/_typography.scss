@@ -5,15 +5,13 @@
 // Body font set
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $white;
+  color: $hoki;
   font-weight: 300;
-  background-color: black;
-
 }
 
 // Headings base styles
 h1, h2, h3, h4, h5 ,h6 {
-  @include fontStyles(bold, $white, inherit);
+  @include fontStyles(bold, $hoki, inherit);
   font-family: 'Amatic SC', cursive;
   letter-spacing: 0.96px;
   text-transform: uppercase;
@@ -81,8 +79,9 @@ a {
 
 //Neon Signs
 .neon {
-  color: #fff;
+  color: $jungleMist;
   font-family: 'Monoton', cursive;
+  font-size: em(72);
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
@@ -97,10 +96,10 @@ a {
 
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $matisse, 0 0 70px $matisse, 0 0 80px $matisse, 0 0 100px $matisse, 0 0 150px $matisse;
+    text-shadow: 0 0 10px $jungleMist, 0 0 20px $jungleMist, 0 0 30px $jungleMist, 0 0 40px $matisse, 0 0 70px $matisse, 0 0 80px $matisse, 0 0 100px $matisse, 0 0 150px $matisse;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $matisse, 0 0 35px $matisse, 0 0 40px $matisse, 0 0 50px $matisse, 0 0 75px $matisse;
+    text-shadow: 0 0 5px $jungleMist, 0 0 10px $jungleMist, 0 0 15px $jungleMist, 0 0 20px $matisse, 0 0 35px $matisse, 0 0 40px $matisse, 0 0 50px $matisse, 0 0 75px $matisse;
   }
 }
 

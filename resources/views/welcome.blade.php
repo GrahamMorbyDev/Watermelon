@@ -3,15 +3,16 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpg")}}" style="height: 400px; margin-top: -25px;">
-
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpg")}}" style="height: 400px; margin-top: -25px; border-bottom: 5px solid green">
+<div class="col-md-12 text-center" style="padding-top: 130px;">
+    <h1 class="neon">Welcome to Watermelon</h1>
+</div>
     </div>
     <!-- header finish -->
 
    <!-- Info to start -->
   <div class="container globalPadding">
       <div class="col-lg-12">
-          <h1 class="neon">Welcome to Watermelon</h1>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when
               looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
               of letters, as opposed to using 'Content here, content here', making it look like readable English. Many

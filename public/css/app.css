@@ -8352,9 +8352,8 @@ button.close {
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #ffffff;
+  color: #647884;
   font-weight: 300;
-  background-color: black;
 }
 
 h1,
@@ -8364,7 +8363,7 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: #ffffff;
+  color: #647884;
   line-height: inherit;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 0.96px;
@@ -8450,8 +8449,9 @@ a:hover {
 }
 
 .neon {
-  color: #fff;
+  color: #BACCD6;
   font-family: 'Monoton', cursive;
+  font-size: 4.5em;
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
@@ -8464,11 +8464,11 @@ a:hover {
 
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF406C, 0 0 70px #FF406C, 0 0 80px #FF406C, 0 0 100px #FF406C, 0 0 150px #FF406C;
+    text-shadow: 0 0 10px #BACCD6, 0 0 20px #BACCD6, 0 0 30px #BACCD6, 0 0 40px #FF406C, 0 0 70px #FF406C, 0 0 80px #FF406C, 0 0 100px #FF406C, 0 0 150px #FF406C;
   }
 
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF406C, 0 0 35px #FF406C, 0 0 40px #FF406C, 0 0 50px #FF406C, 0 0 75px #FF406C;
+    text-shadow: 0 0 5px #BACCD6, 0 0 10px #BACCD6, 0 0 15px #BACCD6, 0 0 20px #FF406C, 0 0 35px #FF406C, 0 0 40px #FF406C, 0 0 50px #FF406C, 0 0 75px #FF406C;
   }
 }
 
