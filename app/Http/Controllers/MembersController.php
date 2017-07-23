@@ -22,7 +22,12 @@ class MembersController extends Controller
 
     //Show Images
     public function imagessets() {
-        $images = DB::table('images')->where('setname')->get();
-        return view('members/imagessets' , ['images' => $images]);
+        //$sql = ('select distinct(setname) , `name` FROM images GROUP BY setname;');
+        $images = DB::table('images')
+        ->select(DB::raw('distinct(setname) , name'))
+        ->groupBy('setname')
+        ->get();
+
+        return view('members/imagesets' , ['images' => $images]);
     }
 }

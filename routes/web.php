@@ -41,5 +41,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //Members Section
+
+//Videos
 Route::get('/members/videos', 'MembersController@videos');
 Route::get('members/video/{id}', 'MembersController@show');
+
+//Image
+Route::get('/members/imagessets' , 'MembersController@imagessets');
