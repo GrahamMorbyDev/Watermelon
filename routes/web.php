@@ -37,6 +37,10 @@ Route::middleware(['admin'])->group( function() {
     Route::get('/admin/users', 'AdminController@ShowUsers');
     Route::post('/update/user', 'UserController@updateUser');
     Route::post('/delete/user', 'UserController@deleteUser');
+
+    // Blog Routes
+    Route::get('/admin/addblog', 'BlogController@showAddBlog');
+    Route::post('saveblog', 'BlogController@createBlog');
 });
 
 

@@ -27,6 +27,12 @@ class BlogController extends Controller
         return view('blog', compact('blog'));
     }
 
+    public function showAddBlog()
+    {
+        return view('admin/addblog');
+    }
+
+
     public function createBlog(Request $request)
     {
         $blog = new Blogs();

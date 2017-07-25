@@ -17,11 +17,11 @@ class Blogs extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('description');
-            $table->string('featuredimage');
+            $table->string('featuredimage')->nullable();
             $table->text('body');
-            $table->boolean('publish');
-            $table->string('author');
-            $table->text('tags');
+            $table->boolean('publish')->default(0);
+            $table->string('author')->nullable();
+            $table->text('tags')->nullable();
             $table->timestamps();
         });
     }
