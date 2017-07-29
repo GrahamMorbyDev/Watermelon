@@ -1,17 +1,18 @@
 // Font import
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Bungee|Open+Sans:300,400,700');
 
 // Body font set
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $hoki;
+  color: $white;
   font-weight: 300;
+  background-color: $matisse;
 }
 
 // Headings base styles
 h1, h2, h3, h4, h5 ,h6 {
-  @include fontStyles(bold, $hoki, inherit);
-  font-family: 'Amatic SC', cursive;
+  @include fontStyles(bold, $gold, inherit);
+  font-family: 'Bungee', cursive;
   letter-spacing: 0.96px;
   text-transform: uppercase;
   padding: 0 0 30px 0;
@@ -74,4 +75,8 @@ a {
 }
 .nav-tabs {
   border-bottom: 1px solid $gold;
+}
+
+.text-inverse {
+  color: $gold;
 }
