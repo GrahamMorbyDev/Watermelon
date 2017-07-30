@@ -12,10 +12,10 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <label for="title">Video Title</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="video title">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Video title">
         </div>
         <div class="form-group">
-            <label for="description"Video Description</label>
+            <label for="description">Video Description</label>
             <textarea class="form-control" id="description" name="description" rows="3"></textarea>
         </div>
         <div class="form-group">

@@ -83,10 +83,10 @@
                 </a>
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="{{URL::asset('admin/')}}">Dashboard</a>
             </li>
             <li>
-                <a href="#">Shortcuts</a>
+                <a href="{{URL::asset('/admin/uploadvideo') }}">Upload Video</a>
             </li>
             <li>
                 <a href="#">Overview</a>
@@ -101,7 +101,7 @@
                 <a href="#">Services</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="{{URL::asset('/admin/users') }}">View and Edit Users</a>
             </li>
         </ul>
     </div>
@@ -110,7 +110,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
-            <a href="#menu-toggle" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+
                 <div class="flash-message">
                     @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                         @if(Session::has('alert-' . $msg))
@@ -121,10 +121,7 @@
                         @endif
                     @endforeach
                 </div> <!-- end .flash-message -->
-                <div class="col-md-12">
-                    <h1>Welcome Admin!</h1>
-                </div>
-                @yield('content')
+            @yield('content')
             </div>
     </div>
     <!-- /#page-content-wrapper -->

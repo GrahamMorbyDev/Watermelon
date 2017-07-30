@@ -3,15 +3,29 @@
     <div class="row">
         <div class="col-lg-12">
             @foreach($users as $user)
-                <table>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Joined</td>
+                        <td>Updated</td>
+                        <td>Edit/Delete</td>
+                    </tr>
+                    </thead>
                     <tbody>
                     <tr>
-                        {{$user->name}}
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->created_at}}</td>
+                        <td>{{$user->updated_at}}</td>
                         <td>
+                            <div class="btn-group">
                             <a data-toggle="modal" data-target="#edit{{$user->id}}" class="btn btn-success">edit</a>
-                        </td>
-                        <td>
-                            <a data-toggle="modal" data-target="#delete{{$user->id}}" class="btn btn-danger">delete</a>
+                            <a data-toggle="modal" data-target="#delete{{$user->id}}" class="btn btn-warning">delete</a>
+                            </div>
                         </td>
                     </tr>
                     </tbody>
