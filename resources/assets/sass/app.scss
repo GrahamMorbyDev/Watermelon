@@ -10,6 +10,8 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$fa-font-path: '../fonts';
+@import "node_modules/font-awesome/scss/font-awesome.scss";
 
 // Utils Partials
 @import "utils/mixins";
@@ -32,6 +34,6 @@
 
 // Framework Templates
 @import "framework/simple-sidebar";
-@import "framework/scss/font-awesome";
+
 
 // Vendor Partials

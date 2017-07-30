@@ -1,6 +1,10 @@
 .notice {
   padding: 20px;
   color: $white;
+  h1 {
+    color: $white;
+    font-size: em(100);
+  }
 }
 .dark {
   background-color: $gold;

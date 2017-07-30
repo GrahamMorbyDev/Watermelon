@@ -89,16 +89,19 @@
                 <a href="{{URL::asset('/admin/uploadvideo') }}">Upload Video</a>
             </li>
             <li>
-                <a href="#">Overview</a>
+                <a href="{{URL::asset('/admin/showVideos') }}">View all Videos</a>
             </li>
             <li>
-                <a href="#">Events</a>
+                <a href="#">Upload Image set</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="#">View all Image sets</a>
             </li>
             <li>
-                <a href="#">Services</a>
+                <a href="#">Add a Blog Post</a>
+            </li>
+            <li>
+                <a href="#">View all Blog Posts</a>
             </li>
             <li>
                 <a href="{{URL::asset('/admin/users') }}">View and Edit Users</a>

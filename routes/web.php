@@ -25,6 +25,7 @@ Route::middleware(['admin'])->group( function() {
     //Video Routes
     Route::get('/admin/uploadvideo' , 'AdminController@UploadVideo');
     Route::post('uploadsinglevideo' , 'AdminController@UploadSingleVideo');
+    Route::get('/admin/showVideos' , 'AdminController@ShowVideos');
 
     //Image Routes
     Route::get('/admin/uploadimages' , 'AdminController@Uploadimage');
