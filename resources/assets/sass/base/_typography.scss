@@ -54,7 +54,7 @@ h6, .h6 {
   text-align: center;
 }
 
-// Hyper Links & Nav Tabs
+// Hyper Links
 a {
   color: $denim;
   text-decoration: none;
@@ -62,20 +62,7 @@ a {
     color: $gold;
   }
 }
-.nav > li > a:hover, .nav > li > a:focus {
-  text-decoration: none;
-  background-color: $denim;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: $gold;
-  background-color: $denim;
-  border: 1px solid $denim;
-  border-bottom-color: transparent;
-  cursor: default;
-}
-.nav-tabs {
-  border-bottom: 1px solid $gold;
-}
+
 
 //Neon Signs
 .neon {

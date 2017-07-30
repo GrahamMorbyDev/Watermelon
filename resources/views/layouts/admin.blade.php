@@ -17,7 +17,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
     <div class="container">
         <div class="navbar-header">
 
@@ -72,22 +72,76 @@
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="flash-message">
-        @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-            @if(Session::has('alert-' . $msg))
+<div id="wrapper" class="toggled">
 
-                <div class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Watermelon
+                </a>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                <a href="#">Shortcuts</a>
+            </li>
+            <li>
+                <a href="#">Overview</a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <a href="#menu-toggle" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+                <div class="flash-message">
+                    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+
+                            <div class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            </div>
+                        @endif
+                    @endforeach
+                </div> <!-- end .flash-message -->
+                <div class="col-md-12">
+                    <h1>Welcome Admin!</h1>
                 </div>
-            @endif
-        @endforeach
-    </div> <!-- end .flash-message -->
-@yield('content')
+                @yield('content')
+            </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
 </div>
+<!-- /#wrapper -->
+
 
 
 <!-- Scripts -->
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/parallax.js')}}"></script>

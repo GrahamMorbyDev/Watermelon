@@ -1,6 +1,7 @@
 @extends('layouts/admin')
 
 @section('content')
+    <div class="container">
 <div class="row">
     <div class="col-lg-12">
         <h1>Upload a video</h1>
@@ -33,4 +34,5 @@
 <script type="text/javascript">
     CKEDITOR.replace( 'description' );
 </script>
+    </div>
 @stop

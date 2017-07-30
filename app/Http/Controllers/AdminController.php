@@ -14,7 +14,12 @@ class AdminController extends Controller
     // Admin home page
     public function AdminHome()
     {
-        return view('admin/index');
+        $users = User::get()->count();
+        $videos = Video::get()->count();
+        $images = Images::get()->count();
+        return view('admin/index' , compact('users' , 'videos', 'images'));
+
+
     }
 
     // Upload Video Page

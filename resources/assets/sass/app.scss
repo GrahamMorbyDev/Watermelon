@@ -25,8 +25,13 @@
 
 // Pages Partials
 @import "pages/welcome";
+@import "pages/admin";
 
 // Themes Partials
 @import "themes/global";
+
+// Framework Templates
+@import "framework/simple-sidebar";
+@import "framework/scss/font-awesome";
 
 // Vendor Partials
