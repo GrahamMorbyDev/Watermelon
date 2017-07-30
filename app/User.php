@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -40,5 +42,14 @@ class User extends Authenticatable
     {
         $address = new Address();
         return $address->where('user_id', $this->id)->first();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubscription()
+    {
+        $subscription = new Subscriptions();
+        return $subscription->where('user_id', $this->id)->first();
     }
 }
