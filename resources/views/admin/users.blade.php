@@ -38,6 +38,7 @@
                             <div class="modal-header">
                                 <button type="button" class="close" style="color: black;" data-dismiss="modal"
                                         aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <p>Update {{$user->name}}</p>
                             </div>
                             <div class="modal-body" style="color: black;">
                                 <form action="{{URL::asset('/update/user')}}" method="post" class="form-group" >
@@ -51,10 +52,6 @@
                                     <div class="form-group">
                                         <label for="email-{{$user->id}}">Email</label>
                                         <input type="text" class="form-control" name="email" id="email-{{$user->id}}" value="{{$user->email}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="admin-{{$user->id}}">Admin</label>
-                                        <input type="text" class="form-control" name="admin" id="admin-{{$user->id}}" value="{{$user->isadmin}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="adr1-{{$user->id}}">Address line 1</label>
@@ -88,9 +85,13 @@
                                         <label for="pcode-{{$user->id}}">Postcode</label>
                                         <input type="text" class="form-control" name="pcode" id="pcode-{{$user->id}}" value="{{$address['postcode']}}">
                                     </div>
-                                    <button class="btn btn-success pull-right">submit</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success pull-right">submit</button>
                                 </form>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
