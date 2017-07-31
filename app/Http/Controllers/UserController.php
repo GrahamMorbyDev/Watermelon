@@ -26,7 +26,7 @@ class UserController extends Controller
 
         $this->updateAddress($request);
 
-        return redirect()->back()->with('alert-success', 'Saved successfully');
+
     }
 
     public function updateAddress(Request $request)
@@ -54,6 +54,8 @@ class UserController extends Controller
             $address = new Address();
             $address->create($addressAttributes);
         }
+
+        return redirect()->back()->with('alert-success', 'Saved successfully');
     }
 
     public function deleteUser(Request $request)

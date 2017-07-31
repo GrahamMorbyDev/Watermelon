@@ -23,7 +23,7 @@ class SubscriptionController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('subscribe', compact('user'));
+        return view('home', compact('user'));
     }
 
     /**
