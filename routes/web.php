@@ -13,7 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('', 'HomeController@disclaimer');
+Route::get('', 'PagesController@index');
 Auth::routes();
 
 Route::get('/blog', 'BlogController@showArticleList');

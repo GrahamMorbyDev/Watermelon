@@ -14,10 +14,11 @@
     <script src="{{ asset('js/parallax.js')}}"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('noirTheme/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
+    <!-- Nav bar -->
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -77,9 +78,22 @@
             </div>
         </div>
     </nav>
+    <!-- Nav bar Eind -->
+
 
     @yield('content')
 </div>
+
+<!-- Footer -->
+<footer>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+        </div>
+    </div>
+</div>
+</footer>
+<!-- footer end -->
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

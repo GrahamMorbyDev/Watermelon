@@ -3,92 +3,84 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpg")}}" style="height: 400px; margin-top: -25px; border-bottom: 5px solid green">
-<div class="col-md-12 text-center" style="padding-top: 130px;">
-    <h1 class="neon">Welcome to Watermelon</h1>
-</div>
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpeg")}}" style="height: 400px; margin-top: -25px;">
     </div>
     <!-- header finish -->
 
-   <!-- Info to start -->
+<!-- Info to start -->
   <div class="container globalPadding">
-      <div class="col-lg-12">
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-              of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-              over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-          </p>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <img src="images/logo.png" alt="Watermelon">
+              <hr>
+              <h1>So you need a Membership service?</h1>
+
+              <p>Are you a producer of content? a provider of a service? or your just looking to give premium services
+              to a wide audience. But you have no real developer experience! Then welcome my friends to Watermelon</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <hr>
+              <div class="col-md-3 notice dark text-center">
+                  <h1 class="fa fa-user-circle-o"></h1>
+                  <p>We make users</p>
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="70"
+                           aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 notice light text-center">
+                  <h1 class="fa fa-play-circle-o"></h1>
+                  <p>Upload full HD videos</p>
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="70"
+                           aria-valuemin="0" aria-valuemax="200" style="width:100%">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 notice dark text-center">
+                  <h1 class="fa fa-picture-o "></h1>
+                  <p>Zip style image sets</p>
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="70"
+                           aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 notice light text-center">
+                  <h1 class="fa fa-newspaper-o "></h1>
+                  <p>Fully working Blog</p>
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="70"
+                           aria-valuemin="0" aria-valuemax="200" style="width:100%">
+                      </div>
+                  </div>
+              </div>
+              <hr>
+          </div>
       </div>
   </div>
-    <!-- Info to start finish -->
-
-    <!--Pricing Tables -->
+<!-- Info to start finish -->
+<!-- Simple statement -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-               <h1>Pricing</h1>
-            </div>
-        </div>
-        <div class="row">
-        <div class="col-lg-12">
-            <div class="col-lg-4 pricing">
-            <h3>Standard</h3>
-                <ul>
-                    <li>Free Stuff</li>
-                    <li>Something else</li>
-                    <li>All other bits</li>
-                    <li>Something else</li>
-                    <li>Maybe this </li>
-                    <li>And this</li>
-                </ul>
-                <p>$300.00</p>
-                <button class="btn btn-success">Buy Now</button>
-            </div>
-            <div class="col-lg-4">
-                <h3>Standard</h3>
-                <ul>
-                    <li>Free Stuff</li>
-                    <li>Something else</li>
-                    <li>All other bits</li>
-                    <li>Something else</li>
-                    <li>Maybe this </li>
-                    <li>And this</li>
-                </ul>
-                <p>$300.00</p>
-                <button class="btn btn-success">Buy Now</button>
-            </div>
-            <div class="col-lg-4">
-                <h3>Standard</h3>
-                <ul>
-                    <li>Free Stuff</li>
-                    <li>Something else</li>
-                    <li>All other bits</li>
-                    <li>Something else</li>
-                    <li>Maybe this </li>
-                    <li>And this</li>
-                </ul>
-                <p>$300.00</p>
-                <button class="btn btn-success">Buy Now</button>
-            </div>
-        </div>
+            <div class="col-md-12 text-center">
+                <hr>
+                <h1>You need it to be easy!</h1>
+                <div class="col-md-6 text-left">
+                <p>With our easy to use interface and knowledge of knowing exactly what you need, we have built an app
+                that give you the ability to just worry about your content and users!</p>
+                <img src="images/adminpanel.png" alt="Watermelon Admin Panel" class="img-responsive">
+                </div>
+                <div class="col-md-6 text-left">
+                    <p>Uploading content should be a walk in the park? It should just happen and you should be more
+                        worried about creating it, rather than fighting to put it up on your site.</p>
+                    <img src="images/videoupload.png" alt="Watermelon Admin Panel" class="img-responsive">
+                </div>
         </div>
     </div>
-    <!-- Pricing Tables finish -->
-
-    <!-- Dont Feel confident -->
-    <div class="container">
-        <h1>Don't feel confident?</h1>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
-        <button class="btn btn-success">Sign Up Now!</button>
-    </div>
-    <!-- Dont Feel confident Finish -->
+<!-- Simple end -->
 
 @endsection

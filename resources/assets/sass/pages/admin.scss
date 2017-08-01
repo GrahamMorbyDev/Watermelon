@@ -10,5 +10,17 @@
   background-color: $gold;
 }
 .light {
-  background-color: $matisse;
+  background-color: $denim;
+}
+.progress-bar-success {
+  background-color: $denim;
+  -webkit-box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
+}
+.progress-bar-info {
+  background-color: $gold;
+  -webkit-box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 32px -9px rgba(0,0,0,0.75);
 }
