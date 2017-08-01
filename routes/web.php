@@ -14,15 +14,32 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('', 'PagesController@index');
-Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{id}', 'BlogController@showBlog');
 
+Auth::routes();
+
+
 Route::get('/subscribe', 'SubscriptionController@index');
-Route::post('sub', ['as'=>'subscribe','uses'=>'SubscriptionController@createSubscription']);
+Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@createSubscription']);
 
 Route::post('/update/user/address', 'UserController@updateAddress');
+Route::middleware(['admin'])->group(function ()
+{
+
+
+    //Videos
+    Route::get('/members/videos', 'MembersController@videos');
+    Route::get('members/video/{id}', 'MembersController@show');
+
+    //Image
+    Route::get('/members/imagessets', 'MembersController@imagessets');
+    Route::get('members/imagessets/{setname}', 'MembersController@showimages');
+
+});
 
 Route::middleware(['admin'])->group(function ()
 {
@@ -32,7 +49,7 @@ Route::middleware(['admin'])->group(function ()
     //Video Routes
     Route::get('/admin/uploadvideo', 'AdminController@UploadVideo');
     Route::post('uploadsinglevideo', 'AdminController@UploadSingleVideo');
-    Route::get('/admin/showVideos' , 'AdminController@ShowVideos');
+    Route::get('/admin/showVideos', 'AdminController@ShowVideos');
 
     //Image Routes
     Route::get('/admin/uploadimages', 'AdminController@Uploadimage');
@@ -48,16 +65,3 @@ Route::middleware(['admin'])->group(function ()
     Route::post('saveblog', 'BlogController@createBlog');
 });
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-//Members Section
-
-//Videos
-Route::get('/members/videos', 'MembersController@videos');
-Route::get('members/video/{id}', 'MembersController@show');
-
-//Image
-Route::get('/members/imagessets', 'MembersController@imagessets');
-Route::get('members/imagessets/{setname}', 'MembersController@showimages');

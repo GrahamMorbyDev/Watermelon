@@ -35,6 +35,13 @@ class User extends Authenticatable
         return $this->isadmin;
     }
 
+    public function isMember()
+    {
+         if($subbed = $this->getSubscription());
+
+        return $subbed;
+    }
+
     /**
      * @return mixed
      */
