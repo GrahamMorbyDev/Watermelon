@@ -34,9 +34,10 @@ class SubscriptionController extends Controller
     {
         $user = Auth::user();
         $input = $request->all();
+        //var_dump($input);die();
         $token = $input['stripeToken'];
 
-//        var_dump($input);die();
+        //var_dump($input);die();
         try
         {
             $user->newSubscription

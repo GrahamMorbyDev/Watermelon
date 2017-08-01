@@ -791,12 +791,12 @@ window.Vue = __webpack_require__(34);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(35));
+/*Vue.component('example', __webpack_require__(35));
 
 var app = new Vue({
   el: '#app'
 });
-
+*/
 /***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {

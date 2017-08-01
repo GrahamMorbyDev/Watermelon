@@ -14,7 +14,7 @@
     <script src="{{ asset('js/parallax.js')}}"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset(env('theme')) }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -87,8 +87,49 @@
 <!-- Footer -->
 <footer>
 <div class="container-fluid">
+    <div class="container">
     <div class="row">
         <div class="col-lg-12">
+            <div class="col-md-4">
+                <h2>Company</h2>
+                <ul>
+                    <li>About us</li>
+                    <li>What we do</li>
+                    <li>Blog</li>
+                    <li>Sign up</li>
+                    <li>Demo</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Company</h2>
+                <ul>
+                    <li>About us</li>
+                    <li>What we do</li>
+                    <li>Blog</li>
+                    <li>Sign up</li>
+                    <li>Demo</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Company</h2>
+                <ul>
+                    <li>About us</li>
+                    <li>What we do</li>
+                    <li>Blog</li>
+                    <li>Sign up</li>
+                    <li>Demo</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+            <p>Powered by watermelon</p>
         </div>
     </div>
 </div>
