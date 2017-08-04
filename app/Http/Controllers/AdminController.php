@@ -56,6 +56,14 @@ class AdminController extends Controller
         return redirect()->back()->with('alert-success', 'Uploaded successfully');
 
     }
+    //Delete Video
+    public function deleteVideo(Request $request)
+    {
+        $video = new Video;
+        $video = $video->find($request->get('id'));
+        $video->delete();
+        return redirect()->back()->with('alert-success', 'Deleted successfully');
+    }
 
     // show users page
     public function ShowUsers()
