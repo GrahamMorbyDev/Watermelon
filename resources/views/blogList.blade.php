@@ -7,7 +7,7 @@
                 <div class="col-md-3 text-center">
                     <h1>{{$blog->title}}</h1>
                     <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" alt="" class="img-responsive">
-                    <p>{!!html_entity_decode($blog->description)!!}</p>
+                    <p>{{$blog->description}}</p>
                     <hr>
                     <div class="btn-group">
                         <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success">View</a>
