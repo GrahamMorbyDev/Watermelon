@@ -40,9 +40,10 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About Us</a></li>
                     <li><a href="#">What we do</a></li>
+                    <li><a href="blog">Blog</a></li>
                     <li><a href="#">Demo</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
