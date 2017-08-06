@@ -44,6 +44,7 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">What we do</a></li>
                     <li><a href="#">Demo</a></li>
+                    <li><a href="blog">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
 

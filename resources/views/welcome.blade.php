@@ -12,7 +12,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <img src="images/logo.png" alt="Watermelon">
+                <img src="images/logo.png" alt="Watermelon" class="img-responsive">
                 <hr>
                 <h1>So you need a Membership service?</h1>
 
