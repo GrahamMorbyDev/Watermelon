@@ -84,7 +84,51 @@
         </div> <!-- end .flash-message -->
         @yield('content')
     </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-md-4">
+                            <h2>Company</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>What we do</li>
+                                <li>Blog</li>
+                                <li>Sign up</li>
+                                <li>Demo</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Company</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>What we do</li>
+                                <li>Blog</li>
+                                <li>Sign up</li>
+                                <li>Demo</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Twitter</h2>
+                            <a class="twitter-timeline" data-height="250" data-link-color="#19CF86" href="https://twitter.com/WebWatermelon">
+                                Tweets by WebWatermelon</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
 
+                    <p>Powered by watermelon</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 

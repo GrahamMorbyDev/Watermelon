@@ -42,11 +42,10 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
                     <li><a href="about">About Us</a></li>
-                    <li><a href="#">What we do</a></li>
+                    <li><a href="whatwedo">What we do</a></li>
                     <li><a href="blog">Blog</a></li>
                     <li><a href="#">Demo</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -124,15 +123,9 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h2>Company</h2>
-                <ul>
-                    <li>About us</li>
-                    <li>What we do</li>
-                    <li>Blog</li>
-                    <li>Sign up</li>
-                    <li>Demo</li>
-                    <li>Contact us</li>
-                </ul>
+                <h2>Twitter</h2>
+                <a class="twitter-timeline" data-height="250" data-link-color="#19CF86" href="https://twitter.com/WebWatermelon">
+                    Tweets by WebWatermelon</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>

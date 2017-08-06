@@ -8,32 +8,43 @@
     </div>
     <!-- header finish -->
 
-    <!-- Info to start -->
+    <!-- Contact Us Form -->
     <div class="container globalPadding">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12">
                 <img src="images/logo.png" alt="Watermelon">
                 <hr>
-                <h1>About Us</h1>
-                <p>Like Mr King said way back in 1963 we had a dream, a wonderful dream to create a simple solution to deliver content
-                to users on a platform that's easy to use and wonderful to navigate. To be able to give high definition video and flawless images
-                the right treatment and have subscribers world wide enjoy the the premium only you can offer.</p>
-                <hr>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="{{URL::asset('images/graham.png')}}" alt="" class="img-responsive center-block">
+                <h1>Contact Us</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
                     </div>
-                    <div class="col-lg-6">
-                        <img src="{{URL::asset('images/scott.png')}}" alt="" class="img-responsive center-block">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
                     </div>
-                </div>
-                <hr>
-                <p>We are wonderful developers who want to change the world with our Watermelon app. We have an extensive knowledge of front and back
-                    end development along with server administration.</p>
+                    <div class="form-group">
+                        <label for="email">Enquiry type</label>
+                        <select class="form-control">
+                            <option>Website</option>
+                            <option>Quote</option>
+                            <option>Advertising</option>
+                            <option>Working with us</option>
+                            <option>Themes</option>
+                        </select>                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" rows="9" placeholder="Your message goes here....."></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Info to start finish -->
+    <!-- End of Contact Form -->
 
     <!-- Simple Pricing -->
     <div class="container">

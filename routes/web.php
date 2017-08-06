@@ -15,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', 'PagesController@index');
 Route::get('about', 'PagesController@about');
+Route::get('whatwedo', 'PagesController@whatwedo');
+Route::get('contact', 'PagesController@contact');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{id}', 'BlogController@showBlog');
+
 
 Auth::routes();
 
