@@ -24,7 +24,11 @@
                 <td>{{$video->created_at}}</td>
                 <td>{{$video->updated_at}}</td>
                 <td><a data-toggle="modal" data-target="#" class="btn btn-success">edit</a>
-                    <a data-toggle="modal" data-target="#" class="btn btn-warning">delete</a>
+                    <form action="{{URL::asset('/admin/deletevideo/')}}" method="post" class="form-group">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="id" value="{{$video->id}}">
+                    <button  class="btn btn-warning">delete</button>
+                    </form>
                 </td>
                 </tr>
             @endforeach

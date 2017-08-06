@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.open')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
+            <img src="{{URL::asset('images/logo.png')}}" alt="Register to watermelon" class="img-responsive">
+            <hr>
+            <h1>Login</h1>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -50,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     Login
                                 </button>
 
@@ -60,8 +60,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>

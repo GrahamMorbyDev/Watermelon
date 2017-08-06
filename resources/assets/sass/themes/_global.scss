@@ -60,3 +60,11 @@
   text-decoration: none;
   font-size: 18px;
 }
+.panel-default > .panel-heading {
+  color: $white;
+  background-color: $matisse;
+  border-color: $matisse;
+}
+.panel-default {
+  border-color: $white;
+}

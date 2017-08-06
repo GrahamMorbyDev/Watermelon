@@ -92,13 +92,13 @@
                 <a href="{{URL::asset('/admin/showVideos') }}">View all Videos</a>
             </li>
             <li>
-                <a href="#">Upload Image set</a>
+                <a href="{{URL::asset('/admin/uploadimages') }}">Upload Image set</a>
             </li>
             <li>
                 <a href="#">View all Image sets</a>
             </li>
             <li>
-                <a href="#">Add a Blog Post</a>
+                <a href="{{URL::asset('/admin/addblog')}}">Add a Blog Post</a>
             </li>
             <li>
                 <a href="#">View all Blog Posts</a>

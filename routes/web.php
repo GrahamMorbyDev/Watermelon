@@ -14,7 +14,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('', 'PagesController@index');
-
+Route::get('about', 'PagesController@about');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@showArticleList');
@@ -29,7 +29,8 @@ Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@creat
 Route::post('/update/user/address', 'UserController@updateAddress');
 Route::middleware(['admin'])->group(function ()
 {
-
+    //Lobby
+    Route::get('/members/lobby' , 'MembersController@lobby');
 
     //Videos
     Route::get('/members/videos', 'MembersController@videos');
@@ -50,6 +51,7 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin/uploadvideo', 'AdminController@UploadVideo');
     Route::post('uploadsinglevideo', 'AdminController@UploadSingleVideo');
     Route::get('/admin/showVideos', 'AdminController@ShowVideos');
+    Route::post('/admin/deletevideo' , 'AdminController@deleteVideo');
 
     //Image Routes
     Route::get('/admin/uploadimages', 'AdminController@Uploadimage');

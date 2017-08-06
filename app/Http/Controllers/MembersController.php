@@ -8,17 +8,21 @@ use Video;
 
 class MembersController extends Controller
 {
+    public function lobby() {
+        return view('members/lobby');
+    }
     //Show Videos
     public function videos() {
         $videos = DB::table('videos')->paginate();
 
         return view('members/videoList' , ['videos' => $videos]);
     }
-
+    //Show Video
     public function show($id) {
         $video = DB::table('videos')->where('id' , $id)->first();
         return view('members/video', compact('video'));
     }
+
 
     //Show Images
     public function imagessets() {

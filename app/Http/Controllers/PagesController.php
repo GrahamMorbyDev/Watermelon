@@ -14,4 +14,8 @@ class PagesController extends Controller
     public function disclaimer() {
         return view('disclaimer');
     }
+    //About page
+    public function about() {
+        return view('about');
+    }
 }

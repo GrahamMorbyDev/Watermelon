@@ -1,6 +1,7 @@
 @extends('layouts/admin')
 
 @section('content')
+    <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <h1>Add Blog</h1>
@@ -39,6 +40,7 @@
 
             <button class="btn btn-success" >Submit</button>
         </form>
+    </div>
     </div>
     <script type="text/javascript">
         CKEDITOR.replace( 'body' );
