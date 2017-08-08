@@ -67,7 +67,9 @@ Route::middleware(['admin'])->group(function ()
     Route::post('/delete/user', 'UserController@deleteUser');
 
     // Blog Routes
-    Route::get('/admin/addblog', 'BlogController@showAddBlog');
+    Route::get('/admin/addblog/', 'BlogController@showAddBlog')->name('addBlog');
+    Route::get('/admin/addblog/{id}', 'BlogController@showAddBlog')->name('editBlog');
     Route::post('saveblog', 'BlogController@createBlog');
+    Route::post('updateblog', 'BlogController@updateBlog');
 });
 

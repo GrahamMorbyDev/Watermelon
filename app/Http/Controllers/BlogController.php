@@ -13,13 +13,20 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showArticleList()
     {
         $blogs = new Blogs();
-        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage','description']);
+        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage', 'description']);
         return view('/blogList', compact('blogs'));
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showBlog($id)
     {
         $blog = new Blogs();
@@ -27,38 +34,68 @@ class BlogController extends Controller
         return view('blog', compact('blog'));
     }
 
-    public function showAddBlog()
+    /**
+     * @param null $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showAddBlog($id = null)
     {
-        return view('admin/addblog');
+        $blog = new Blogs();
+        if ($id)
+        {
+            $blog = $blog->where('id', $id)->first();
+        }
+        return view('admin/addblog', compact('blog'));
     }
 
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function createBlog(Request $request)
     {
-        $blog = new Blogs();
 
-        $imagePath = $request->file('featuredimage')->store('blogimages');
+        // if the id is present then we ar working with an existing blog
+        if ($request->get('id'))
+        {
+            if($this->updateBlog($request))
+            {
+                return redirect()->back()->with('alert-success', 'Updated successfully');
+            } else {
+                return redirect()->back()->with('alert-warning', 'Updated not Successful');
+            }
 
-        $blogAttributes = [
-            'title' => $request->get('title'),
-            'description' => $request->get('description'),
-            'featuredimage' => $imagePath,
-            'body' => $request->get('body'),
-            'publish' => $request->get('publish'),
-            'author' => $request->get('author'),
-            'tags' => $request->get('tags'),
-        ];
+        } else
+        {
+            $this->validateBlog($request, true);
 
-        $blog->create($blogAttributes);
+            $blog = new Blogs();
+            $imagePath = $request->file('featuredimage')->store('blogimages');
 
-        return redirect()->back()->with('alert-success', 'Saved successfully');
+            $blog->title = $request->get('title');
+            $blog->description = $request->get('description');
+            $blog->featuredimage = $imagePath;
+            $blog->body = $request->get('body');
+            $blog->publish = $request->get('publish');
+            $blog->author = $request->get('author');
+            $blog->tags = $request->get('tags');
+
+            $blog->save();
+            return redirect()->route('editBlog', ['id' => $blog->id]);
+        }
     }
 
+    /**
+     * @param Request $request
+     * @return bool
+     */
     public function updateBlog(Request $request)
     {
+        $this->validateBlog($request, false);
+
         $blog = new Blogs();
         $blog = $blog->find($request->get('id'));
-
         if ($request->file('featuredimage'))
         {
             $imagePath = $request->file('featuredimage')->store('blogimages');
@@ -67,18 +104,39 @@ class BlogController extends Controller
             $imagePath = $blog->featuredimage;
         }
 
-        $blogAttributes = [
-            'title' => $request->get('title'),
-            'description' => $request->get('description'),
-            'featuredimage' => $imagePath,
-            'body' => $request->get('body'),
-            'publish' => $request->get('publish'),
-            'author' => $request->get('author'),
-            'tags' => $request->get('tags'),
-        ];
+            $blog->title = $request->get('title');
+            $blog->description = $request->get('description');
+            $blog->featuredimage = $imagePath;
+            $blog->body = $request->get('body');
+            $blog->publish = $request->get('publish');
+            $blog->author = $request->get('author');
+            $blog->tags = $request->get('tags');
 
-        $blog->update($blogAttributes);
+        return $blog->save();
+    }
 
-        return redirect()->back()->with('alert-success', 'Saved successfully');
+    /**
+     * @param Request $request
+     * @param bool $new
+     */
+    public function validateBlog(Request $request, $new = true)
+    {
+
+        if ($new)
+        {
+            $this->validate($request, [
+                'title' => 'required|unique:blogs|max:191',
+                'featuredimage' => 'required|max:1000000'
+            ]);
+        }
+
+        $this->validate($request, [
+            'description' => 'required|max:191',
+
+            'body' => 'required',
+            'publish' => 'required',
+            'author' => 'required|max:191',
+        ]);
+
     }
 }
