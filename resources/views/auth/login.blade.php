@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <img src="{{URL::asset('images/logo.png')}}" alt="Register to watermelon" class="img-responsive">
+            <img src="{{URL::asset('images/placeholderTwo.jpg')}}" alt="Placeholder" class="img-responsive greyImage">
             <hr>
-            <h1>Login</h1>
+            <h1 class="text-center">Login</h1>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

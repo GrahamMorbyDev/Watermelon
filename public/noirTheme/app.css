@@ -8478,6 +8478,7 @@ table .name {
   font-size: 1em;
   color: #647884;
   padding: 9.48px 21px 9.48px 21px;
+  border-radius: 0;
 }
 
 .btn-success {
@@ -8501,6 +8502,20 @@ table .name {
   border: #ffffff;
 }
 
+/* Gray Scale */
+
+.greyImage {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.greyImage:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 .navbar-default {
   background-color: #000000;
   border-color: #D53E38;
@@ -8513,6 +8528,12 @@ table .name {
 
 .navbar-default .navbar-brand {
   color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #D53E38;
+  background-color: transparent;
 }
 
 .pricing {
@@ -8529,5 +8550,18 @@ table .name {
 
 .pricing ul {
   list-style: none;
+}
+
+.boxPadding {
+  padding: 20px;
+}
+
+.parallaxTitle {
+  font-size: 3.75em;
+  text-align: center;
+  padding: 120px;
+  color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 

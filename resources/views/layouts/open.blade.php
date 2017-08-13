@@ -33,19 +33,18 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'WaterMelon') }}
+                    {{ config('app.name', 'Placeholder') }}
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about">About Us</a></li>
-                    <li><a href="whatwedo">What we do</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="#">Demo</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="{{URL::asset('/')}}">Home</a></li>
+                    <li><a href="{{URL::asset('/about')}}">About Us</a></li>
+                    <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
+                    <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
+                    <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
