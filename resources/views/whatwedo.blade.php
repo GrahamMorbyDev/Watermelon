@@ -3,8 +3,7 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}"
-         style="height: 400px; margin-top: -25px;">
+    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}">
         <h1 class="parallaxTitle">Customs</h1>
     </div>
     <!-- header finish -->

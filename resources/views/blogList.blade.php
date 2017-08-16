@@ -2,27 +2,28 @@
 
 @section('content')
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}"
-         style="height: 400px; margin-top: -25px;">
-        <h1 class="parallaxTitle">Blog</h1>
+    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll"
+         data-image-src="{{asset("images/header.png")}}">
+        <h1 class="parallaxTitle">{{ config('app.name', 'Placeholder') }} Blog</h1>
     </div>
     <!-- header finish -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 boxPadding">
                 @foreach($blogs as $blog)
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center thumbnail">
                         <h1>{{$blog->title}}</h1>
                         <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" alt="" class="img-responsive">
+                        <br>
                         <p>{{$blog->description}}</p>
-                        <hr>
                         <div class="btn-group">
-                            <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success">View</a>
+                            <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success btn-lg center-block">View</a>
                         </div>
                     </div>
                 @endforeach
             </div>
+            {{$blogs->links()}}
         </div>
     </div>
-    {{$blogs->links()}}
+
 @endsection

@@ -99,27 +99,19 @@
     <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-md-4">
+            <div class="col-md-4 menu">
                 <h2>Company</h2>
                 <ul>
-                    <li>About us</li>
-                    <li>What we do</li>
-                    <li>Blog</li>
-                    <li>Sign up</li>
-                    <li>Demo</li>
-                    <li>Contact us</li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">What we do</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Contact us</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h2>Company</h2>
-                <ul>
-                    <li>About us</li>
-                    <li>What we do</li>
-                    <li>Blog</li>
-                    <li>Sign up</li>
-                    <li>Demo</li>
-                    <li>Contact us</li>
-                </ul>
+                <h2>Powered by</h2>
+                <img src="{{URL::asset('images/stripe.png')}}" alt="Stripe" class="img-responsive">
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
@@ -132,7 +124,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
 
-            <p>Powered by watermelon</p>
+            <p>Powered by <a href="#" class="watermelon">Watermelon</a></p>
         </div>
     </div>
 </div>

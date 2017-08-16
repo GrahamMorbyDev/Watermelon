@@ -1,13 +1,15 @@
-.pricing {
-  text-align: center;
-border: 1px solid $hoki;
-  h3 {
-    font-size: em(32);
-    background-color: $matisse;
-    color: $white;
-    padding-top: 20px;
-  }
-  ul {
-    list-style: none;
-  }
+.parallax-block {
+  height: 400px;
+  margin-top: -25px;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: black;
+  border: 1px solid $gold;
+  border-radius: 2px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }

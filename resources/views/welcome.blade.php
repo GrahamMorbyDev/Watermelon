@@ -3,8 +3,7 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}"
-         style="height: 400px; margin-top: -25px;">
+    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}">
         <h1 class="parallaxTitle">Welcome</h1>
     </div>
     <!-- header finish -->
@@ -14,6 +13,7 @@
         <div class="row">
             <!-- Top Strip -->
             <div class="col-lg-12 text-center">
+                <h1 class="text-center">{{ config('app.name', 'Placeholder') }}</h1>
                 <hr>
                 <div class="col-md-4">
                     <img src="{{URL::asset('images/placeholder.jpg')}}" alt="Placeholder" class="img-responsive greyImage">
@@ -117,8 +117,5 @@
         </div>
     </div>
     <!-- Banners Bottom end -->
-
-
-
 
 @endsection

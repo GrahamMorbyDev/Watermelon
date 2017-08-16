@@ -3,8 +3,7 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}"
-         style="height: 400px; margin-top: -25px;">
+    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll" data-image-src="{{asset("images/header.png")}}">
         <h1 class="parallaxTitle">About Us</h1>
     </div>
     <!-- header finish -->
@@ -13,7 +12,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>About Placeholder</h1>
+                <h1>About {{ config('app.name', 'Placeholder') }}</h1>
                 <hr>
                 <div class="col-md-8 col-md-offset-2">
                     <img src="{{URL::asset('images/placeholderTwo.jpg')}}" alt="Placeholder" class="img-responsive greyImage">

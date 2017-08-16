@@ -8502,6 +8502,11 @@ table .name {
   border: #ffffff;
 }
 
+.btn-lg,
+.btn-group-lg > .btn {
+  font-size: 1.25em;
+}
+
 /* Gray Scale */
 
 .greyImage {
@@ -8530,26 +8535,56 @@ table .name {
   color: #ffffff;
 }
 
+.navbar-default .navbar-brand:hover {
+  color: #D53E38;
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #D53E38;
   background-color: transparent;
 }
 
-.pricing {
-  text-align: center;
-  border: 1px solid #647884;
+footer {
+  border-top: 5px solid #D53E38;
+  margin-top: 25px;
 }
 
-.pricing h3 {
-  font-size: 2em;
-  background-color: #000000;
+footer .watermelon {
+  color: #D53E38;
+}
+
+footer .watermelon:hover {
   color: #ffffff;
-  padding-top: 20px;
 }
 
-.pricing ul {
-  list-style: none;
+footer .menu li {
+  padding: 5px;
+}
+
+footer .menu li a {
+  color: #D53E38;
+}
+
+footer .menu li a:hover {
+  color: #ffffff;
+}
+
+.parallax-block {
+  height: 400px;
+  margin-top: -25px;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: black;
+  border: 1px solid #D53E38;
+  border-radius: 2px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 
 .boxPadding {

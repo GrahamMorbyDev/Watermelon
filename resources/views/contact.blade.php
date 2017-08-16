@@ -13,8 +13,8 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12">
+                <h1 class="text-center">Contact {{ config('app.name', 'Placeholder') }}</h1>
                 <hr>
-                <h1 class="text-center">Contact Us</h1>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
