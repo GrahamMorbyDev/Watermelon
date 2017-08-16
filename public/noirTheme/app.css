@@ -8637,3 +8637,7 @@ footer .menu li a:hover {
   -webkit-text-stroke-color: black;
 }
 
+.globalMargin {
+  margin-top: 75px;
+}
+

@@ -1,11 +1,11 @@
-@extends('layouts.open')
+@extends('layouts.members')
 
 @section('content')
     <div class="container">
 
         <!-- Disclaimer Text -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 globalMargin">
                 <h1 class="text-center">Borderland Bound Site Agreement</h1>
                 <hr>
                 <p class="text-center text-inverse">All bondage scenarios depicted within our productions (video & images) are strictly of a
@@ -154,7 +154,7 @@
                             <option value="1947">1947</option>
                         </select>
                     </div>
-                    <button class="btn btn-success" id="select">Select</button>
+                    <a href="{{URL::asset('home')}}" class="btn btn-success" id="select">Select</a>
                 </form>
             </div>
 
