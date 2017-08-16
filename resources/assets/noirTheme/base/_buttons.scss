@@ -13,6 +13,10 @@
   background-color: $white;
   border: $white;
 }
+.btn-warning {
+  @include button-bg($darkgreen, $darkgreen);
+  color: white;
+}
 .btn-lg {
   font-size: em(20);
 }

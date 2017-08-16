@@ -55,13 +55,17 @@ h6, .h6 {
 
 // Hyper Links
 a {
-  color: $denim;
+  color: $gold;
   text-decoration: none;
   &:hover {
-    color: $gold;
+    color: $white;
   }
 }
-
+.fourzero {
+h1 {
+  font-size: em(75);
+}
+}
 
 //Neon Signs
 .neon {

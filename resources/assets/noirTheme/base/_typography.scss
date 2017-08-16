@@ -56,10 +56,9 @@ h6, .h6 {
 
 // Hyper Links & Nav Tabs
 a {
-  color: $denim;
-  text-decoration: none;
+  color: $gold;
   &:hover {
-    color: $gold;
+    color: $white;
   }
 }
 .nav > li > a:hover, .nav > li > a:focus {
@@ -79,4 +78,20 @@ a {
 
 .text-inverse {
   color: $gold;
+}
+.fourzero {
+  padding: 10px;
+  h1 {
+    font-size: em(100);
+    span {
+      font-size: em(8);
+    }
+  }
+  p {
+    @include fontStyles(bold, $white, inherit);
+    font-family: 'Bungee', cursive;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    padding: 0 0 30px 0;
+  }
 }

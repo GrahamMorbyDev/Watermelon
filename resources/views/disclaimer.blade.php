@@ -2,16 +2,18 @@
 
 @section('content')
     <div class="container">
+
+        <!-- Disclaimer Text -->
         <div class="row">
             <div class="col-md-12">
+                <h1 class="text-center">Borderland Bound Site Agreement</h1>
+                <hr>
                 <p class="text-center text-inverse">All bondage scenarios depicted within our productions (video & images) are strictly of a
                     role play and story driven nature and feature fully consenting participants and established
                     safe signals (clearly defined within each fantasy scene) between model(s) and crew are in
                     continual use throughout the production. Thus, these are pure, tongue in cheek adventuristic
                     fantasy scenarios, without exception fully consensual, contextual and supported by model
                     release to this effect.</p>
-                <hr>
-                <h1 class="text-center">Borderland Bound Site Agreement</h1>
                 <p>This Website contains sexually-oriented adult content which may include visual images and
                     verbal descriptions of nude adults, adults engaging in sexual acts, and other audio and
                     visual material of a sexually-explicit nature. Permission to enter this Website and to
@@ -32,8 +34,22 @@
                 <p>If all of these conditions apply to you, you are permitted to ENTER. If any of these conditions
                     do not apply to you, you are forbidden from entering and viewing the contents of this Website
                     and you should now leave.</p>
+
+
+            </div>
+        </div>
+        <!-- End Disclaimer Text -->
+
+        <!-- Verify Form -->
+        <div class="row">
+
+            <div class="col-md-12">
+                <hr>
+                <h3 class="text-center">By ENTERING your date of birth, you are stating you are over the age of 18 and
+                    agree with the <a href="{{URL::asset('terms')}}">Terms & Conditions</a>.
+                    If you don't understand the above statement, you must LEAVE</h3>
                 <form class="form-inline" id="dateForm">
-                    <div class="col-md-2 col-md-offset-3">
+                    <div class="col-md-2 col-md-offset-2">
                         <select name="DOBMonth" class="form-control">
                             <option> - Month - </option>
                             <option value="January">January</option>
@@ -140,8 +156,9 @@
                     </div>
                     <button class="btn btn-success" id="select">Select</button>
                 </form>
-
             </div>
+
         </div>
+        <!-- End Verify Form -->
     </div>
 @stop

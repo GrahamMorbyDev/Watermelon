@@ -1,4 +1,4 @@
-@extends('layouts/members')
+@extends('layouts/open')
 @section('content')
 
     <div class="container">
@@ -6,7 +6,7 @@
             <h1>Videos</h1>
             @foreach($videos as $video)
                 <div class="col-md-3 text-center">
-                    <h1>{{$video->title}}</h1>
+                    <h2>{{$video->title}}</h2>
                     <img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" class="img-responsive">
                     <p>{!!html_entity_decode($video->description)!!}</p>
                     <hr>

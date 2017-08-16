@@ -8421,12 +8421,11 @@ h6,
 }
 
 a {
-  color: #231f20;
-  text-decoration: none;
+  color: #D53E38;
 }
 
 a:hover {
-  color: #D53E38;
+  color: #ffffff;
 }
 
 .nav > li > a:hover,
@@ -8451,6 +8450,28 @@ a:hover {
 
 .text-inverse {
   color: #D53E38;
+}
+
+.fourzero {
+  padding: 10px;
+}
+
+.fourzero h1 {
+  font-size: 6.25em;
+}
+
+.fourzero h1 span {
+  font-size: 0.5em;
+}
+
+.fourzero p {
+  font-weight: bold;
+  color: #ffffff;
+  line-height: inherit;
+  font-family: 'Bungee', cursive;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  padding: 0 0 30px 0;
 }
 
 table {
@@ -8500,6 +8521,22 @@ table .name {
 .btn-default {
   background-color: #ffffff;
   border: #ffffff;
+}
+
+.btn-warning {
+  background: #2A9F3E;
+  border: #2A9F3E;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #217f31;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:active {
+  background: #0f3a17;
 }
 
 .btn-lg,

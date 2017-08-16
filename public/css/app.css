@@ -11473,12 +11473,16 @@ h6,
 }
 
 a {
-  color: #ec1c23;
+  color: #00BEA3;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00BEA3;
+  color: #ffffff;
+}
+
+.fourzero h1 {
+  font-size: 4.6875em;
 }
 
 .neon {
