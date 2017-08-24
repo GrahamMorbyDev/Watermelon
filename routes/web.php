@@ -44,6 +44,7 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/members/imagessets', 'MembersController@imagessets');
     Route::get('members/imagessets/{setname}', 'MembersController@showimages');
 
+
 });
 
 Route::middleware(['admin'])->group(function ()
@@ -71,5 +72,8 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin/addblog/{id}', 'BlogController@showAddBlog')->name('editBlog');
     Route::post('saveblog', 'BlogController@createBlog');
     Route::post('updateblog', 'BlogController@updateBlog');
+
+    //Headers
+    Route::get('/admin/headers', 'AdminController@headers');
 });
 
