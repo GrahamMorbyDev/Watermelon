@@ -93,4 +93,11 @@ class AdminController extends Controller
         return redirect()->back()->with('alert-success', 'Uploaded successfully');
 
     }
+
+    //Headers Change
+    public function headers()
+    {
+        return view('admin.headers');
+    }
+
 }
