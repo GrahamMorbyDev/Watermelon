@@ -48,9 +48,10 @@
                 <h3 class="text-center">By ENTERING your date of birth, you are stating you are over the age of 18 and
                     agree with the <a href="{{URL::asset('terms')}}">Terms & Conditions</a>.
                     If you don't understand the above statement, you must LEAVE</h3>
-                <form class="form-inline" id="dateForm">
+                <form class="form-inline" id="dateForm" method="post" action="{{URL::asset('storedb')}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="col-md-2 col-md-offset-2">
-                        <select name="DOBMonth" class="form-control">
+                        <select name="month" id="month" class="form-control">
                             <option> - Month - </option>
                             <option value="January">January</option>
                             <option value="Febuary">Febuary</option>
@@ -67,7 +68,7 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <select name="DOBDay" class="form-control">
+                        <select name="day" id="day" class="form-control">
                             <option> - Day - </option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -103,7 +104,7 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <select name="DOBYear" class="form-control">
+                        <select name="year" id="year" class="form-control">
                             <option> - Year - </option>
                             <option value="1993">1993</option>
                             <option value="1992">1992</option>
@@ -153,8 +154,9 @@
                             <option value="1948">1948</option>
                             <option value="1947">1947</option>
                         </select>
+                        <input type="hidden" name="ip" id="ip" value="<?= $_SERVER['REMOTE_ADDR'] ?>">
                     </div>
-                    <a href="{{URL::asset('home')}}" class="btn btn-success" id="select">Select</a>
+                    <input type="submit" class="btn btn-success" id="select" value="Submit">
                 </form>
             </div>
 

@@ -14,6 +14,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('', 'PagesController@disclaimer');
+Route::post('storedb', 'PagesController@storeDob');
 Route::get('home', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('whatwedo', 'PagesController@whatwedo');
