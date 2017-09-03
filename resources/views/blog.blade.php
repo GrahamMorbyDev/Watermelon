@@ -5,7 +5,7 @@
         <div class="row">
             <?$auth = \Illuminate\Support\Facades\Auth::user()?>
             @if(isset($auth) && $auth->isAdmin())
-                <button class="btn btn-success" type="button" onclick="window.location='{{ URL::asset("/admin/addblog/".$blog->id) }}'" >Edit Blog</button>
+                <button class="btn btn-success" type="button" onclick="window.location='{{ URL::asset("/admin/blog/".$blog->id) }}'" >Edit Blog</button>
             @endif
             <div class="col-lg-12">
                 <h1>{{$blog->title}}</h1>

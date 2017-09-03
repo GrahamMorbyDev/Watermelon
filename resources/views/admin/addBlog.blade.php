@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Add Blog</h1>
+                <h1>{{$blog->id? 'Edit Blog':'Add Blog'}}</h1>
             </div>
         </div>
         <div class="row">

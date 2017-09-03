@@ -63,8 +63,9 @@ Route::middleware(['admin'])->group(function ()
     Route::post('/admin/deletevideo' , 'AdminController@deleteVideo');
 
     //Image Routes
-    Route::get('/admin/uploadimages', 'AdminController@Uploadimage');
-    Route::post('/admin/uploadimageset', 'AdminController@UploadImageSet');
+    Route::get('/admin/images', 'ImageController@showUploadimage')->name('addImage');
+    Route::get('/admin/images/{id}', 'ImageController@showUploadimage')->name('editImage');
+    Route::post('/admin/uploadimageset', 'ImageController@uploadImageSet');
 
     // User Routes
     Route::get('/admin/users', 'AdminController@ShowUsers');
@@ -72,8 +73,8 @@ Route::middleware(['admin'])->group(function ()
     Route::post('/delete/user', 'UserController@deleteUser');
 
     // Blog Routes
-    Route::get('/admin/addblog/', 'BlogController@showAddBlog')->name('addBlog');
-    Route::get('/admin/addblog/{id}', 'BlogController@showAddBlog')->name('editBlog');
+    Route::get('/admin/blog/', 'BlogController@showAddBlog')->name('addBlog');
+    Route::get('/admin/blog/{id}', 'BlogController@showAddBlog')->name('editBlog');
     Route::post('saveblog', 'BlogController@createBlog');
     Route::post('updateblog', 'BlogController@updateBlog');
 

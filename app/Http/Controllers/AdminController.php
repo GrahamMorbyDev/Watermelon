@@ -72,28 +72,6 @@ class AdminController extends Controller
         return view('admin/users', compact('users'));
     }
 
-
-
-    // Upload Image set
-    public function Uploadimage()
-    {
-        return view('admin/uploadimages');
-    }
-    //Upload image sets to DB
-    public function UploadImageSet(Request $request)
-    {
-     $files = $request->file('name');
-     foreach($files as $file){
-         $imagepath = $file->store('imagesets');
-         Images::create([
-             'setname' => $request->get('setname'),
-             'name' => $imagepath
-         ]);
-     }
-        return redirect()->back()->with('alert-success', 'Uploaded successfully');
-
-    }
-
     //Headers Change
     public function headers()
     {
