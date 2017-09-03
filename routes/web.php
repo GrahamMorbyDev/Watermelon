@@ -48,6 +48,7 @@ Route::middleware(['members'])->group(function ()
     //Image
     Route::get('/members/imagessets', 'MembersController@imagessets');
     Route::get('members/imagessets/{setname}', 'MembersController@showimages');
+    Route::post('members/imageset/download' , 'MembersController@downloadImages');
 
 
 });
