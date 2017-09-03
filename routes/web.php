@@ -35,7 +35,7 @@ Route::get('/subscribe', 'SubscriptionController@index');
 Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@createSubscription']);
 
 Route::post('/update/user/address', 'UserController@updateAddress');
-Route::middleware(['admin'])->group(function ()
+Route::middleware(['members'])->group(function ()
 {
     //Lobby
     Route::get('/members/lobby' , 'MembersController@lobby');
