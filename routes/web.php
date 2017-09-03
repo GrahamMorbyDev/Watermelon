@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', 'PagesController@disclaimer');
 Route::post('storedb', 'PagesController@storeDob');
-Route::get('home', 'PagesController@index');
+Route::get('welcome', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('whatwedo', 'PagesController@whatwedo');
+Route::get('updates', 'PagesController@updates');
 Route::get('contact', 'PagesController@contact');
 Route::get('terms', 'PagesController@terms');
 
@@ -61,6 +62,7 @@ Route::middleware(['admin'])->group(function ()
     Route::post('uploadsinglevideo', 'AdminController@UploadSingleVideo');
     Route::get('/admin/showVideos', 'AdminController@ShowVideos');
     Route::post('/admin/deletevideo' , 'AdminController@deleteVideo');
+    Route::post('/admin/editvideo', 'AdminController@editvideo');
 
     //Image Routes
     Route::get('/admin/images', 'ImageController@showUploadimage')->name('addImage');

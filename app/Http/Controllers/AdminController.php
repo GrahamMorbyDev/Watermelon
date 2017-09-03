@@ -65,6 +65,35 @@ class AdminController extends Controller
         return redirect()->back()->with('alert-success', 'Deleted successfully');
     }
 
+    //edit Video
+    public function editvideo()
+    {
+        $id = $_POST['id'];
+        $video = DB::table('videos')->where('id', $id)->get()->first();
+        return view('admin/editvideo', compact('video'));
+    }
+
+    //Update Video
+    public function updateVideo(Request $request)
+    {
+       $video = new Video();
+       $video = $video->find($request->get('id'));
+       $videopath = $request->file('filename')->store('videos');
+
+        if($request->file('featuredimage')) {
+           $imagePath = $request->file('featuredimage')->store('videoimages');
+       }else
+       {
+           $imagePath = $video->featuredimage;
+       }
+       $video->title = $request->get('title');
+       $video->description = $request->get('description');
+       $video->featuredimage = $imagePath;
+       $video->file = $videopath;
+
+       return $video->save();
+    }
+
     // show users page
     public function ShowUsers()
     {

@@ -12,7 +12,8 @@
                 <td>Featured Image</td>
                 <td>Created</td>
                 <td>Updated</td>
-                <td>Edit/Delete</td>
+                <td>Edit</td>
+                <td>Delete</td>
             </tr>
             </thead>
             <tbody>
@@ -23,7 +24,14 @@
                 <td><img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" width="100px"></td>
                 <td>{{$video->created_at}}</td>
                 <td>{{$video->updated_at}}</td>
-                <td><a data-toggle="modal" data-target="#" class="btn btn-success">edit</a>
+                    <td>
+                        <form action="{{URL::asset('/admin/editvideo')}}" method="post" class="form-group">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="id" value="{{$video->id}}">
+                            <button type="submit"  class="btn btn-success">Edit</button>
+                        </form>
+                    </td>
+                <td>
                     <form action="{{URL::asset('/admin/deletevideo/')}}" method="post" class="form-group">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="id" value="{{$video->id}}">

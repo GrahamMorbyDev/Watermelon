@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Dob;
+use Video;
 
 class PagesController extends Controller
 {
@@ -23,7 +25,7 @@ class PagesController extends Controller
             'year' => $request->get('year'),
             'ip' => $request->get('ip')
         ]);
-        return redirect('home');
+        return redirect('welcome');
     }
     //About page
     public function about() {
@@ -40,5 +42,14 @@ class PagesController extends Controller
     //Terms
     public function terms() {
         return view('terms');
+    }
+    //Latest Updates Page
+    public function updates() {
+        $videos = DB::table('videos')->paginate(6);
+        $images = DB::table('images')
+            ->select(DB::raw('distinct(setname) , name'))
+            ->groupBy('setname')
+            ->get();
+        return view('updates', compact('videos', 'images'));
     }
 }
