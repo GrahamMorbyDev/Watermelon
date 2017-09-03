@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UserDob extends Migration
+class Dobs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class UserDob extends Migration
      */
     public function up()
     {
-        Schema::create('userDob', function (Blueprint $table) {
+        Schema::create('dobs', function (Blueprint $table) {
             $table->increments('id');
             $table->text('month');
             $table->text('day');

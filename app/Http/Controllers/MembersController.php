@@ -22,6 +22,13 @@ class MembersController extends Controller
         $video = DB::table('videos')->where('id' , $id)->first();
         return view('members/video', compact('video'));
     }
+    // Download Video
+    public function downloadVideos() {
+        $file_name = $_POST['title'];
+        $file_path = public_path('storage/'.$file_name);
+        return response()->download($file_path);
+
+    }
 
 
     //Show Images

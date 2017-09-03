@@ -42,6 +42,7 @@ Route::middleware(['admin'])->group(function ()
     //Videos
     Route::get('/members/videos', 'MembersController@videos');
     Route::get('members/video/{id}', 'MembersController@show');
+    Route::post('members/video/download' , 'MembersController@downloadVideos');
 
     //Image
     Route::get('/members/imagessets', 'MembersController@imagessets');

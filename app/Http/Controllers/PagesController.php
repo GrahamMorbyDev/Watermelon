@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\userDob;
+use App\Dob;
 
 class PagesController extends Controller
 {
@@ -17,13 +17,13 @@ class PagesController extends Controller
     }
     // Store form from the disclaimer
     public function storeDob(Request $request) {
-        userDob::create([
+        Dob::create([
             'month' => $request->get('month'),
             'day' => $request->get('day'),
             'year' => $request->get('year'),
             'ip' => $request->get('ip')
         ]);
-        return redirect('welcome');
+        return redirect('home');
     }
     //About page
     public function about() {
