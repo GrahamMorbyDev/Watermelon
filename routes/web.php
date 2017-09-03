@@ -58,16 +58,20 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin', 'AdminController@AdminHome');
 
     //Video Routes
-    Route::get('/admin/uploadvideo', 'AdminController@UploadVideo');
-    Route::post('uploadsinglevideo', 'AdminController@UploadSingleVideo');
-    Route::get('/admin/showVideos', 'AdminController@ShowVideos');
-    Route::post('/admin/deletevideo' , 'AdminController@deleteVideo');
-    Route::post('/admin/editvideo', 'AdminController@editvideo');
+    Route::get('/admin/uploadvideo', 'VideoController@uploadVideo');
+    Route::post('uploadsinglevideo', 'VideoController@uploadSingleVideo');
+    Route::get('/admin/showVideos', 'VideoController@showVideos');
+    Route::post('/admin/deletevideo' , 'VideoController@deleteVideo');
+    Route::post('/admin/editvideo', 'VideoController@editVideo');
 
     //Image Routes
+    Route::get('/admin/images/all', 'ImageController@showImages');
     Route::get('/admin/images', 'ImageController@showUploadimage')->name('addImage');
     Route::get('/admin/images/{id}', 'ImageController@showUploadimage')->name('editImage');
+    Route::post('/admin/images/delete' , 'ImageController@deleteImage');
     Route::post('/admin/uploadimageset', 'ImageController@uploadImageSet');
+
+
 
     // User Routes
     Route::get('/admin/users', 'AdminController@ShowUsers');

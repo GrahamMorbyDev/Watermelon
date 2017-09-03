@@ -2,13 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Video;
 use App\Images;
-use App\Blogs;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\DB;
 
 class ImageController extends Controller
 {
@@ -21,6 +16,14 @@ class ImageController extends Controller
             $image = $image->where('id', $id)->first();
         }
         return view('admin/uploadimages', compact('image'));
+    }
+
+    // Upload Image set
+    public function showImages()
+    {
+        $images = new Images();
+        $images = $images->paginate(10);
+        return view('admin/showImages', compact('images'));
     }
 
     //Upload image sets to DB
@@ -97,5 +100,17 @@ class ImageController extends Controller
             'setname' => 'required||max:191',
         ]);
 
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function deleteImage(Request $request)
+    {
+        $image = new Images;
+        $image = $image->find($request->get('id'));
+        $image->delete();
+        return redirect()->back()->with('alert-success', 'Deleted successfully');
     }
 }
