@@ -63,6 +63,7 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin/showVideos', 'AdminController@ShowVideos');
     Route::post('/admin/deletevideo' , 'AdminController@deleteVideo');
     Route::post('/admin/editvideo', 'AdminController@editvideo');
+    Route::post('/admin/updatevideo', 'AdminController@updateVideo');
 
     //Image Routes
     Route::get('/admin/uploadimages', 'AdminController@Uploadimage');

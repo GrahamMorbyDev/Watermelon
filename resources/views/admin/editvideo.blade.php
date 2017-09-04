@@ -6,7 +6,7 @@
             <h1>Edit {{$video->title}}</h1>
         </div>
         <div class="row">
-            <form action="{{URL::asset('/uploadsinglevideo')}}" method="post" enctype="multipart/form-data">
+            <form action="{{URL::asset('/admin/updatevideo')}}" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <label for="title">Video Title</label>
