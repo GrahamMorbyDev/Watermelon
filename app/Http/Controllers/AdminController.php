@@ -7,7 +7,6 @@ use App\Video;
 use App\Images;
 use App\Blogs;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -21,77 +20,6 @@ class AdminController extends Controller
         $blogs = Blogs::get()->count();
 
         return view('admin/index' , compact('users' , 'videos', 'images', 'blogs'));
-
-
-    }
-
-    // Upload Video Page
-    public function UploadVideo()
-    {
-        return view('admin/uploadvideo');
-    }
-
-    public function ShowVideos() {
-        $videos = Video::paginate(10);
-        return view('admin/showVideos', compact('videos'));
-    }
-
-    // Upload single Video
-    public function UploadSingleVideo(Request $request)
-    {
-        //image
-        $imagepath = $request->file('featuredimage')->store('videoimages');
-
-        //video
-        $videopath = $request->file('filename')->store('videos');
-
-
-        Video::create([
-            'title' => $request->get('title'),
-            'description' => $request->get('description'),
-            'featuredimage' => $imagepath,
-            'filename' => $videopath
-        ]);
-
-        return redirect()->back()->with('alert-success', 'Uploaded successfully');
-
-    }
-    //Delete Video
-    public function deleteVideo(Request $request)
-    {
-        $video = new Video;
-        $video = $video->find($request->get('id'));
-        $video->delete();
-        return redirect()->back()->with('alert-success', 'Deleted successfully');
-    }
-
-    //edit Video
-    public function editvideo()
-    {
-        $id = $_POST['id'];
-        $video = DB::table('videos')->where('id', $id)->get()->first();
-        return view('admin/editvideo', compact('video'));
-    }
-
-    //Update Video
-    public function updateVideo(Request $request)
-    {
-       $video = new Video();
-       $video = $video->find($request->get('id'));
-       $videopath = $request->file('filename')->store('videos');
-
-        if($request->file('featuredimage')) {
-           $imagePath = $request->file('featuredimage')->store('videoimages');
-       }else
-       {
-           $imagePath = $video->featuredimage;
-       }
-       $video->title = $request->get('title');
-       $video->description = $request->get('description');
-       $video->featuredimage = $imagePath;
-       $video->file = $videopath;
-
-       return $video->save();
     }
 
     // show users page
@@ -99,28 +27,6 @@ class AdminController extends Controller
     {
         $users = User::paginate(15);
         return view('admin/users', compact('users'));
-    }
-
-
-
-    // Upload Image set
-    public function Uploadimage()
-    {
-        return view('admin/uploadimages');
-    }
-    //Upload image sets to DB
-    public function UploadImageSet(Request $request)
-    {
-     $files = $request->file('name');
-     foreach($files as $file){
-         $imagepath = $file->store('imagesets');
-         Images::create([
-             'setname' => $request->get('setname'),
-             'name' => $imagepath
-         ]);
-     }
-        return redirect()->back()->with('alert-success', 'Uploaded successfully');
-
     }
 
     //Headers Change
