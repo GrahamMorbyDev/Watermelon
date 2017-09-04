@@ -30,8 +30,8 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+            <a class="navbar-brand" href="{{ url('/welcome') }}">
+                {{ config('app.name', 'Placeholder') }}
             </a>
         </div>
 
@@ -78,8 +78,8 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
-                    Watermelon
+                <a href="/welcome">
+                    {{ config('app.name', 'Placeholder') }}
                 </a>
             </li>
             <li>
