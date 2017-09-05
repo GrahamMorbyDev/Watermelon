@@ -86,7 +86,7 @@
                 <a href="{{URL::asset('admin/')}}">Dashboard</a>
             </li>
             <li>
-                <a href="{{URL::asset('/admin/uploadvideo') }}">Upload Video</a>
+                <a href="{{URL::asset('/admin/videos') }}">Upload Video</a>
             </li>
             <li>
                 <a href="{{URL::asset('/admin/showVideos') }}">View all Videos</a>

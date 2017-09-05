@@ -59,7 +59,8 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin', 'AdminController@AdminHome');
 
     //Video Routes
-    Route::get('/admin/uploadvideo', 'VideoController@uploadVideo');
+    Route::get('/admin/videos', 'VideoController@showUploadVideo')->name('addVideo');
+    Route::get('/admin/videos/{id}', 'VideoController@showUploadVideo')->name('editVideo');
     Route::post('uploadsinglevideo', 'VideoController@uploadSingleVideo');
     Route::get('/admin/showVideos', 'VideoController@showVideos');
     Route::post('/admin/deletevideo' , 'VideoController@deleteVideo');

@@ -19,25 +19,21 @@
             <tbody>
             @foreach($videos as $video)
                 <tr>
-            <td>{{$video->id}}</td>
-            <td>{{$video->title}}</td>
-                <td><img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" width="100px"></td>
-                <td>{{$video->created_at}}</td>
-                <td>{{$video->updated_at}}</td>
+                    <td>{{$video->id}}</td>
+                    <td>{{$video->title}}</td>
+                    <td><img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" width="100px"></td>
+                    <td>{{$video->created_at}}</td>
+                    <td>{{$video->updated_at}}</td>
                     <td>
-                        <form action="{{URL::asset('/admin/editvideo')}}" method="post" class="form-group">
+                        <a href="{{URL::asset('/admin/videos/'.$video->id)}}" type="submit" class="btn btn-success">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{URL::asset('/admin/deletevideo/')}}" method="post" class="form-group">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="id" value="{{$video->id}}">
-                            <button type="submit"  class="btn btn-success">Edit</button>
+                            <button class="btn btn-warning">delete</button>
                         </form>
                     </td>
-                <td>
-                    <form action="{{URL::asset('/admin/deletevideo/')}}" method="post" class="form-group">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="id" value="{{$video->id}}">
-                    <button  class="btn btn-warning">delete</button>
-                    </form>
-                </td>
                 </tr>
             @endforeach
             </tbody>

@@ -25,12 +25,10 @@
                     <td>{{$image->created_at}}</td>
                     <td>{{$image->updated_at}}</td>
                     <td>
-                        <a href="{{URL::asset('/admin/images/'.$image->id)}}" type="submit"
-                           class="btn btn-success">Edit</a>
+                        <a href="{{URL::asset('/admin/images/'.$image->id)}}" type="submit" class="btn btn-success">Edit</a>
                     </td>
                     <td>
-                        <form action="{{URL::asset('/admin/images/delete')}}" method="post"
-                              class="form-group">
+                        <form action="{{URL::asset('/admin/images/delete')}}" method="post" class="form-group">
                             <button class="btn btn-warning">Delete</button>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="id" value="{{$image->id}}">
