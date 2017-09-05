@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Images;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use ZipArchive;
 
 class MembersController extends Controller
 {
@@ -39,10 +42,39 @@ class MembersController extends Controller
     // Download Video
     public function downloadImages(Request $request)
     {
-        $filename = $request->get('name');
-        $filePath = public_path('storage/' . $filename);
-        $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        return response()->download($filePath, $request->get('setname') . '.' . $ext);
+        $name = $request->get('setname');
+
+        $images = new Images;
+        $images = $images->where('setname', $name)->get();
+        $files = array();
+        foreach($images as $image)
+        {
+            array_push($files, $image->name);
+        }
+
+
+//        var_dump($files); die();
+        $zipName = public_path('storage/imagesets/'. $name .'.zip');
+        $f = is_writable(public_path('storage/imagesets/'));
+
+//        $zipThing = Storage::put('imagesets/'.$name .'.zip', 'public');
+//        var_dump($zipThing);
+        $zip = new ZipArchive;
+        $errors = $zip->open($zipName, ZipArchive::CREATE);
+//        var_dump($errors); die();
+        foreach ($files as $i => $file) {
+            var_dump($file);
+            $ext = pathinfo($file, PATHINFO_EXTENSION);
+            $d = $zip->addFile(public_path('storage/'.$file), $name.'/'.($i+1).'.'.$ext);
+//            var_dump($d); die();
+        }
+        $zip->close();
+
+
+//        $filename = $request->get('name');
+//        $filePath = public_path('storage/' . $filename);
+//        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        return response()->download($zipName);
     }
 
 
