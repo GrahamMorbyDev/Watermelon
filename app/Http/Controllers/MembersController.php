@@ -47,34 +47,29 @@ class MembersController extends Controller
         $images = new Images;
         $images = $images->where('setname', $name)->get();
         $files = array();
+
         foreach($images as $image)
         {
             array_push($files, $image->name);
         }
 
 
-//        var_dump($files); die();
+        $headers = '';
+
         $zipName = public_path('storage/imagesets/'. $name .'.zip');
-        $f = is_writable(public_path('storage/imagesets/'));
+        $writable = is_writable(public_path('storage/imagesets/'));
 
-//        $zipThing = Storage::put('imagesets/'.$name .'.zip', 'public');
-//        var_dump($zipThing);
         $zip = new ZipArchive;
-        $errors = $zip->open($zipName, ZipArchive::CREATE);
-//        var_dump($errors); die();
-        foreach ($files as $i => $file) {
-            var_dump($file);
-            $ext = pathinfo($file, PATHINFO_EXTENSION);
-            $d = $zip->addFile(public_path('storage/'.$file), $name.'/'.($i+1).'.'.$ext);
-//            var_dump($d); die();
+        if($zip->open($zipName, ZipArchive::CREATE))
+        {
+            foreach ($files as $i => $file) {
+                $ext = pathinfo($file, PATHINFO_EXTENSION);
+                $zip->addFile(public_path('storage/'.$file), $name.'/'.($i+1).'.'.$ext);
+            }
+            $zip->close();
+            return response()->download($zipName, null,  $headers);
         }
-        $zip->close();
-
-
-//        $filename = $request->get('name');
-//        $filePath = public_path('storage/' . $filename);
-//        $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        return response()->download($zipName);
+        return redirect()->back()->with('alert-warning', 'Failed to download');
     }
 
 
