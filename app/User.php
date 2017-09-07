@@ -48,7 +48,13 @@ class User extends Authenticatable
     public function getAddress()
     {
         $address = new Address();
-        return $address->where('user_id', $this->id)->first();
+        $data = $address->where('user_id', $this->id)->first();
+        if($data)
+        {
+            return $data;
+        }
+
+        return false;
     }
 
     /**
