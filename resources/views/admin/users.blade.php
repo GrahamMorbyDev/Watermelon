@@ -50,7 +50,7 @@
                                     <div class="modal-body" style="color: black;">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $user->id }}">
-                                        <? $user->getAddress() ? $address = $user->getAddress() : $address = false?>
+                                        <? $address = false ?>
                                         @if($address)
                                         <div class="form-group">
                                             <label for="name-{{$user->id}}">Name</label>
