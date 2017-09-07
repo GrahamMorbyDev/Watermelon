@@ -107,7 +107,7 @@
                                         <button class="btn btn-success pull-right">submit</button>
                                     </div>
                                 </form>
-                                <? $sub = $user->getSubscription()?>
+                                {{ $sub = $user->getSubscription()}}
                             </div>
                         </div>
                     </div>
