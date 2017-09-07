@@ -36,7 +36,7 @@
                         </td>
                     </tr>
 
-                    
+
 
                     <div class="modal fade" id="edit{{$user->id}}" tabindex="-1" role="dialog"
                          aria-labelledby="myModalLabel">
@@ -51,7 +51,7 @@
                                     <div class="modal-body" style="color: black;">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $user->id }}">
-                                        <? $address = $user->getAddress()?>
+                                        {{$address = $user->getAddress()}}
                                         @if($address)
                                         <div class="form-group">
                                             <label for="name-{{$user->id}}">Name</label>
