@@ -45,7 +45,7 @@ class BlogController extends Controller
         {
             $blog = $blog->where('id', $id)->first();
         }
-        return view('admin/addblog', compact('blog'));
+        return view('admin/addBlog', compact('blog'));
     }
 
 
