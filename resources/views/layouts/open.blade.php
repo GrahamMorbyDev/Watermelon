@@ -32,7 +32,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/welcome') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Placeholder') }}
                 </a>
             </div>
@@ -40,10 +40,8 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{URL::asset('/welcome')}}">Home</a></li>
+                    <li><a href="{{URL::asset('')}}">Home</a></li>
                     <li><a href="{{URL::asset('/about')}}">About Us</a></li>
-                    <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
-                    <li><a href="{{URL::asset('updates')}}">Updates</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>

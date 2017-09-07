@@ -2,9 +2,8 @@
 
 @section('content')
     <!--Header -->
-    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll"
-         data-image-src="{{asset("images/header.png")}}">
-        <h1 class="parallaxTitle">{{ config('app.name', 'Placeholder') }} Blog</h1>
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpeg")}}"
+         style="height: 400px; margin-top: -25px;">
     </div>
     <!-- header finish -->
     <div class="container">
