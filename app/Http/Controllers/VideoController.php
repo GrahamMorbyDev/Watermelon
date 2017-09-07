@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class VideoController extends Controller
 {
     // Upload Video Page
-    public function showUploadVideo($id)
+    public function showUploadVideo($id = null)
     {
         $video = new Video();
         if ($id)
