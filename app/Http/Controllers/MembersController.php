@@ -54,11 +54,14 @@ class MembersController extends Controller
         }
 
 
-        $headers = '';
-
         $zipName = public_path('storage/imagesets/'. $name .'.zip');
         $writable = is_writable(public_path('storage/imagesets/'));
-
+        $headers = array(
+            'Content-Type: application/zip',
+            "Content-Disposition: attachment; filename=$zipName",
+            "Pragma: no-cache",
+            "Expires: 0"
+        );
         $zip = new ZipArchive;
         if($zip->open($zipName, ZipArchive::CREATE))
         {
