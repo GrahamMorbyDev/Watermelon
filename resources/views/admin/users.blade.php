@@ -52,7 +52,7 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $user->id }}">
                                         {{$address = $user->getAddress()}}
-                                        @if($address)
+
                                         <div class="form-group">
                                             <label for="name-{{$user->id}}">Name</label>
                                             <input type="text" class="form-control" name="name" id="name-{{$user->id}}"
@@ -64,6 +64,8 @@
                                                    id="email-{{$user->id}}"
                                                    value="{{$user->email}}">
                                         </div>
+
+                                        @if($address)
                                         <div class="form-group">
                                             <label for="adr1-{{$user->id}}">Address line 1</label>
                                             <input type="text" class="form-control" name="adr1" id="adr1-{{$user->id}}"
