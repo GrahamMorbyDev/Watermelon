@@ -14,22 +14,22 @@
             <div class="col-lg-12 text-center">
                 <img src="images/logo.png" alt="Watermelon">
                 <hr>
-                <h1>What we do</h1>
-                <p>We have served the web industry for years and noticed a few things! Firstly there are so many tools available its hard
-                    to understand which one will work for your business and your app. Second, how hard can it be to get a simple solution that does'nt
-                    hurt your head or your wallet and thirdly why can't they all be simple.</p>
-                <p>So we decided to build one! A simple app that works for hosting content! For getting all your hard work on a platform where your premium customers
-                    can enjoy it.</p>
+                <h1>About Us</h1>
+                <p>Like Mr King said way back in 1963 we had a dream, a wonderful dream to create a simple solution to deliver content
+                    to users on a platform that's easy to use and wonderful to navigate. To be able to give high definition video and flawless images
+                    the right treatment and have subscribers world wide enjoy the the premium only you can offer.</p>
                 <hr>
-            </div>
-            <div class="col-lg-12">
-                <h3>Image and Video's</h3>
-                <p>Watermelon hosts Video's and Image's with ease! A simple to use upload system and management tools to have all your content in
-                    one simple place. Video's output to 1080p and Watermelon can deal with MP4 files all the way up to 1gb.</p>
-                <h3>Ecommerce</h3>
-                <p>Coming Very Soon</p>
-                <h3>DMCA Piracy</h3>
-                <p>Coming Very Soon</p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="{{URL::asset('images/graham.png')}}" alt="" class="img-responsive center-block">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="{{URL::asset('images/scott.png')}}" alt="" class="img-responsive center-block">
+                    </div>
+                </div>
+                <hr>
+                <p>We are wonderful developers who want to change the world with our Watermelon app. We have an extensive knowledge of front and back
+                    end development along with server administration.</p>
             </div>
         </div>
     </div>

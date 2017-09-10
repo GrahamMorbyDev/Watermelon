@@ -42,6 +42,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL::asset('')}}">Home</a></li>
                     <li><a href="{{URL::asset('/about')}}">About Us</a></li>
+                    <li><a href="{{URL::asset('/whatwedo')}}">What We Do</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
