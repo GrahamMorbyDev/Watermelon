@@ -9,6 +9,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 boxPadding">
+                <img src="{{URL::asset('images/blog.png')}}" alt="Welcome to the blog" class="img-responsive center-block">
+                <hr>
                 @foreach($blogs as $blog)
                     <div class="col-md-4 text-center thumbnail">
                         <h1>{{$blog->title}}</h1>
