@@ -110,7 +110,7 @@ class VideoController extends Controller
         {
             $this->validate($request, [
                 'featuredimage' => 'required||max:191',
-                'filename' => 'required||max:191'
+                'filename' => 'required'
             ]);
         }
 
