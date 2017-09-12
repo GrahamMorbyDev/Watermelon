@@ -91,13 +91,13 @@ class ImageController extends Controller
         if ($new)
         {
             $this->validate($request, [
-                'name' => 'required|max:191',
+                'name' => 'required|max:1000000',
             ]);
         }
 
         $this->validate($request, [
 
-            'setname' => 'required||max:191',
+            'setname' => 'required||max:1000000',
         ]);
 
     }
