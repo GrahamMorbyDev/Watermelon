@@ -30,8 +30,8 @@ class ImageController extends Controller
     public function uploadImageSet(Request $request)
     {
         $files = $request->file('name');
-
-        // if the id is present then we ar working with an existing image
+        
+        // if the id is present then we are working with an existing image
         if ($request->get('id'))
         {
             if ($this->updateImageSet($request))
@@ -97,7 +97,7 @@ class ImageController extends Controller
 
         $this->validate($request, [
 
-            'setname' => 'required||max:1000000',
+            'setname' => 'required||max:191',
         ]);
 
     }
