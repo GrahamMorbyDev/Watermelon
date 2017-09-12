@@ -30,7 +30,6 @@ class ImageController extends Controller
     public function uploadImageSet(Request $request)
     {
         $files = $request->file('name');
-        $image = new Images();
 
         // if the id is present then we ar working with an existing image
         if ($request->get('id'))
@@ -48,6 +47,7 @@ class ImageController extends Controller
 
             foreach ($files as $file)
             {
+                $image = new Images();
                 $imagepath = $file->store('imagesets');
                 $image->setname = $request->get('setname');
                 $image->name = $imagepath;
