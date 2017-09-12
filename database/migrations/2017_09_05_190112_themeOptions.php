@@ -17,7 +17,7 @@ class ThemeOptions extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('value');
-            $table->string('enabled');
+            $table->boolean('enabled');
         });
     }
 
