@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Config;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,10 +23,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $config =  new Config;
-        $conf = $config->getEnabled();
-
-        return view('home', compact('user', 'config', 'conf'));
+        return view('home', compact('user'));
     }
 
 }

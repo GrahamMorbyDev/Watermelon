@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{$config::getConfigOption($conf, 'example')}}</h1>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel-body">
@@ -82,7 +81,7 @@
                         </form>
                     @else
                         <?$sub = $user->getSubscription()?>
-                        <h1>Welcome</h1>
+                        <h1>{{config('settings.welcomeMessage')}}</h1>
                         <p>{{$user->name}}</p>
                         <p>Your subscription to {{$sub->name}} expires
                             at {{$sub->ends_at ? $sub->ends_at : 'unknown' }}</p>
