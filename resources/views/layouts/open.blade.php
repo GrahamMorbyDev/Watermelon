@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{URL::asset('')}}">Home</a></li>
+                    <li><a href="{{URL::asset('/welcome')}}">Home</a></li>
                     <li><a href="{{URL::asset('/about')}}">Links</a></li>
                     <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
                     <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
@@ -129,7 +129,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
 
-            <p>Powered by <a href="#" class="watermelon">Watermelon</a></p>
+            <p>Powered by <a href="http://www.watermelon.solutions/" target="_blank" class="watermelon">Watermelon</a></p>
         </div>
     </div>
 </div>
