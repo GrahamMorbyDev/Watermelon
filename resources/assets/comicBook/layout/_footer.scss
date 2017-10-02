@@ -1,0 +1,21 @@
+footer {
+  border-top: 5px solid $gold;
+  margin-top: 25px;
+  .watermelon {
+    color: $gold;
+    &:hover{
+      color: $white;
+    }
+  }
+  .menu {
+    li {
+      padding: 5px;
+      a {
+        color: $gold;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
