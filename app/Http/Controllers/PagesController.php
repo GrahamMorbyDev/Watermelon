@@ -52,4 +52,8 @@ class PagesController extends Controller
             ->get();
         return view('updates', compact('videos', 'images'));
     }
+    //FAQ
+    public function faq() {
+        return view('faq');
+    }
 }

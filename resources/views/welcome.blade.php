@@ -92,6 +92,27 @@
                 </p>
             </div>
         </div>
+        <div class="row">
+            <hr>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <a href="{{URL::asset('#')}}">
+                        <img class="img-responsive" src='{{URL::asset('images/membershipBW.jpg')}}'
+                             onmouseover="this.src='{{URL::asset('images/membershipC.jpg')}}';"
+                             onmouseout="this.src='{{URL::asset('images/membershipBW.jpg')}}';" />
+                    </a>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{URL::asset('#')}}">
+                        <img class="img-responsive" src='{{URL::asset('images/shopBW.jpg')}}'
+                             onmouseover="this.src='{{URL::asset('images/shopC.jpg')}}';"
+                             onmouseout="this.src='{{URL::asset('images/shopBW.jpg')}}';" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- End of access links -->
 

@@ -41,9 +41,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL::asset('')}}">Home</a></li>
-                    <li><a href="{{URL::asset('/about')}}">About Us</a></li>
-                    <li><a href="{{URL::asset('/whatwedo')}}">What We Do</a></li>
+                    <li><a href="{{URL::asset('/about')}}">Links</a></li>
+                    <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
+                    <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
+                    <li><a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">Clips 4 Sale</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
 

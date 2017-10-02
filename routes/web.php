@@ -21,6 +21,7 @@ Route::get('whatwedo', 'PagesController@whatwedo');
 Route::get('updates', 'PagesController@updates');
 Route::get('contact', 'PagesController@contact');
 Route::get('terms', 'PagesController@terms');
+Route::get('faq', 'PagesController@faq');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
