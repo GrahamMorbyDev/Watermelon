@@ -45,6 +45,7 @@
                     <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
                     <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
+                    <li><a href="{{URL::asset('http://superbounduniverse.tumblr.com/')}}" target="_blank">Tumblr</a></li>
                     <li><a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">Clips 4 Sale</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
@@ -120,8 +121,7 @@
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                <a class="twitter-timeline" data-height="250" data-link-color="#19CF86" href="https://twitter.com/WebWatermelon">
-                    Tweets by WebWatermelon</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-height="250" data-theme="dark" href="https://twitter.com/johnnydfetish?ref_src=twsrc%5Etfw">Tweets by johnnydfetish</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>
