@@ -43,6 +43,7 @@
                     <li><a href="{{URL::asset('/welcome')}}">Home</a></li>
                     <li><a href="{{URL::asset('/about')}}">Links</a></li>
                     <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
+                    <li><a href="{{URL::asset('/updates')}}">Updates</a></li>
                     <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
                     <li><a href="{{URL::asset('http://superbounduniverse.tumblr.com/')}}" target="_blank">Tumblr</a></li>
@@ -107,11 +108,12 @@
             <div class="col-md-4 menu">
                 <h2>Company</h2>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">What we do</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Sign up</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="{{URL::asset('/welcome')}}">Home</a></li>
+                    <li><a href="{{URL::asset('/about')}}">Links</a></li>
+                    <li><a href="{{URL::asset('/whatwedo')}}">Customs</a></li>
+                    <li><a href="{{URL::asset('/updates')}}">Updates</a></li>
+                    <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
+                    <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
                     <li><a href="{{URL::asset('terms')}}">Terms & Conditions</a></li>
                 </ul>
             </div>
