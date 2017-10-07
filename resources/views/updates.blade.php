@@ -2,9 +2,8 @@
 
 @section('content')
     <!--Header -->
-    <div class="container-fluid parallax-window parallax-block" data-parallax="scroll"
-         data-image-src="{{asset("images/header.png")}}">
-        <h1 class="parallaxTitle">Updates</h1>
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
+         style="height: 400px; margin-top: -25px;">
     </div>
     <!-- header finish -->
     <div class="container globalPadding">
