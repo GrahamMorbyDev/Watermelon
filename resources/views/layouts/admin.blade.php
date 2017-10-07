@@ -106,6 +106,9 @@
             <li>
                 <a href="{{URL::asset('/admin/users') }}">View and Edit Users</a>
             </li>
+            <li>
+                <a href="{{URL::asset('/admin/contacts') }}">Site contacts</a>
+            </li>
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->

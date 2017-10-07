@@ -16,27 +16,24 @@
                 <img src="images/slider2.JPG" class="center-block" alt="Watermelon">
                 <hr>
                 <h1>Contact Us</h1>
-                <form>
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+                <form method="post" action="{{URL::asset('contact-us')}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
                     </div>
                     <div class="form-group">
-                        <label for="email">Enquiry type</label>
-                        <select class="form-control">
-                            <option>Website</option>
-                            <option>Quote</option>
-                            <option>Advertising</option>
-                            <option>Working with us</option>
-                            <option>Themes</option>
-                        </select>                    </div>
-                    <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" rows="9" placeholder="Your message goes here....."></textarea>
+                        <textarea class="form-control" rows="9" name="message" placeholder="Your message goes here....."></textarea>
                     </div>
 
 

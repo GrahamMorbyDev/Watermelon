@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Dob;
 use Video;
+use App\contactUS;
 
 class PagesController extends Controller
 {
@@ -38,6 +39,18 @@ class PagesController extends Controller
     //Contact
     public function contact() {
         return view('contact');
+    }
+    public function contactUSPost(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
+
+        ContactUS::create($request->all());
+
+        return back()->with('success', 'Thanks for contacting us!');
     }
     //Terms
     public function terms() {

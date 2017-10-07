@@ -20,6 +20,7 @@ Route::get('about', 'PagesController@about');
 Route::get('whatwedo', 'PagesController@whatwedo');
 Route::get('updates', 'PagesController@updates');
 Route::get('contact', 'PagesController@contact');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'PagesController@contactUSPost']);
 Route::get('terms', 'PagesController@terms');
 Route::get('faq', 'PagesController@faq');
 
@@ -86,5 +87,8 @@ Route::middleware(['admin'])->group(function ()
 
     //Headers
     Route::get('/admin/headers', 'AdminController@headers');
+
+    //Contact Routes
+    Route::get('/admin/contacts', 'AdminController@contact');
 });
 

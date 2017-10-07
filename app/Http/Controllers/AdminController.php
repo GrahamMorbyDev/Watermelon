@@ -34,5 +34,10 @@ class AdminController extends Controller
     {
         return view('admin.headers');
     }
+    //Get Contacts
+    public function contact() {
+        $contacts = DB::table('contactus')->get();
+        return view('admin.contact', compact('contacts'));
+    }
 
 }
