@@ -12,12 +12,7 @@
             <div class="col-md-12 text-center">
                 <h1>Updates</h1>
                 <hr>
-                <h2>Etiam placerat risus pellentesque augue sodales porttitor sit amet id sem. Nulla sit
-                    amet tempus ligula. Fusce maximus nunc vel luctus malesuada. Fusce cursus nec nibh
-                    in sollicitudin.</h2>
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="{{URL::asset('images/placeholderTwo.jpg')}}" alt="Placeholder" class="img-responsive greyImage">
-                </div>
+                <h2>Look at our latest updates to our ever growing membership library</h2>
             </div>
         </div>
         <div class="row">
