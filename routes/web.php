@@ -29,12 +29,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{id}', 'BlogController@showBlog');
 
+Route::get('/verotel/postback', 'VerotelController@postback');
+Route::get('/verotel/success', 'VerotelController@success');
+Route::get('/verotel/cancel', 'VerotelController@cancel');
 
 Auth::routes();
 
 
 Route::get('/subscribe', 'SubscriptionController@index');
 Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@createSubscription']);
+Route::post('/subscribe/cancel', 'SubscriptionController@cancelSubscription');
 
 Route::post('/update/user/address', 'UserController@updateAddress');
 Route::middleware(['members'])->group(function ()

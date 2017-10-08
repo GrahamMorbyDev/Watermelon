@@ -2,9 +2,11 @@
 
 namespace App;
 
+use DateTime;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
@@ -37,7 +39,7 @@ class User extends Authenticatable
 
     public function isMember()
     {
-         if($subbed = $this->getSubscription());
+        if ($subbed = $this->getLatestSubscription()) ;
 
         return $subbed;
     }
@@ -49,7 +51,7 @@ class User extends Authenticatable
     {
         $address = new Address();
         $data = $address->where('user_id', $this->id)->first();
-        if($data)
+        if ($data)
         {
             return $data;
         }
@@ -58,11 +60,25 @@ class User extends Authenticatable
     }
 
     /**
+     * Get last updated subscription
      * @return mixed
      */
-    public function getSubscription()
+    public function getLatestSubscription()
     {
-        $subscription = new Subscriptions();
-        return $subscription->where('user_id', $this->id)->first();
+        $now = new DateTime();
+        $now = $now->format('Y-m-d H:i:s');
+
+        $subscription = DB::table('subscriptions')
+            ->select(DB::raw('*'))
+            ->where([
+                ['user_id', '=', $this->id],
+                ['ends_at', '>=', $now],
+            ])
+            ->orWhere([
+                ['user_id', '=', $this->id],
+                ['ends_at', '=', NULL]])
+            ->orderBy('updated_at', 'DESC')
+            ->first();
+        return $subscription;
     }
 }

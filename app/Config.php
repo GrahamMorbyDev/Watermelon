@@ -4,6 +4,7 @@ namespace App;
 
 use Doctrine\Common\Cache\Cache;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Schema;
 
 class Config extends Model
 {
@@ -11,19 +12,22 @@ class Config extends Model
 
     public function getEnabled()
     {
-        $data = $this->select('name', 'value')
-            ->where('enabled', 1)
-            ->get()
-            ->keyBy('name')
-            ->toArray();
-
-        $settings = null;
-        foreach ($data as $item)
+        if(Schema::hasTable('config'))
         {
-            $settings['settings'][$item['name']] = $item['value'];
-        }
+            $data = $this->select('name', 'value')
+                ->where('enabled', 1)
+                ->get()
+                ->keyBy('name')
+                ->toArray();
 
-        if($settings)
-            config($settings);
+            $settings = null;
+            foreach ($data as $item)
+            {
+                $settings['settings'][$item['name']] = $item['value'];
+            }
+
+            if($settings)
+                config($settings);
+        }
     }
 }

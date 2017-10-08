@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6f7fd4658020db35d94154b60bb8623",
+    "content-hash": "a2c4bc04da53651b3d5cce918ed4ad0d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2588,6 +2588,46 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2016-09-20T12:50:39+00:00"
+        },
+        {
+            "name": "verotel/flexpay-php-client",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verotel/flexpay-php-client.git",
+                "reference": "dee49da8b97cebadd5e5cd64e2896cdb7a582023"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verotel/flexpay-php-client/zipball/dee49da8b97cebadd5e5cd64e2896cdb7a582023",
+                "reference": "dee49da8b97cebadd5e5cd64e2896cdb7a582023",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Verotel\\": "src/Verotel/"
+                },
+                "files": [
+                    "FlexPay.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A client to Verotel FlexPay online payment gateway",
+            "homepage": "http://www.verotel.com",
+            "keywords": [
+                "billing.creditcard",
+                "cardbilling",
+                "credit card",
+                "flexpay",
+                "freenom pay",
+                "payment",
+                "verotel"
+            ],
+            "time": "2017-05-31T12:24:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

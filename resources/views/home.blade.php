@@ -48,8 +48,7 @@
                             </div>
                             <button type="submit" class="btn btn-success pull-right">Subscribe</button>
                         </form>
-                    @elseif(!$user->getSubscription())
-
+                    @elseif(!$user->getLatestSubscription())
                         <div class="panel panel-default credit-card-box">
                             <div class="panel-heading display-table">
                                 <div class="row display-tr">
@@ -61,15 +60,32 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="{{URL::asset('sub')}}" method="post" class="form-group">
+
+
+                        @if(config('settings.verotelPaymentEnabled'))
+                            <form id="verotel" action="{{URL::asset('sub')}}" method="post"
+                                  class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="id" value="{{ $user->id }}">
+                                <input type="hidden" name="paymentType" value="verotel">
+                                <button type="submit" class="btn btn-success pull-left">Verotel</button>
+                            </form>
+                        @endif
+                        <button id="payStripe" type="button" class="btn btn-success pull-right">Stripe</button>
+
+
+
+
+
+                        <form style="display: none;" id="stripe" action="{{URL::asset('sub')}}" method="post"
+                              class="form-group">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="id" value="{{ $user->id }}">
+                            <input type="hidden" name="paymentType" value="stripe">
 
                             <div class="form-group">
                                 <label for="plan">Plan</label>
                                 <select class="form-control" name="plan" id="plan">
-                                    <option value="watermelon">membership (£10)</option>
-                                    <option value="watermelon">membership (£10)</option>
                                     <option value="watermelon">membership (£10)</option>
                                 </select>
                             </div>
@@ -80,20 +96,38 @@
                             <button type="submit" class="btn btn-success pull-right">Subscribe</button>
                         </form>
                     @else
-                        <?$sub = $user->getSubscription()?>
+                        <?$sub = $user->getLatestSubscription()?>
                         <h1>{{config('settings.welcomeMessage')}}</h1>
                         <p>{{$user->name}}</p>
-                        <p>Your subscription to {{$sub->name}} expires
-                            at {{$sub->ends_at ? $sub->ends_at : 'unknown' }}</p>
+                        <p>You are subscribed to {{$sub->name}}</p>
+                        @if($sub->ends_at != null)
+                            <p>Your subscription to {{$sub->name}} expires
+                                at {{$sub->ends_at ? $sub->ends_at : 'unknown' }}</p>
+                        @else
+                            <form id="cancel" action="{{URL::asset('subscribe/cancel')}}" method="post"
+                                  class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="id" value="{{ $user->id }}">
+                                <button type="submit" class="btn btn-success pull-left">Cancel</button>
+                            </form>
+                        @endif
+
+
                     @endif
                 </div>
             </div>
         </div>
     </div>
 
+    {{--<script>--}}
 
+    {{--</script>--}}
     <script src="https://js.stripe.com/v3/"></script>
-    <script>
+    <script type="javascript">
+        $("#payStripe").click(function () {
+            alert('bugger');
+            $("#stripe").show();
+        });
 
         var stripe = Stripe("<?= env('STRIPE_PUBLISHABLE_SECRET') ?>");
         var elements = stripe.elements();
@@ -136,5 +170,4 @@
             });
         });
     </script>
-    </div>
 @endsection

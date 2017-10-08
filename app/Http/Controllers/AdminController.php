@@ -1,6 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
+//require_once base_path('vendor/verotel/flexpay-php-client/src/Verotel/FlexPay/Client.php');
+//require_once base_path('vendor/verotel/flexpay-php-client/src/Verotel/FlexPay/Brand.php');
 
 use App\User;
 use App\Video;
@@ -8,6 +9,9 @@ use App\Images;
 use App\Blogs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+
+
 
 class AdminController extends Controller
 {
@@ -18,7 +22,6 @@ class AdminController extends Controller
         $videos = Video::get()->count();
         $images = Images::get()->count();
         $blogs = Blogs::get()->count();
-
         return view('admin/index' , compact('users' , 'videos', 'images', 'blogs'));
     }
 
