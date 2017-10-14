@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <img src="{{URL::asset('images/logo.png')}}" alt="Placeholder" class="img-responsive greyImage">
+            <img src="{{URL::asset('images/enter.jpg')}}" alt="Placeholder" class="img-responsive greyImage">
             <hr>
             <h1 class="text-center">Register</h1>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">

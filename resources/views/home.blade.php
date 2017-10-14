@@ -71,7 +71,7 @@
                                 <button type="submit" class="btn btn-success pull-left">Verotel</button>
                             </form>
                         @endif
-                        <button id="payStripe" type="button" class="btn btn-success pull-right">Stripe</button>
+                        <!-- <button id="payStripe" type="button" class="btn btn-success pull-right">Stripe</button> -->
 
 
 

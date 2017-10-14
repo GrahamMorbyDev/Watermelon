@@ -119,7 +119,7 @@
             </div>
             <div class="col-md-4">
                 <h2>Powered by</h2>
-                <img src="{{URL::asset('images/stripe.png')}}" alt="Stripe" class="img-responsive">
+                <img src="{{URL::asset('images/payment.png')}}" alt="Stripe" class="img-responsive">
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
