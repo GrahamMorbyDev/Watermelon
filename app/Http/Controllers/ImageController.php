@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Images;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ImageController extends Controller
 {
     // Upload Image set
@@ -21,8 +21,10 @@ class ImageController extends Controller
     // Upload Image set
     public function showImages()
     {
-        $images = new Images();
-        $images = $images->paginate(10);
+        $images = DB::table('images')
+            ->select(DB::raw('distinct(setname) , name'))
+            ->groupBy('setname')
+            ->get();
         return view('admin/showImages', compact('images'));
     }
 

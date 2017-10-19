@@ -109,7 +109,7 @@
                                         <button class="btn btn-success pull-right">submit</button>
                                     </div>
                                 </form>
-                                {{ $sub = $user->getLatestSubscription()}}
+                            <?$sub = $user->getLatestSubscription()?>
                             </div>
                         </div>
                     </div>
