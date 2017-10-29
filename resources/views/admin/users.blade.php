@@ -51,7 +51,7 @@
                                     <div class="modal-body" style="color: black;">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $user->id }}">
-                                        {{$address = $user->getAddress()}}
+                                        <?php $address = $user->getAddress() ?>
 
                                         <div class="form-group">
                                             <label for="name-{{$user->id}}">Name</label>
@@ -109,7 +109,7 @@
                                         <button class="btn btn-success pull-right">submit</button>
                                     </div>
                                 </form>
-                                {{ $sub = $user->getLatestSubscription()}}
+                                <?php $sub = $user->getLatestSubscription() ?>
                             </div>
                         </div>
                     </div>
