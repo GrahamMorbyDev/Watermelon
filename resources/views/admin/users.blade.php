@@ -109,7 +109,11 @@
                                         <button class="btn btn-success pull-right">submit</button>
                                     </div>
                                 </form>
+<<<<<<< HEAD
                                 <?php $sub = $user->getLatestSubscription() ?>
+=======
+                            <?$sub = $user->getLatestSubscription()?>
+>>>>>>> superbound
                             </div>
                         </div>
                     </div>
