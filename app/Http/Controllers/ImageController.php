@@ -26,6 +26,21 @@ class ImageController extends Controller
         return view('admin/showImages', compact('images'));
     }
 
+    // Upload Image set
+    public function showImagesInSet($setname)
+    {
+        $images = new Images();
+        $images = $images->where('setname', $setname)->paginate(10);
+        return view('admin/showImages', compact('images'));
+    }
+
+    public function showImageSets()
+    {
+        $images = new Images();
+        $images = $images->groupBy('setname')->paginate(10);
+        return view('admin/showImageSets', compact('images'));
+    }
+
     //Upload image sets to DB
     public function uploadImageSet(Request $request)
     {
@@ -113,4 +128,22 @@ class ImageController extends Controller
         $image->delete();
         return redirect()->back()->with('alert-success', 'Deleted successfully');
     }
+
+    /**
+     * Delete whole image set
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function deleteImageSet(Request $request)
+    {
+        $image = new Images;
+        $images = $image->where('setname', $request->get('setname'))->get();
+        foreach ($images as $img)
+        {
+            $img->delete();
+        }
+        return redirect()->back()->with('alert-success', 'Set Deleted successfully');
+    }
+
+
 }

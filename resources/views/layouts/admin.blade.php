@@ -95,7 +95,7 @@
                 <a href="{{URL::asset('/admin/images') }}">Upload Image set</a>
             </li>
             <li>
-                <a href="{{URL::asset('/admin/images/all') }}">View all Image sets</a>
+                <a href="{{URL::asset('/admin/images/sets') }}">View all Image sets</a>
             </li>
             <li>
                 <a href="{{URL::asset('/admin/blog')}}">Add a Blog Post</a>

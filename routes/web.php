@@ -73,9 +73,12 @@ Route::middleware(['admin'])->group(function ()
 
     //Image Routes
     Route::get('/admin/images/all', 'ImageController@showImages');
+    Route::get('/admin/images/sets', 'ImageController@showImageSets');
+    Route::get('/admin/images/set/{setname}', 'ImageController@showImagesInSet');
     Route::get('/admin/images', 'ImageController@showUploadimage')->name('addImage');
     Route::get('/admin/images/{id}', 'ImageController@showUploadimage')->name('editImage');
     Route::post('/admin/images/delete' , 'ImageController@deleteImage');
+    Route::post('/admin/images/set/delete' , 'ImageController@deleteImageSet');
     Route::post('/admin/uploadimageset', 'ImageController@uploadImageSet');
 
     // User Routes
