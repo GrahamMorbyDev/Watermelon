@@ -84,15 +84,22 @@ class ImageController extends Controller
         $image = $image->find($request->get('id'));
         if ($request->file('name'))
         {
-            $imagePath = $request->file('name')->store('imagesets');
+            $files = $request->file('name');
+            foreach ($files as $file)
+            {
+                $imagepath = $file->store('imagesets');
+                $image->setname = $request->get('setname');
+                $image->name = $imagepath;
+                $image->update();
+            }
+            return true;
         } else
         {
             $imagePath = $image->name;
+            $image->setname = $request->get('setname');
+            $image->name = $imagePath;
+            return $image->update();
         }
-
-        $image->setname = $request->get('setname');
-        $image->name = $imagePath;
-        return $image->save();
     }
 
 

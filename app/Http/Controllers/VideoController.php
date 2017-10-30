@@ -86,6 +86,8 @@ class VideoController extends Controller
 
         if ($request->file('filename'))
         {
+            $file = $request->file('filename');
+            $file->store('videos');
             $videoPath = $request->file('filename')->store('videos');
         } else
         {
@@ -96,7 +98,7 @@ class VideoController extends Controller
         $video->featuredimage = $imagePath;
         $video->filename = $videoPath;
 
-        return $video->save();
+        return $video->update();
     }
 
     /**
