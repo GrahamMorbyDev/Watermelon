@@ -44,7 +44,7 @@
         <div class="row">
         <hr>
         <div class="col-md-3 text-center">
-            <a href="#">
+            <a href="{{URL::asset('about')}}">
                 <img class="img-responsive" src='{{URL::asset('images/aboutBW.jpg')}}'
                      onmouseover="this.src='{{URL::asset('images/aboutc.jpg')}}';",
                      onmouseout="this.src='{{URL::asset('images/aboutBW.jpg')}}';" />
@@ -52,14 +52,14 @@
             </a>
         </div>
         <div class="col-md-3 text-center">
-            <a href="#">
+            <a href="{{URL::asset('register')}}">
                 <img class="img-responsive" src='{{URL::asset('images/memBW.jpg')}}'
                      onmouseover="this.src='{{URL::asset('images/memC.jpg')}}';"
                      onmouseout="this.src='{{URL::asset('images/memBW.jpg')}}';" />
             </a>
         </div>
         <div class="col-md-3 text-center">
-            <a href="#">
+            <a href="{{URL::asset('faq')}}">
                 <img class="img-responsive" src='{{URL::asset('images/faqBW.jpg')}}'
                      onmouseover="this.src='{{URL::asset('images/faqC.jpg')}}';"
                      onmouseout="this.src='{{URL::asset('images/faqBW.jpg')}}';" />
@@ -67,7 +67,7 @@
             </a>
         </div>
         <div class="col-md-3 text-center">
-            <a href="#">
+            <a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">
                 <img class="img-responsive" src='{{URL::asset('images/c4sBW.jpg')}}'
                      onmouseover="this.src='{{URL::asset('images/c4sC.jpg')}}';"
                      onmouseout="this.src='{{URL::asset('images/c4sBW.jpg')}}';" />
@@ -96,7 +96,7 @@
             <hr>
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="{{URL::asset('#')}}">
+                    <a href="{{URL::asset('register')}}">
                         <img class="img-responsive" src='{{URL::asset('images/membershipBW.jpg')}}'
                              onmouseover="this.src='{{URL::asset('images/membershipC.jpg')}}';"
                              onmouseout="this.src='{{URL::asset('images/membershipBW.jpg')}}';" />
@@ -104,7 +104,7 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="{{URL::asset('#')}}">
+                    <a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">
                         <img class="img-responsive" src='{{URL::asset('images/shopBW.jpg')}}'
                              onmouseover="this.src='{{URL::asset('images/shopC.jpg')}}';"
                              onmouseout="this.src='{{URL::asset('images/shopBW.jpg')}}';" />

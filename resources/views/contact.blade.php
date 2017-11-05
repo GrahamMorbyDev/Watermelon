@@ -61,7 +61,7 @@
             <hr>
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="{{URL::asset('#')}}">
+                    <a href="{{URL::asset('register')}}">
                         <img class="img-responsive" src='{{URL::asset('images/membershipBW.jpg')}}'
                              onmouseover="this.src='{{URL::asset('images/membershipC.jpg')}}';"
                              onmouseout="this.src='{{URL::asset('images/membershipBW.jpg')}}';" />
@@ -69,7 +69,7 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="{{URL::asset('#')}}">
+                    <a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">
                         <img class="img-responsive" src='{{URL::asset('images/shopBW.jpg')}}'
                              onmouseover="this.src='{{URL::asset('images/shopC.jpg')}}';"
                              onmouseout="this.src='{{URL::asset('images/shopBW.jpg')}}';" />
