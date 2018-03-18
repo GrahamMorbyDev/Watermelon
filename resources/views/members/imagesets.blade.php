@@ -18,8 +18,9 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="name" id="name" value="{{$image->name}}">
                         <input type="hidden" name="setname" id="setname" value="{{$image->setname}}">
-                        <button type="submit" class="btn btn-warning center-block" style="width: 100%">Download</button>
+                        <button type="submit" class="btn btn-warning center-block" style="width: 100%; margin-bottom: 10px;">Download</button>
                     </form>
+                    <hr>
                 </div>
             @endforeach
         </div>
