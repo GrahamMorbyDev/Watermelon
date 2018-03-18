@@ -5,9 +5,11 @@
         <div class="col-lg-12">
             <h1>Images</h1>
             @foreach($images as $image)
-                <div class="col-md-4 text-center" style="min-height: 475px">
+                <div class="col-md-4 text-center" style="min-height: 330px">
                     <p>{{$image->setname}}</p>
-                    <img src="{{URL::asset("storage/" . $image->name)}}" alt="" class="img-responsive">
+                    <div style="height: 150px; overflow: hidden">
+                        <img src="{{URL::asset("storage/" . $image->name)}}" alt=""  class="img-responsive">
+                    </div>
                     <hr>
                     <a href="{{URL::asset('members/imagessets/' . $image->setname)}}" class="btn btn-success" style="width: 100%">View Now</a>
                     <br>
