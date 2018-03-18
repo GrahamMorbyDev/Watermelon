@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <h1>Images</h1>
             @foreach($images as $image)
-                <div class="col-md-4 text-center" style="min-height: 450px">
+                <div class="col-md-4 text-center" style="min-height: 475px">
                     <p>{{$image->setname}}</p>
                     <img src="{{URL::asset("storage/" . $image->name)}}" alt="" class="img-responsive">
                     <hr>
