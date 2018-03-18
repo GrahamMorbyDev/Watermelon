@@ -106,7 +106,7 @@
                         correspondence and will take into consideration your views and opinions. </p>
                     <br>
                     <hr>
-                    <a class='btn btn-lg btn-default center-block' href="{{URL::asset('#')}}">JOIN NOW</a>
+                    <a class='btn btn-lg btn-warning center-block' href="{{URL::asset('#')}}">JOIN NOW</a>
                     <hr>
                 </div>
             </div>
