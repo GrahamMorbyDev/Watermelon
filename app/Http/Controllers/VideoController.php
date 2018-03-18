@@ -22,7 +22,7 @@ class VideoController extends Controller
     public function showVideos()
     {
         $videos = new Video();
-        $videos = $videos->paginate(10);
+        $videos = $videos->latest()->paginate(10);
         return view('admin/showVideos', compact('videos'));
     }
 

@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <h1>Videos</h1>
             @foreach($videos as $video)
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" style="min-height: 525px;">
                     <h3>{{$video->title}}</h3>
                     <img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" class="img-responsive">
                     <hr>
@@ -20,7 +20,11 @@
                 </div>
             @endforeach
         </div>
+        <div class="col-md-12 text-center">
+            {{$videos->links()}}
+        </div>
     </div>
-    {{$videos->links()}};
+
+
 
 @stop

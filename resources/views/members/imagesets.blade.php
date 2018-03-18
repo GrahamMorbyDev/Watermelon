@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <h1>Images</h1>
             @foreach($images as $image)
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 text-center" style="min-height: 450px">
                     <h2>{{$image->setname}}</h2>
                     <img src="{{URL::asset("storage/" . $image->name)}}" alt="" class="img-responsive">
                     <hr>
@@ -19,7 +19,6 @@
                         <button type="submit" class="btn btn-warning center-block" style="width: 100%">Download</button>
                     </form>
                 </div>
-
             @endforeach
         </div>
     </div>

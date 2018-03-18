@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <hr>
-                <video muted autoplay controls loop src="{{URL::asset('video/welcome.mov')}}"></video>
+                <video id="video" muted onloadedmetadata="this.muted = true" autoplay controls loop src="{{URL::asset('video/welcome.mov')}}"></video>
                 <h1>Greetings!</h1>
                 <p>Greetings bondage enthusiasts and other fetish aficionados! Here at Superbound we seek to
                     provide you with a unique kinky viewing experience. At Superbound you will find a

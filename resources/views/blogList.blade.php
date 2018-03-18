@@ -2,17 +2,16 @@
 
 @section('content')
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpeg")}}"
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
          style="height: 400px; margin-top: -25px;">
     </div>
     <!-- header finish -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12 boxPadding">
-                <img src="{{URL::asset('images/blog.png')}}" alt="Welcome to the blog" class="img-responsive center-block">
                 <hr>
                 @foreach($blogs as $blog)
-                    <div class="col-md-4 text-center thumbnail">
+                    <div class="col-md-4 text-center" style="min-height: 450px;">
                         <h1>{{$blog->title}}</h1>
                         <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" alt="" class="img-responsive">
                         <br>
