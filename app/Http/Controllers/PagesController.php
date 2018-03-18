@@ -58,7 +58,7 @@ class PagesController extends Controller
     }
     //Latest Updates Page
     public function updates() {
-        $videos = DB::table('videos')->paginate(6);
+        $videos = DB::table('videos')->latest()->paginate(6);
         $images = DB::table('images')
             ->select(DB::raw('distinct(setname) , name'))
             ->groupBy('setname')

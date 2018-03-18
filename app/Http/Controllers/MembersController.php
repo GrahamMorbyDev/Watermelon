@@ -18,7 +18,7 @@ class MembersController extends Controller
     //Show Videos
     public function videos()
     {
-        $videos = DB::table('videos')->paginate();
+        $videos = DB::table('videos')->latest()->paginate(12);
 
         return view('members/videoList', ['videos' => $videos]);
     }
