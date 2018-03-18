@@ -9,6 +9,7 @@
                     <div style="height: 75px;">
                         <h3>{{$video->title}}</h3>
                     </div>
+                    <p>Date Added: {{Str_limit($video->created_at, 10, $end = '')}}</p>
                     <div style="height: 150px; overflow: hidden;">
                         <img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" class="img-responsive">
                     </div>
