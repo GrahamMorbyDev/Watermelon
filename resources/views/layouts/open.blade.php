@@ -123,8 +123,7 @@
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                <a class="twitter-timeline" data-height="250" data-theme="dark" href="https://twitter.com/johnnydfetish?ref_src=twsrc%5Etfw">Tweets by johnnydfetish</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
+                <a class="twitter-timeline" data-height="250" href="https://twitter.com/MindiMink?ref_src=twsrc%5Etfw">Tweets by MindiMink</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
         </div>
     </div>
     </div>

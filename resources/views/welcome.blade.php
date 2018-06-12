@@ -11,9 +11,9 @@
     <!-- Info to start -->
     <div class="container globalPadding">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12">
                 <hr>
-                <video id="video" muted onloadedmetadata="this.muted = true" autoplay controls loop src="{{URL::asset('video/welcome.mov')}}"></video>
+                <div class="col-md-6">
                 <h1>Greetings!</h1>
                 <p>Greetings bondage enthusiasts and other fetish aficionados! Here at Superbound we seek to
                     provide you with a unique kinky viewing experience. At Superbound you will find a
@@ -28,6 +28,7 @@
                     intrepid reporters, brave sleuths and other gorgeous babes are captured, bound, gagged
                     and toyed with by supervillains, crooks, slavers and other evil characters! So leave reality
                     behind and enter the twisted bondage realm of Superbound!</p>
+                </div>
             </div>
         </div>
     </div>

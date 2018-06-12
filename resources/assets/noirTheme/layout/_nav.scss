@@ -1,19 +1,19 @@
 .navbar-default {
-  background-color: $matisse;
-  border-color: $gold;
-  border-bottom: 5px solid $gold;
+  background-color: $whiteLilac;
+  border-color: $hoki;
+  border-bottom: 5px solid $hoki;
 }
 .navbar-default .navbar-nav > li > a {
-  color: $white;
+  color: $hoki;
 }
 .navbar-default .navbar-brand {
-  color: $white;
+  color: $matisse;
   &:hover {
-    color: $gold;
+    color: $hoki;
   }
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: $gold;
+  color: $matisse;
   background-color: transparent;
 }
 
