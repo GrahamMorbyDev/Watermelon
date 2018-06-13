@@ -19,6 +19,7 @@ class VideoController extends Controller
         return view('admin/uploadvideo', compact('video'));
     }
 
+    // Show all videos
     public function showVideos()
     {
         $videos = new Video();

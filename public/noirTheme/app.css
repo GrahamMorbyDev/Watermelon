@@ -8624,6 +8624,10 @@ footer .menu li a:hover {
   transition: border 0.2s ease-in-out;
 }
 
+img {
+  border: 3px solid #647884;
+}
+
 .boxPadding {
   padding: 20px;
 }

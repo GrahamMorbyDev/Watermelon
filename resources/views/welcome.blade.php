@@ -15,19 +15,33 @@
                 <hr>
                 <div class="col-md-6">
                 <h1>Greetings!</h1>
-                <p>Greetings bondage enthusiasts and other fetish aficionados! Here at Superbound we seek to
-                    provide you with a unique kinky viewing experience. At Superbound you will find a
-                    multitude of beautiful women in various forms of bondage for your entertainment.
-                    Superbound's unique style incorporates many elements of genre fiction and comic books
-                    as well as other scifi, horror and fantasy elements and blends them with damsel in
-                    distress bondage with a decidedly more physical emphasis! Within the Superbound
-                    universe exists a dystopian world where the bad guys win (or at least get the upper
-                    hand and play out their twisted thrills!) and subject gorgeous ladies to restrictive
-                    bondage while fondling their luscious bodies and more! All in good fun, these fantasies
-                    will transport you to a world of base carnal desires as various mighty superheroines,
-                    intrepid reporters, brave sleuths and other gorgeous babes are captured, bound, gagged
-                    and toyed with by supervillains, crooks, slavers and other evil characters! So leave reality
-                    behind and enter the twisted bondage realm of Superbound!</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{URL::asset('images/home3.jpg')}}" alt="Welcome to Taboo Mindi" class="img-responsive">
                 </div>
             </div>
         </div>
