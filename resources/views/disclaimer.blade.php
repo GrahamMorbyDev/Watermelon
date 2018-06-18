@@ -8,12 +8,6 @@
             <div class="col-md-12 globalMargin">
                 <h1 class="text-center">{{ config('app.name', 'Placeholder') }} Site Agreement</h1>
                 <hr>
-                <p class="text-center text-inverse">All bondage scenarios depicted within our productions (video & images) are strictly of a
-                    role play and story driven nature and feature fully consenting participants and established
-                    safe signals (clearly defined within each fantasy scene) between model(s) and crew are in
-                    continual use throughout the production. Thus, these are pure, tongue in cheek adventuristic
-                    fantasy scenarios, without exception fully consensual, contextual and supported by model
-                    release to this effect.</p>
                 <p>This Website contains sexually-oriented adult content which may include visual images and
                     verbal descriptions of nude adults, adults engaging in sexual acts, and other audio and
                     visual material of a sexually-explicit nature. Permission to enter this Website and to

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Bungee|Open+Sans:300,400,700);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Bungee|Open+Sans:300,400,700);@import url(https://fonts.googleapis.com/css?family=Shrikhand);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8366,7 +8366,7 @@ h6 {
   font-weight: bold;
   color: #647884;
   line-height: inherit;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Shrikhand', cursive;
   letter-spacing: 0.96px;
   text-transform: uppercase;
   padding: 0 0 30px 0;
@@ -8421,7 +8421,7 @@ h6,
 }
 
 a {
-  color: #D53E38;
+  color: #637791;
 }
 
 a:hover {
@@ -8431,25 +8431,25 @@ a:hover {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #231f20;
+  background-color: #C4CFDE;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #D53E38;
-  background-color: #231f20;
-  border: 1px solid #231f20;
+  color: #637791;
+  background-color: #C4CFDE;
+  border: 1px solid #C4CFDE;
   border-bottom-color: transparent;
   cursor: default;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #D53E38;
+  border-bottom: 1px solid #637791;
 }
 
 .text-inverse {
-  color: #D53E38;
+  color: #637791;
 }
 
 .fourzero {
@@ -8503,19 +8503,19 @@ table .name {
 }
 
 .btn-success {
-  background: #D53E38;
-  border: #D53E38;
+  background: #637791;
+  border: #637791;
   color: white;
 }
 
 .btn-success:hover {
-  background: #bc2d28;
+  background: #526379;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .btn-success:active {
-  background: #751c19;
+  background: #2f3945;
 }
 
 .btn-default {
@@ -8583,12 +8583,12 @@ table .name {
 }
 
 footer {
-  border-top: 5px solid #D53E38;
+  border-top: 5px solid #637791;
   margin-top: 25px;
 }
 
 footer .watermelon {
-  color: #D53E38;
+  color: #637791;
 }
 
 footer .watermelon:hover {
@@ -8600,7 +8600,7 @@ footer .menu li {
 }
 
 footer .menu li a {
-  color: #D53E38;
+  color: #637791;
 }
 
 footer .menu li a:hover {
@@ -8618,7 +8618,7 @@ footer .menu li a:hover {
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: black;
-  border: 1px solid #D53E38;
+  border: 1px solid #637791;
   border-radius: 2px;
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
