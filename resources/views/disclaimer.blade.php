@@ -25,9 +25,20 @@
                         the contemporary community standards of acceptance and tolerance of your community for
                         sexually-explicit material.</li>
                 </ol>
+                <p>All content and mentions of Mother, Step Mother, Mom, Mommy and Son, Daughter or any any other
+                    family member relationship are acted out in pure fantasy. At no time are two blood-related
+                    members of a family having any sexual interactions or intercourse. Thus, these are pure, tongue
+                    in cheek adventuristic fantasy scenarios, without exception fully consensual, contextual.</p>
+
+                <p>All content on this site is owned and controlled by Mindi Mink LLC. All content is considered
+                    premium and no sharing, trading or posting to third party sites should take place without the
+                    consent of the owner. If a member is found to be doing any of the above his/her membership will
+                    be revoked and no money will be refunded for loss of time left on the subscription.</p>
+
                 <p>If all of these conditions apply to you, you are permitted to ENTER. If any of these conditions
                     do not apply to you, you are forbidden from entering and viewing the contents of this Website
                     and you should now leave.</p>
+
 
 
             </div>

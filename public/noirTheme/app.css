@@ -8354,6 +8354,7 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #647884;
   font-weight: 300;
+  font-size: 16px;
   background-color: #FAFBFD;
 }
 
@@ -8625,7 +8626,7 @@ footer .menu li a:hover {
 }
 
 img {
-  border: 3px solid #647884;
+  border: 5px solid #637791;
 }
 
 .boxPadding {
