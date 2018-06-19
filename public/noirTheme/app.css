@@ -8608,6 +8608,10 @@ footer .menu li a:hover {
   color: #ffffff;
 }
 
+footer img {
+  border: none;
+}
+
 .parallax-block {
   height: 400px;
   margin-top: -25px;

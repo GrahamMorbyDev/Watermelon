@@ -104,7 +104,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="col-md-4 menu">
-                <h2>Company</h2>
+                <h2>Menu</h2>
                 <ul>
                     <li><a href="{{URL::asset('/welcome')}}">Home</a></li>
                     <li><a href="{{URL::asset('/about')}}">Links</a></li>
@@ -116,17 +116,30 @@
             </div>
             <div class="col-md-4">
                 <h2>Powered by</h2>
-                <img src="{{URL::asset('images/payment.png')}}" alt="Stripe" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="{{URL::asset('images/watermelon.png')}}" alt="Watermelon app" class="img-responsive center-block" width="50%">
+                </a>
+                <h2 class="text-center">Watermelon</h2>
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
                 <a class="twitter-timeline" data-height="250" href="https://twitter.com/MindiMink?ref_src=twsrc%5Etfw">Tweets by MindiMink</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
-        </div>
+            </div>
     </div>
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
-
+            <hr>
+        <div>
+            <ul style="margin-top:0px;margin-bottom:10px;font-size:14px;line-height:20px;text-align:center"><h4 style="font-weight:500;line-height:1.1;margin-top:10px;margin-bottom:5px;font-size:18px">PARENTS! USE THESE SITES TO FILTER ADULT CONTENT!</h4>
+                    <a href="http://www.fosi.org/" style="color:rgb(181,164,207);text-decoration:none;background:transparent" target="_blank">FOSI</a>&nbsp;|&nbsp;
+                    <a href="http://www.cyberpatrol.com/" style="color:rgb(181,164,207);text-decoration:none;background:transparent" target="_blank">Cyber Patrol</a>&nbsp;|&nbsp;
+                    <a href="http://www.safesurf.com/" style="color:rgb(181,164,207);text-decoration:none;background:transparent" target="_blank">Safe Surf</a>&nbsp;|&nbsp;
+                    <a href="http://www.netnanny.com/" style="color:rgb(181,164,207);text-decoration:none;background:transparent" target="_blank">Net Nanny</a>&nbsp;|&nbsp;
+                    <a href="http://www.cybersitter.com/" style="color:rgb(181,164,207);text-decoration:none;background:transparent" target="_blank">Cyber Sitter</a>
+                </ul>
+            </div>
+        </div>
             <p>Powered by <a href="http://www.watermelon.solutions/" target="_blank" class="watermelon">Watermelon</a></p>
         </div>
     </div>
