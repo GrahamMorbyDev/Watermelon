@@ -45,7 +45,7 @@
                     <li><a href="{{URL::asset('/updates')}}">Updates</a></li>
                     <li><a href="{{URL::asset('/faq')}}">FAQ</a></li>
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
-                    <li><a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">Clips 4 Sale</a></li>
+                    <li><a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse" target="_blank">Clips 4 Sale</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
 

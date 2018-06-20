@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <hr>
-                <img src="images/about.jpg" alt="About Superbound">
+                <img src="images/about.jpg" alt="Mindi Mink faq" class="img-responsive">
             </div>
         </div>
         <div class="row">

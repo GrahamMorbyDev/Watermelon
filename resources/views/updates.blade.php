@@ -9,6 +9,9 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-md-12 text-center">
+                <hr>
+                <img src="images/about.jpg" alt="Mindi Mink Updates" class="img-responsive">
+                <hr>
                 <h1>Updates</h1>
                 <hr>
                 <h2>Look at our latest updates to our ever growing membership library</h2>

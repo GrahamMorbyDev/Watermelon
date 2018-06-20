@@ -5,6 +5,18 @@
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
          style="height: 400px; margin-top: -25px;">
     </div>
+
+    <!-- Info to start -->
+    <div class="container globalPadding">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <hr>
+                <img src="images/about.jpg" alt="Mindi Mink Links" class="img-responsive">
+                <hr>
+                <h1>BLog</h1>
+            </div>
+        </div>
+    </div>
     <!-- header finish -->
     <div class="container">
         <div class="row">

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <hr>
-                <img src="images/slider2.JPG" class="center-block" alt="Watermelon">
+                <img src="images/about.jpg" alt="Mindi Mink Links" class="img-responsive">
                 <hr>
                 <h1>Contact Us</h1>
                 @if(Session::has('success'))
@@ -50,30 +50,29 @@
             <div class="col-md-12 text-center">
                 <hr>
                 <h1>Membership Access & and other purchasing options</h1>
-                <p>Superbound.com is a membership site that updates twice a week with brand new videos as well as a
-                    multitude of still images. As time passes more and more videos and images will accumulate with
-                    videos generally being retired after 3 months (but still available at Superbound CS4).
-                    Membership does have its privileges!
+                <p>TabooMindi.xxx is a membership site that caters to the Stepmom/Son(Other
+                    family stepfamily member) Taboo fantasy. The site will be updated on a
+                    fortnightly basis and will be a mixture of still images and videos for
+                    you, the member to enjoy. So hit the link below to gain access to this
+                    premium exclusive content and enjoy seeing mommy.
                 </p>
             </div>
         </div>
         <div class="row">
             <hr>
             <div class="col-md-12">
-                <div class="col-md-6">
+                <div class="col-md-6 text-center">
                     <a href="{{URL::asset('register')}}">
-                        <img class="img-responsive" src='{{URL::asset('images/membershipBW.jpg')}}'
-                             onmouseover="this.src='{{URL::asset('images/membershipC.jpg')}}';"
-                             onmouseout="this.src='{{URL::asset('images/membershipBW.jpg')}}';" />
+                        <img class="img-responsive" src='{{URL::asset('images/membershipC.jpg')}}'/>
                     </a>
-                    </a>
+                    <h2>Membership</h2>
                 </div>
-                <div class="col-md-6">
-                    <a href="https://www.clips4sale.com/studio/8178/superbound/Cat4-BONDAGE#startingpoint" target="_blank">
-                        <img class="img-responsive" src='{{URL::asset('images/shopBW.jpg')}}'
-                             onmouseover="this.src='{{URL::asset('images/shopC.jpg')}}';"
-                             onmouseout="this.src='{{URL::asset('images/shopBW.jpg')}}';" />
+                <div class="col-md-6 text-center">
+                    <a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse"
+                       target="_blank">
+                        <img class="img-responsive" src='{{URL::asset('images/shopC.jpg')}}'/>
                     </a>
+                    <h2>Shop</h2>
                 </div>
             </div>
         </div>
