@@ -13,7 +13,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('', 'PagesController@disclaimer');
+Route::get('', 'PagesController@comingsoon');
+Route::get('disclaimer', 'PagesController@disclaimer');
 Route::post('storedb', 'PagesController@storeDob');
 Route::get('welcome', 'PagesController@index');
 Route::get('about', 'PagesController@about');

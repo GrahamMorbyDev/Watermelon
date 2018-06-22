@@ -40,6 +40,7 @@ class PagesController extends Controller
     public function contact() {
         return view('contact');
     }
+    //Contact Post
     public function contactUSPost(Request $request)
     {
         $this->validate($request, [
@@ -68,5 +69,9 @@ class PagesController extends Controller
     //FAQ
     public function faq() {
         return view('faq');
+    }
+    //Coming Soon
+    public function comingsoon() {
+        return view('comingsoon');
     }
 }
