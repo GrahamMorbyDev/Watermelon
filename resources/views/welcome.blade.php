@@ -42,12 +42,21 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <hr>
+                <img src="{{URL::asset('images/taboomindi.png')}}" alt="Features of taboo mindi" class="center-block" width="50%" style="border: none;">
+                <h1>You get access to 20 videos per month, Multiple Images and so much never seen before content.</h1>
+                <h1>All for $39.99 per month - Saving you $$$</h1>
+                <a href="#" class="btn btn-success center-block">Sign up today - $39.99</a>
+            </div>
+        </div>
     </div>
     <!-- Info to start finish -->
 
     <!-- Middle Parallax -->
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/about.jpg")}}"
-         style="height: 400px; margin-top: 20px;">
+         style="height: 600px; margin-top: 20px;">
     </div>
     <!-- Middle End -->
 
@@ -108,7 +117,7 @@
                     <h2>Membership</h2>
                 </div>
                 <div class="col-md-6 text-center">
-                    <a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse"
+                    <a href="https://mypornboutique.com/mindi-mink.html"
                        target="_blank">
                         <img class="img-responsive" src='{{URL::asset('images/shopC.jpg')}}'/>
                     </a>

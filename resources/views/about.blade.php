@@ -125,7 +125,7 @@
                     <h2>Membership</h2>
                 </div>
                 <div class="col-md-6 text-center">
-                    <a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse"
+                    <a href="https://mypornboutique.com/mindi-mink.html"
                        target="_blank">
                         <img class="img-responsive" src='{{URL::asset('images/shopC.jpg')}}'/>
                     </a>
