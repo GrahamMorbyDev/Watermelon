@@ -10,7 +10,7 @@
                 <div class="carousel-inner">
                     @foreach($imageset as $i => $image)
                     <div class="item <?= $i === 0 ? 'active': ''?>">
-                        <img src="{{URL::asset("storage/" . $image->name)}}">
+                        <img src="{{URL::asset("storage/" . $image->name)}}" class="img-responsive">
                     </div>
                     @endforeach
                 </div>
