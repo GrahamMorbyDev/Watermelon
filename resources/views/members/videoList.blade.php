@@ -16,12 +16,12 @@
                         <hr>
                     <a href="{{URL::asset('members/video/' . $video->id)}}" class="btn btn-success center-block">Watch Now</a>
                     <br>
-                    <form action="{{URL::asset('members/video/download')}}" method="post">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="filename" id="filename" value="{{$video->filename}}">
-                        <input type="hidden" name="title" id="title" value="{{$video->title}}">
-                        <button type="submit" class="btn btn-warning center-block" style="width: 100%">Download</button>
-                    </form>
+                    {{--<form action="{{URL::asset('members/video/download')}}" method="post">--}}
+                        {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
+                        {{--<input type="hidden" name="filename" id="filename" value="{{$video->filename}}">--}}
+                        {{--<input type="hidden" name="title" id="title" value="{{$video->title}}">--}}
+                        {{--<button type="submit" class="btn btn-warning center-block" style="width: 100%">Download</button>--}}
+                    {{--</form>--}}
                     <hr>
                 </div>
             @endforeach

@@ -4,7 +4,7 @@
 
     <!--Header -->
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
-         style="height: 400px; margin-top: -25px;">
+         style="height: 600px; margin-top: -25px;">
     </div>
     <!-- header finish -->
 
@@ -116,7 +116,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- End of access links -->
 

@@ -116,7 +116,7 @@
             </div>
             <div class="col-md-4">
                 <h2>Powered by</h2>
-                <a href="#" target="_blank">
+                <a href="http://www.watermelon.solutions/" target="_blank">
                     <img src="{{URL::asset('images/watermelon.png')}}" alt="Watermelon app" class="img-responsive center-block" width="50%">
                 </a>
                 <h2 class="text-center">Watermelon</h2>

@@ -31,7 +31,7 @@
                             <img src="{{URL::asset("storage/" . $video->featuredimage)}}" alt="" class="img-responsive">
                         </div>
                             <hr>
-                        <a href="{{URL::asset('/subscribe')}}" class="btn btn-default center-block">Join Today</a>
+                        <a href="{{URL::asset('/subscribe')}}" class="btn btn-success center-block">Join Today</a>
                         <br>
                     </div>
                 @endforeach
@@ -53,7 +53,7 @@
                             <img src="{{URL::asset("storage/" . $image->name)}}" alt="" class="img-responsive">
                         </div>
                             <hr>
-                        <a href="{{URL::asset('/subscribe')}}" class="btn btn-warning center-block">Join Today</a>
+                        <a href="{{URL::asset('/subscribe')}}" class="btn btn-success center-block">Join Today</a>
                     </div>
                 @endforeach
             </div>
