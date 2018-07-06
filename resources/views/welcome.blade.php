@@ -63,19 +63,19 @@
             </div>
             <div class="col-md-3 text-center">
                 <a href="{{URL::asset('register')}}">
-                    <img class="img-responsive" src='{{URL::asset('images/memc.jpg')}}'/>
+                    <img class="img-responsive" src='{{URL::asset('images/memC.jpg')}}'/>
                 </a>
                 <h2>Membership</h2>
             </div>
             <div class="col-md-3 text-center">
                 <a href="{{URL::asset('faq')}}">
-                    <img class="img-responsive" src='{{URL::asset('images/faqc.jpg')}}'/>
+                    <img class="img-responsive" src='{{URL::asset('images/faqC.jpg')}}'/>
                 </a>
                 <h2>FAQ</h2>
             </div>
             <div class="col-md-3 text-center">
                 <a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse" target="_blank">
-                    <img class="img-responsive" src='{{URL::asset('images/c4sc.jpg')}}'/>
+                    <img class="img-responsive" src='{{URL::asset('images/c4sC.jpg')}}'/>
                 </a>
                 <h2>Clips 4 Sale</h2>
             </div>
