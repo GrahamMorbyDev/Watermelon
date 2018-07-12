@@ -150,7 +150,7 @@
                 </ul>
             </div>
         </div>
-            <p>Powered by <a href="http://www.watermelon.solutions/" target="_blank" class="watermelon">Watermelon</a></p>
+            <p style="color:#000000; text-align: center;">&copy; Butterfly Software Developments | All Content Licensed by M Mink LLC</p>
         </div>
     </div>
 </div>
