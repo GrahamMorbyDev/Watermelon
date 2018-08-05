@@ -13,8 +13,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('', 'PagesController@comingsoon');
-Route::get('disclaimer', 'PagesController@disclaimer');
+//Auth Routes
+Auth::routes();
+
+//Home Pages
+Route::get('comingsoon', 'PagesController@index');
+Route::get('', 'PagesController@disclaimer');
 Route::post('storedb', 'PagesController@storeDob');
 Route::get('welcome', 'PagesController@index');
 Route::get('about', 'PagesController@about');
@@ -24,24 +28,23 @@ Route::get('contact', 'PagesController@contact');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'PagesController@contactUSPost']);
 Route::get('terms', 'PagesController@terms');
 Route::get('faq', 'PagesController@faq');
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{id}', 'BlogController@showBlog');
 
+//Verotel Routes
 Route::get('/verotel/postback', 'VerotelController@postback');
 Route::get('/verotel/success', 'VerotelController@success');
 Route::get('/verotel/cancel', 'VerotelController@cancel');
 
-Auth::routes();
-
-
+//Stripe Routes
 Route::get('/subscribe', 'SubscriptionController@index');
 Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@createSubscription']);
 Route::post('/subscribe/cancel', 'SubscriptionController@cancelSubscription');
-
 Route::post('/update/user/address', 'UserController@updateAddress');
+
+
+//Members Section
 Route::middleware(['members'])->group(function ()
 {
     //Lobby
@@ -60,6 +63,8 @@ Route::middleware(['members'])->group(function ()
 
 });
 
+
+//Admin Sections
 Route::middleware(['admin'])->group(function ()
 {
     // admin views

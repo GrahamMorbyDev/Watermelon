@@ -64,7 +64,7 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        {{--<li><a href="{{ route('register') }}">Register</a></li>--}}
                     @else
                         <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
                         <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>
@@ -125,15 +125,14 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h2>Powered by</h2>
-                <a href="http://www.watermelon.solutions/" target="_blank">
-                    <img src="{{URL::asset('images/watermelon.png')}}" alt="Watermelon app" class="img-responsive center-block" width="50%">
+                <h2>Protected</h2>
+                <a href="http://www.latestladies.com" target="_blank">
+                    <img src="{{URL::asset('/images/dmca2blue.jpg')}}" alt="Dmca By Latest Ladies" class="img-responsive">
                 </a>
-                <h2 class="text-center">Watermelon</h2>
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                <a class="twitter-timeline" data-height="250" href="https://twitter.com/MindiMink?ref_src=twsrc%5Etfw">Tweets by MindiMink</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
+                <a class="twitter-timeline" data-height="320" href="https://twitter.com/MindiMink?ref_src=twsrc%5Etfw">Tweets by MindiMink</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
             </div>
     </div>
     </div>
