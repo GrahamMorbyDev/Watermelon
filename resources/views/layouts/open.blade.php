@@ -149,7 +149,7 @@
                 </ul>
             </div>
         </div>
-            <p style="color:#000000; text-align: center;">&copy; <?php echo date("Y") ?> Butterfly Software Developments | All Content Licensed by M Mink LLC</p>
+            <p style="color:#000000; text-align: center;">&copy; <?php echo date("Y") ?> Butterfly Software Developments UK</p>
         </div>
     </div>
 </div>

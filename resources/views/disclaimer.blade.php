@@ -30,7 +30,7 @@
                     members of a family having any sexual interactions or intercourse. Thus, these are pure, tongue
                     in cheek adventuristic fantasy scenarios, without exception fully consensual, contextual.</p>
 
-                <p>All content on this site is owned and controlled by Mindi Mink LLC. All content is considered
+                <p>All content on this site is owned and controlled by Butterfly Software Developments UK. All content is considered
                     premium and no sharing, trading or posting to third party sites should take place without the
                     consent of the owner. If a member is found to be doing any of the above his/her membership will
                     be revoked and no money will be refunded for loss of time left on the subscription.</p>
