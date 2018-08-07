@@ -11,14 +11,8 @@
             </video>
         </div>
     </div>
-    <script LANGUAGE="javascript">
-
-        function click() {
-            if (event.button==2) {
-                alert('Sorry, this function is disabled.')
-            }
-        }
-        document.onMouseDown=click
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 
 @stop
