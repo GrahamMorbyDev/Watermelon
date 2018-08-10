@@ -64,7 +64,7 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ route('login') }}">Login</a></li>
-                        {{--<li><a href="{{ route('register') }}">Register</a></li>--}}
+                        <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
                         <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>
@@ -132,8 +132,7 @@
             </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                <a class="twitter-timeline" data-height="320" href="https://twitter.com/MindiMink?ref_src=twsrc%5Etfw">Tweets by MindiMink</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
-            </div>
+                <a class="twitter-timeline" data-height="250" data-theme="dark" href="https://twitter.com/NFLTrading_Card?ref_src=twsrc%5Etfw">Tweets by NFLTrading_Card</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
     </div>
     </div>
     <div class="row">

@@ -3,7 +3,7 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
          style="height: 600px; margin-top: -25px;">
     </div>
     <!-- header finish -->
@@ -13,49 +13,67 @@
         <div class="row">
             <div class="col-lg-12">
                 <hr>
-                <div class="col-md-8">
-                    <h1>Welcome to TabooMindi.xxx</h1>
-                    <p>Welcome to Taboo Mindi, the home of the hottest Mom on the planet.
-                        Join Mindi as she tries to get through her daily life trying hard not
-                        to make the mistakes a stepmom shouldn't. But when your Mindi its a
-                        very tough ask, she has to make sure her young stepfamily do as they
-                        say and she will make sure by using any means necessary. </p>
-                    <p>Taboo Mindi is a place to live out your Mommy fantasies.
-                        Join as she teaches you and many others how to be a big boy!
-                        And no mommy is as hot as Mindi. She will have you coming
-                        back for more time and time again!</p>
-                    <p>You will have access to an array of content from short videos to
-                        full-length video clips all showcasing how Mindi struggles
-                        daily being Stepmom! You will also get various still images
-                        from various video shoots. Full photo sets that you can enjoy
-                        time and time again.</p>
-                    <p>All content and mentions of Mother, Step Mother, Mom, Mommy and Son,
-                        Daughter or any any other family member relationship are acted out
-                        in pure fantasy. At no time are two blood-related members of a family
-                        having any sexual interactions or intercourse. Thus, these are pure,
-                        tongue in cheek adventuristic fantasy scenarios, without exception fully
-                        consensual, contextual.</p>
+                <img src="{{URL::asset('images/logosea.png')}}" alt="NFL Trading Cards" class="center-block">
+                    <p>Welcome to NFL Trading Cards, Thanks for stopping by and we hope the site gives you everything
+                        you are looking for. So let me introduce us and our service. First and foremost we are Football
+                        fans, we are from the UK and we love everything Football. Second, to that, we are also
+                        collectors. We love the trading cards and have been collecting for many years.  </p>
+                    <p>So why did we start this little site!? Well, we know how hard it is to get some of what we have
+                        for sale in the UK and other places around the globe. See the NFL is a global reach sport and we
+                        feel it should be easier to get such things as trading cards and hobby items and that's
+                        why we decided to give the UK and European fans a little taste of it.</p>
+                    <p>That doesn't mean that we don't cater for the US either! I mean seriously we would be crazy
+                        not to! All our boxes are posted out of the USA and we have access to all the latest cards
+                        and also the old but good stuff.</p>
+                    <p>So if your a fan of the game and trading cards then you have come to the right place!
+                        Any questions please contact us.</p>
                     <a href="#" class="btn btn-success center-block">Join Today</a>
-                </div>
-                <div class="col-md-4">
-                    <img src="{{URL::asset('images/home3.jpg')}}" alt="Welcome to Taboo Mindi" class="img-responsive">
-                </div>
+
+
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" style="margin-bottom: 50px">
                 <hr>
-                <img src="{{URL::asset('images/taboomindi.png')}}" alt="Features of taboo mindi" class="center-block" width="50%" style="border: none;">
-                <h1>You get access to 20 videos per month, Multiple Images and so much never seen before content.</h1>
-                <h1>All for $39.99 per month - Saving you $$$</h1>
-                <a href="#" class="btn btn-success center-block">Sign up today - $39.99</a>
+                <h1>The Next box ships in:</h1>
+                <h1 class="timer" id="demo"></h1>
+                <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Sep 1, 2018 15:37:25").getTime();
+
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+
+                        // Get todays date and time
+                        var now = new Date().getTime();
+
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id="demo"
+                        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+
+                        // If the count down is finished, write some text
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+                    }, 1000);
+                </script>
             </div>
         </div>
     </div>
     <!-- Info to start finish -->
 
     <!-- Middle Parallax -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/about.jpg")}}"
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/midnfl.jpg")}}"
          style="height: 600px; margin-top: 20px;">
     </div>
     <!-- Middle End -->
@@ -64,30 +82,22 @@
     <div class="container">
         <div class="row">
             <hr>
-            <div class="col-md-3 text-center">
-                <a href="{{URL::asset('about')}}">
-                    <img class="img-responsive" src='{{URL::asset('images/aboutc.jpg')}}'/>
-                </a>
-                <h2>About</h2>
+            <div class="col-md-4 text-center flavour">
+                <i class="fa fa-check"></i>
+                <h1>Pick</h1>
+                <p>Grab your flavour! One Month, Three Month or One Off!</p>
             </div>
-            <div class="col-md-3 text-center">
-                <a href="{{URL::asset('register')}}">
-                    <img class="img-responsive" src='{{URL::asset('images/memC.jpg')}}'/>
-                </a>
-                <h2>Membership</h2>
+            <div class="col-md-4 text-center flavour">
+                <i class="fa fa-paypal"></i>
+                <h1>Pay</h1>
+                <p>Secure check out with Paypal to pay for your crate!</p>
             </div>
-            <div class="col-md-3 text-center">
-                <a href="{{URL::asset('faq')}}">
-                    <img class="img-responsive" src='{{URL::asset('images/faqC.jpg')}}'/>
-                </a>
-                <h2>FAQ</h2>
+            <div class="col-md-4 text-center flavour">
+                <i class="fa fa-dropbox"></i>
+                <h1>Open</h1>
+                <p>Bring the hobby to your doorstep and enjoy! </p>
             </div>
-            <div class="col-md-3 text-center">
-                <a href="https://www.clips4sale.com/studio/80433/mindi-mink-s-playhouse" target="_blank">
-                    <img class="img-responsive" src='{{URL::asset('images/c4sC.jpg')}}'/>
-                </a>
-                <h2>Clips 4 Sale</h2>
-            </div>
+        </div>
             <hr>
         </div>
     </div>
@@ -110,19 +120,7 @@
         <div class="row">
             <hr>
             <div class="col-md-12">
-                <div class="col-md-6 text-center">
-                    <a href="{{URL::asset('register')}}">
-                        <img class="img-responsive" src='{{URL::asset('images/membershipC.jpg')}}'/>
-                    </a>
-                    <h2>Membership</h2>
-                </div>
-                <div class="col-md-6 text-center">
-                    <a href="https://mypornboutique.com/mindi-mink.html"
-                       target="_blank">
-                        <img class="img-responsive" src='{{URL::asset('images/shopC.jpg')}}'/>
-                    </a>
-                    <h2>Shop</h2>
-                </div>
+                <img class="img-responsive center-block" src='{{URL::asset('images/homeBottom.jpg')}}'/>
             </div>
         </div>
     </div>
