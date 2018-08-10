@@ -73,7 +73,7 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        <li><a href="{{ route('register') }}">Subscribe</a></li>
                     @else
                        {{-- <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
                         <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>--}}
