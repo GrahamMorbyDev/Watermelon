@@ -11,32 +11,26 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Learn More</h1>
-                <hr>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-4">
-                        <img src="{{URL::asset('images/score18.jpeg')}}" alt="Score 2018 Panini Cards" class="img-responsive">
+                <h1>Subscribe to a plan</h1>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="XS4RA4Z5ZD98Q">
+                    <input type="hidden" name="on0" value="">
+                    <div class="col-md-6 col-md-offset-3">
+                        <select name="os0" class="form-control">
+                            <option value="One Month">One Month : £29.99 GBP - monthly</option>
+                            <option value="Twelve Month">Twelve Month : £299.99 GBP - yearly</option>
+                        </select>
                     </div>
-                    <div class="col-md-8">
-                        <h2>How it works</h2>
-                        <p>So you collect and like to open blind packs and blind bags. Well imagine for a price of 29.99
-                            per month with shipping included you can get 8-9 packs of various booster card packs from
-                            various series plus some card collecting needs. You can get Folders, Card Holders, Cases
-                            and other such things that sometimes as collectors we don't really think we need until we
-                            actually need it. </p>
-                        <p>We use Ultra Pro for all our card protection needs and feel they are a cut above the rest
-                            and will offer you plenty to protect your collection. We hold Cards by the Major Companies
-                            and will also from time to time add in bundles of trade cards and special one-off cards we
-                            find when opening for our YouTube channel.</p>
-                        <p>So all you need to do to get involved is subscribe and sit back and wait for your box to
-                            arrive. We post on the first of each month and all cards are sent out of the USA. You can
-                            then grab your cards and unwrap and enjoy. We also sell single packs and other such items
-                            in our store. So you have a choice either ask us to ship all at once or have your store
-                            orders come out to you straight away.</p>
-                    </div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="hidden" name="currency_code" value="GBP">
+                        {{--<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">--}}
+                        <br>
+                        <button type="submit" name="submit" class="btn btn-success center-block">Subscribe</button>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
                 </div>
+                </form>
+                <hr>
             </div>
         </div>
     </div>
@@ -119,15 +113,4 @@
     </div>
     </div>
     <!-- End of Nice Links -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Latest Video</h1>
-                <div class="col-md-6 col-md-offset-3">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/qPlm1-ZAhPU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

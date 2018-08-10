@@ -42,6 +42,11 @@ Route::get('/subscribe', 'SubscriptionController@index');
 Route::post('sub', ['as' => 'subscribe', 'uses' => 'SubscriptionController@createSubscription']);
 Route::post('/subscribe/cancel', 'SubscriptionController@cancelSubscription');
 Route::post('/update/user/address', 'UserController@updateAddress');
+Route::get('paypalSub', 'SubscriptionController@paypalSubscription');
+
+//PayPal Routes
+Route::post('paypal', 'PaymentController@payWithpaypal');
+Route::get('status', 'PaymentController@getPaymentStatus');
 
 
 //Members Section

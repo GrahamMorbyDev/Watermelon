@@ -55,7 +55,7 @@ class UserController extends Controller
             $address->create($addressAttributes);
         }
 
-        return redirect()->back()->with('alert-success', 'Saved successfully');
+        return redirect('paypalSub');
     }
 
     public function deleteUser(Request $request)

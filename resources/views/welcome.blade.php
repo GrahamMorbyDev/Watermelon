@@ -1,10 +1,9 @@
 @extends('layouts.open')
 
 @section('content')
-
     <!--Header -->
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
-         style="height: 600px; margin-top: -25px;">
+         style="height: 700px; margin-top: -25px;">
     </div>
     <!-- header finish -->
 
@@ -27,9 +26,7 @@
                         and also the old but good stuff.</p>
                     <p>So if your a fan of the game and trading cards then you have come to the right place!
                         Any questions please contact us.</p>
-                    <a href="#" class="btn btn-success center-block">Join Today</a>
-
-
+                    <a href="#" class="btn btn-success center-block">Subscribe Today</a>
             </div>
         </div>
         <div class="row">
@@ -85,7 +82,7 @@
             <div class="col-md-4 text-center flavour">
                 <i class="fa fa-check"></i>
                 <h1>Pick</h1>
-                <p>Grab your flavour! One Month, Three Month or One Off!</p>
+                <p>Grab your box!</p>
             </div>
             <div class="col-md-4 text-center flavour">
                 <i class="fa fa-paypal"></i>
@@ -100,6 +97,13 @@
         </div>
             <hr>
         </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <a href="#" class="btn btn-success center-block">Subscribe Today</a>
+            </div>
+        </div>
+    </div>
     </div>
     <!-- End of Nice Links -->
 
@@ -107,14 +111,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <hr>
-                <h1>Membership Access & and other purchasing options</h1>
-                <p>TabooMindi.xxx is a membership site that caters to the Stepmom/Son(Other
-                    family stepfamily member) Taboo fantasy. The site will be updated on a
-                    fortnightly basis and will be a mixture of still images and videos for
-                    you, the member to enjoy. So hit the link below to gain access to this
-                    premium exclusive content and enjoy seeing mommy.
-                </p>
+                {{--<hr>
+                <form class="w3-container w3-display-middle w3-card-4 " method="POST" id="payment-form"  action="{{URL::asset('paypal')}}">
+                    {{ csrf_field() }}
+                    <h2 class="w3-text-blue">Payment Form</h2>
+                    <p>Demo PayPal form - Integrating paypal in laravel</p>
+                    <p>
+                        <label class="w3-text-blue"><b>Enter Amount</b></label>
+                        <input class="w3-input w3-border" name="amount" type="text"></p>
+                    <button class="w3-btn w3-blue">Pay with PayPal</button></p>
+                </form>--}}
             </div>
         </div>
         <div class="row">

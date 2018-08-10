@@ -3,8 +3,8 @@
 @section('content')
 
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/enter.jpg")}}"
-         style="height: 400px; margin-top: -25px;">
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
+         style="height: 700px; margin-top: -25px;">
     </div>
     <!-- header finish -->
 
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <hr>
-                <img src="images/about.jpg" alt="Mindi Mink Links" class="img-responsive">
+                <img src="images/enter.jpg" alt="Mindi Mink Links" class="img-responsive center-block">
                 <hr>
                 <h1>Contact Us</h1>
                 @if(Session::has('success'))
@@ -43,40 +43,4 @@
         </div>
     </div>
     <!-- End of Contact Form -->
-
-    <!-- access links -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <hr>
-                <h1>Membership Access & and other purchasing options</h1>
-                <p>TabooMindi.xxx is a membership site that caters to the Stepmom/Son(Other
-                    family stepfamily member) Taboo fantasy. The site will be updated on a
-                    fortnightly basis and will be a mixture of still images and videos for
-                    you, the member to enjoy. So hit the link below to gain access to this
-                    premium exclusive content and enjoy seeing mommy.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <hr>
-            <div class="col-md-12">
-                <div class="col-md-6 text-center">
-                    <a href="{{URL::asset('register')}}">
-                        <img class="img-responsive" src='{{URL::asset('images/membershipC.jpg')}}'/>
-                    </a>
-                    <h2>Membership</h2>
-                </div>
-                <div class="col-md-6 text-center">
-                    <a href="https://mypornboutique.com/mindi-mink.html"
-                       target="_blank">
-                        <img class="img-responsive" src='{{URL::asset('images/shopC.jpg')}}'/>
-                    </a>
-                    <h2>Shop</h2>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- End of access links -->
 @endsection

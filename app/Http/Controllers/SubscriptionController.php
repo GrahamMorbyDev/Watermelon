@@ -127,4 +127,8 @@ class SubscriptionController extends Controller
         }
         return view('subList', ['subs' => $return]);
     }
+
+    public function paypalSubscription() {
+        return view('paypalSub');
+    }
 }
