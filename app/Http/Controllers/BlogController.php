@@ -19,7 +19,7 @@ class BlogController extends Controller
     public function showArticleList()
     {
         $blogs = new Blogs();
-        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage', 'description','slug']);
+        $blogs = $blogs->where('publish', '=', 1)->latest()->paginate(4, ['id', 'title', 'featuredimage', 'description','slug']);
         return view('/blogList', compact('blogs'));
     }
 

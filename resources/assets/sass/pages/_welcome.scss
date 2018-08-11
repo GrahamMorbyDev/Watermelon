@@ -25,3 +25,18 @@
     }
   }
 }
+
+.bloglist {
+  min-height: 450px;
+  background: $denim;
+  color: white;
+  padding: 20px;
+
+  &:nth-child(even) {
+    background: $gold;
+  }
+
+  h3{
+    color: white;
+  }
+}

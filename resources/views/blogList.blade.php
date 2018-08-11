@@ -21,13 +21,13 @@
             <div class="col-lg-12 boxPadding">
                 <hr>
                 @foreach($blogs as $blog)
-                    <div class="col-md-4 text-center" style="min-height: 450px;">
-                        <h1>{{$blog->title}}</h1>
+                    <div class="col-md-3 text-center bloglist">
+                        <h3>{{$blog->title}}</h3>
                         <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" alt="" class="img-responsive">
                         <br>
                         <p>{{$blog->description}}</p>
                         <div class="btn-group">
-                            <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-success btn-lg center-block">View</a>
+                            <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-success btn-lg center-block">Read The Article</a>
                         </div>
                     </div>
                 @endforeach

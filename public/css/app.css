@@ -14757,6 +14757,21 @@ footer ul li {
   color: #A5ACAF;
 }
 
+.bloglist {
+  min-height: 450px;
+  background: #69BE28;
+  color: white;
+  padding: 20px;
+}
+
+.bloglist:nth-child(even) {
+  background: #002244;
+}
+
+.bloglist h3 {
+  color: white;
+}
+
 .notice {
   padding: 20px;
   color: #ffffff;
