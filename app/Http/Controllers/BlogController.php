@@ -19,7 +19,7 @@ class BlogController extends Controller
     public function showArticleList()
     {
         $blogs = new Blogs();
-        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage', 'description']);
+        $blogs = $blogs->where('publish', '=', 1)->paginate(10, ['id', 'title', 'featuredimage', 'description','slug']);
         return view('/blogList', compact('blogs'));
     }
 
@@ -27,10 +27,10 @@ class BlogController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showBlog($id)
+    public function showBlog($slug)
     {
         $blog = new Blogs();
-        $blog = $blog->where('id', $id)->first();
+        $blog = $blog->where('slug', $slug)->first();
         return view('blog', compact('blog'));
     }
 
@@ -71,8 +71,14 @@ class BlogController extends Controller
             $this->validateBlog($request, true);
 
             $blog = new Blogs();
+
+            //Store Image
             $imagePath = $request->file('featuredimage')->store('blogimages');
 
+            //Create Slug
+            $str = strtolower($request->get('title'));
+
+            //Store Post
             $blog->title = $request->get('title');
             $blog->description = $request->get('description');
             $blog->featuredimage = $imagePath;
@@ -80,7 +86,9 @@ class BlogController extends Controller
             $blog->publish = $request->get('publish');
             $blog->author = $request->get('author');
             $blog->tags = $request->get('tags');
+            $blog->slug = preg_replace('/\s+/', '-', $str);
 
+            //Save
             $blog->save();
             return redirect()->route('editBlog', ['id' => $blog->id]);
         }

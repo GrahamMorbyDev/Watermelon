@@ -27,7 +27,7 @@
                         <br>
                         <p>{{$blog->description}}</p>
                         <div class="btn-group">
-                            <a href="{{URL::asset('blog/' . $blog->id)}}" class="btn btn-success btn-lg center-block">View</a>
+                            <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-success btn-lg center-block">View</a>
                         </div>
                     </div>
                 @endforeach
