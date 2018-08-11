@@ -15,3 +15,13 @@
     color: $denim;
   }
 }
+
+.blogview {
+  a {
+    color: $denim;
+
+    &:hover {
+      color: $sail;
+    }
+  }
+}

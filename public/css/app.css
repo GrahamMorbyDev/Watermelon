@@ -14749,6 +14749,14 @@ footer ul li {
   color: #69BE28;
 }
 
+.blogview a {
+  color: #69BE28;
+}
+
+.blogview a:hover {
+  color: #A5ACAF;
+}
+
 .notice {
   padding: 20px;
   color: #ffffff;
