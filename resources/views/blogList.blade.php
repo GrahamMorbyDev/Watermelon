@@ -11,10 +11,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <hr>
-                <img src="images/about.jpg" alt="Mindi Mink Links" class="img-responsive">
-                <hr>
-                <h1>BLog</h1>
+                <h1>NFL Trading card Blog</h1>
             </div>
         </div>
     </div>
