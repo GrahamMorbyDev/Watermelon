@@ -110,3 +110,8 @@ Route::middleware(['admin'])->group(function ()
     Route::get('/admin/contacts', 'AdminController@contact');
 });
 
+//Store Section
+Route::get('store/index', 'StoreController@index');
+
+Route::get('store/get/products', 'StoreController@products');
+
