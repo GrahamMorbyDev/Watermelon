@@ -11,7 +11,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>NFL Trading card Blog</h1>
+                
             </div>
         </div>
     </div>
