@@ -14759,17 +14759,8 @@ footer ul li {
 
 .bloglist {
   min-height: 450px;
-  background: #8e44ad;
-  color: white;
   padding: 20px;
-}
-
-.bloglist:nth-child(even) {
-  background: #8e44ad;
-}
-
-.bloglist h3 {
-  color: white;
+  border: 2px solid #cccccc;
 }
 
 .product-item {

@@ -11,7 +11,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-                
+
             </div>
         </div>
     </div>
@@ -22,13 +22,9 @@
                 <hr>
                 @foreach($blogs as $blog)
                     <div class="col-md-3 text-center bloglist">
-                        <h3>{{$blog->title}}</h3>
                         <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" alt="" class="img-responsive">
-                        <br>
-                        <p>{{$blog->description}}</p>
-                        <div class="btn-group">
-                            <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-success btn-lg center-block">Read The Article</a>
-                        </div>
+                        <h3>{{$blog->title}}</h3>
+                        <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-success btn-lg center-block">Read</a>
                     </div>
                 @endforeach
             </div>
