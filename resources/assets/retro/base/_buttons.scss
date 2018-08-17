@@ -1,0 +1,37 @@
+.btn {
+  font-weight: 700;
+  font-size: em(16);
+  color: $hoki;
+  padding: 9.48px 21px 9.48px 21px;
+}
+
+.btn-success {
+  @include button-bg($gold, $gold);
+  color: white;
+  &:active {
+    @include button-bg($gold, $gold);
+    color: white;
+  }
+  &:focus {
+    @include button-bg($gold, $gold);
+    color: white;
+  }
+}
+
+.btn-warning {
+  @include button-bg($matisse, $matisse);
+  color: white;
+  &:active {
+    @include button-bg($matisse, $matisse);
+    color: white;
+  }
+  &:focus {
+    @include button-bg($matisse, $matisse);
+    color: white;
+  }
+}
+
+.btn-default {
+  background-color: $white;
+  border: $white;
+}

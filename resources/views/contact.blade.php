@@ -13,7 +13,6 @@
         <div class="row">
             <div class="col-lg-12">
                 <hr>
-                <img src="images/enter.jpg" alt="Mindi Mink Links" class="img-responsive center-block">
                 <hr>
                 <h1>Contact Us</h1>
                 @if(Session::has('success'))

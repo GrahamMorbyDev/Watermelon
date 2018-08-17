@@ -1,0 +1,27 @@
+.navbar-default {
+  background-color: $gold;
+  border-color: $gold;
+  border-bottom: 5px solid $denim;
+}
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+}
+.navbar-default .navbar-brand {
+  color: $white;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: $denim;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: $white;
+  background-color: $denim;
+  border: 1px solid $denim;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.nav-tabs {
+  border-bottom: 1px solid $gold;
+  font-size: em(18);
+}

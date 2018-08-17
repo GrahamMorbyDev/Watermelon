@@ -1,0 +1,29 @@
+// Font Mixins
+
+// Controls Font Styles
+@mixin fontStyles($fontWeight, $fontColor, $lineHeight) {
+  font-weight: $fontWeight;
+  color: $fontColor;
+  line-height: $lineHeight;
+}
+
+// EM Calc for PX to EM
+$browser-font: 16;
+@function em($pixels, $context: $browser-font){
+  @return #{$pixels/$context}em;
+}
+
+// Color Mixins
+
+// Button color and fades on hover
+@mixin button-bg($bg, $border) {
+  background: $bg;
+  border: $border;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}

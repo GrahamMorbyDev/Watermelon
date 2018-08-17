@@ -15,5 +15,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.sass('resources/assets/noirTheme/app.scss', 'public/noirTheme');
-mix.sass('resources/assets/comicBook/app.scss', 'public/comicBook');
+mix.sass('resources/assets/retro/app.scss', 'public/retro');
 

@@ -61,12 +61,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL::asset('/')}}">Home</a></li>
-                    <li><a href="{{URL::asset('/about')}}">About Us</a></li>
+                    <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
                     {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
-                    <li><a href="https://twitter.com/NFLTrading_Card" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/NFL-Trading-Cards-1618137328312194/" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCMgqQH9B5m-l2puVRPmLC8g" target="_blank">YouTube</a></li>
+                    <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
 
@@ -74,8 +73,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Subscribe</a></li>
+                        {{--<li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Subscribe</a></li>--}}
                     @else
                        {{-- <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
                         <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>--}}
@@ -128,23 +127,22 @@
                 <h2>Menu</h2>
                 <ul>
                     <li><a href="{{URL::asset('/')}}">Home</a></li>
-                    <li><a href="{{URL::asset('/about')}}">About Us</a></li>
+                <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
                     {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
                     <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
-                    <li><a href="https://twitter.com/NFLTrading_Card" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/NFL-Trading-Cards-1618137328312194/" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCMgqQH9B5m-l2puVRPmLC8g" target="_blank">YouTube</a></li>
+                    <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <h2>Facebook</h2>
-                <div class="fb-page" data-href="https://www.facebook.com/NFL-Trading-Cards-1618137328312194/" data-tabs="timeline" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/NFL-Trading-Cards-1618137328312194/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NFL-Trading-Cards-1618137328312194/">NFL Trading Cards</a></blockquote></div>
-            </div>
+                <div class="fb-page" data-href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" data-tabs="timeline" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/">Retro Gamer Crate</a></blockquote></div>            </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                <a class="twitter-timeline" data-height="250" data-theme="dark" href="https://twitter.com/NFLTrading_Card?ref_src=twsrc%5Etfw">Tweets by NFLTrading_Card</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
-    </div>
+                <a class="twitter-timeline"  href="https://twitter.com/retrogamercrate" data-widget-id="551840756865191936">Tweets by @retrogamercrate</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
     </div>
         <div class="row" style="padding: 50px;"></div>
     </div>

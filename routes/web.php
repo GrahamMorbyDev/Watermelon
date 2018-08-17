@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //Home Pages
-Route::get('comingsoon', 'PagesController@index');
+Route::get('', 'PagesController@comingsoon');
 //Route::get('', 'PagesController@disclaimer');
 //Route::post('storedb', 'PagesController@storeDob');
-Route::get('', 'PagesController@index');
+Route::get('welcome', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('whatwedo', 'PagesController@whatwedo');
 Route::get('updates', 'PagesController@updates');

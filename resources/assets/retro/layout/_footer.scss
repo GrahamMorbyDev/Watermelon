@@ -1,0 +1,18 @@
+footer {
+  background-color: $gold;
+  border-top: 5px solid $denim;
+  min-height: 200px;
+  color: $white;
+  margin-top: 50px;
+  h2 {
+    color: $white;
+    margin-bottom: -15px;
+  }
+  ul {
+    list-style: none;
+    li {
+     padding: 5px;
+      margin-left: -45px;
+    }
+  }
+}
