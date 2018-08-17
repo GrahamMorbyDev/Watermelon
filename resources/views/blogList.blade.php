@@ -2,7 +2,7 @@
 
 @section('content')
     <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpg")}}"
          style="height: 700px; margin-top: -25px;">
     </div>
     <!-- header finish -->
@@ -11,7 +11,7 @@
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12 text-center">
-
+                <img src="{{URL::asset('images/blog.jpg')}}" alt="Welcome to the blog" class="img-responsive">
             </div>
         </div>
     </div>
