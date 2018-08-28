@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
            <div id="app">
-               <home></home>
+               <app></app>
            </div>
         </div>
     </div>

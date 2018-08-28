@@ -3,6 +3,7 @@
 namespace App;
 
 use DateTime;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use Billable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -42,6 +44,11 @@ class User extends Authenticatable
         if ($subbed = $this->getLatestSubscription()) ;
 
         return $subbed;
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 
     /**
