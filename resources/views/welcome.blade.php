@@ -3,7 +3,7 @@
 @section('content')
     <!--Header -->
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
-         style="height: 700px; margin-top: -25px;">
+         style="height: 400px; margin-top: -25px;">
     </div>
     <!-- header finish -->
 

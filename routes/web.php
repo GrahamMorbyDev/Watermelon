@@ -31,6 +31,7 @@ Route::get('faq', 'PagesController@faq');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{slug}', 'BlogController@showBlog');
+Route::post('get/single/game', 'PagesController@singleGame');
 
 //Verotel Routes
 Route::get('/verotel/postback', 'VerotelController@postback');
