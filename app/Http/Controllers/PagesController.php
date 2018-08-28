@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Dob;
 use Video;
 use App\contactUS;
+use Messerli90\IGDB\Facades\IGDB;
 
 class PagesController extends Controller
 {
@@ -53,10 +54,12 @@ class PagesController extends Controller
 
         return back()->with('success', 'Thanks for contacting us!');
     }
+
     //Terms
     public function terms() {
         return view('terms');
     }
+
     //Latest Updates Page
     public function updates() {
         $videos = DB::table('videos')->latest()->paginate(6);
@@ -66,12 +69,23 @@ class PagesController extends Controller
             ->get();
         return view('updates', compact('videos', 'images'));
     }
+
     //FAQ
     public function faq() {
         return view('faq');
     }
     //Coming Soon
     public function comingsoon() {
-        return view('comingsoon');
+        $game = IGDB::searchGames('fallout');
+        //dd($game);
+        return view('comingsoon', compact('game'));
+    }
+
+    //Game Page
+    public function singleGame(Request $request) {
+        $id = $request->get('id');
+        $game = IGDB::getGame($id);
+        //dd($game);
+        return view('singlegame', compact('game'));
     }
 }

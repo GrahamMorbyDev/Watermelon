@@ -29,10 +29,16 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'igdb' => [
+        'key' => env('YOUR_IGDB_KEY'),
+        'url' => env('YOUR_IGDB_URL')
+    ],
+
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_PUBLISHABLE_SECRET','pk_test_RCTcGzwBA1YDQGzZIhHntIpv'),
         'secret' => env('STRIPE_SECRET','sk_test_v8pnOkQ6BFgyw9ZaI0MqgVnF'),
     ],
+
 
 ];

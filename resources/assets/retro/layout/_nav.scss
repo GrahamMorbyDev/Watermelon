@@ -4,10 +4,12 @@
   border-bottom: 5px solid $denim;
 }
 .navbar-default .navbar-nav > li > a {
-  color: $white;
+  color: $denim;
+  font-size: 12px;
 }
 .navbar-default .navbar-brand {
-  color: $white;
+  color: $denim;
+  font-size: 12px;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {

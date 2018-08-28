@@ -11,6 +11,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
+        "messerli90/igdb": "^1.0",
         "paypal/rest-api-sdk-php": "^1.13",
         "verotel/flexpay-php-client": "^4.0"
     },
