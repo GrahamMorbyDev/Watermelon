@@ -29,6 +29,17 @@
         js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=190225075032128&autoLogAppEvents=1';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124829134-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124829134-1');
+</script>
+
 <div id="app">
     <!-- header -->
     <header>
@@ -44,8 +55,8 @@
                             <li><a href="https://twitter.com/retrogamercrate" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
                             <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                             <li><a href="https://www.youtube.com/channel/UCBFFEMIr4D2ot_84isxJ7-g" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
-                            <li><i class="fa fa-instagram"></i></li>
-                            <li><i class="fa fa-twitch"></i></li>
+                            <li><a href="https://www.instagram.com/retrogamercrate/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.twitch.tv/retrogamerzone" target="_blank"><i class="fa fa-twitch"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -166,6 +177,7 @@
     </div>
         <div class="row" style="padding: 50px;"></div>
     </div>
+</div>
 </div>
 </footer>
 <!-- footer end -->
