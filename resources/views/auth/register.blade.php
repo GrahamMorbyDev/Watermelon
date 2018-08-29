@@ -3,8 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <img src="{{URL::asset('images/enter.jpg')}}" alt="Placeholder" class="img-responsive greyImage">
-            <hr>
+
             <h1 class="text-center">Register</h1>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -61,7 +60,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-default">
                                     Register
                                 </button>
                             </div>
