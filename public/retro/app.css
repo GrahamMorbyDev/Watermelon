@@ -14470,12 +14470,11 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: #647884;
+  color: #8e44ad;
   line-height: inherit;
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.96px;
   text-transform: uppercase;
-  padding: 0 0 30px 0;
 }
 
 h1,
@@ -14669,30 +14668,74 @@ table .name {
 }
 
 .btn-default {
-  background-color: #ffffff;
-  border: #ffffff;
+  background: #8e44ad;
+  border: #8e44ad;
+  color: white;
+  border-radius: 0;
+}
+
+.btn-default:hover {
+  background: #763890;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-default:active {
+  background: #432051;
+}
+
+.btn-default:active {
+  background: #8e44ad;
+  border: #8e44ad;
+  color: white;
+}
+
+.btn-default:active:hover {
+  background: #763890;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-default:active:active {
+  background: #432051;
+}
+
+.btn-default:focus {
+  background: #8e44ad;
+  border: #8e44ad;
+  color: white;
+}
+
+.btn-default:focus:hover {
+  background: #763890;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-default:focus:active {
+  background: #432051;
 }
 
 .navbar-default {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  border-bottom: 5px solid #8e44ad;
+  background-color: #8e44ad;
+  border-color: #8e44ad;
+  border-radius: 0;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #8e44ad;
+  color: #ffffff;
   font-size: 12px;
 }
 
 .navbar-default .navbar-brand {
-  color: #8e44ad;
+  color: #ffffff;
   font-size: 12px;
 }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #8e44ad;
+  background-color: #ffffff;
 }
 
 .nav-tabs > li.active > a,
@@ -14730,6 +14773,48 @@ footer ul {
 footer ul li {
   padding: 5px;
   margin-left: -45px;
+}
+
+header {
+  padding: 30px;
+}
+
+header .socialLinks {
+  list-style: none;
+  margin-top: 20px;
+}
+
+header .socialLinks li {
+  float: left;
+  font-size: 40px;
+  padding: 10px;
+}
+
+header .socialLinks li a {
+  color: #8e44ad;
+}
+
+header .socialLinks li a:hover {
+  color: #34193f;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header .socialLinks li a:active {
+  color: #432051;
+}
+
+.carousel-img-responsive {
+  width: 100%;
+}
+
+.newsBlock {
+  margin-bottom: 30px;
+}
+
+.newsBlock .newsItem {
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 .pricing {
@@ -14872,6 +14957,29 @@ footer ul li {
   color: #fff;
   background: #8e44ad;
   border-color: #8e44ad;
+}
+
+.gameView p {
+  font-size: 12px;
+  min-height: 40px;
+}
+
+.gameView button {
+  font-size: 14px;
+}
+
+.searchbox {
+  border-top: 2px solid #8e44ad;
+  margin-top: 35px;
+}
+
+.searchbox input {
+  height: 50px;
+  border-color: #8e44ad;
+}
+
+.searchbox placeholder {
+  font-family: 'Anton', sans-serif;
 }
 
 .notice {

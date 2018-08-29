@@ -8,6 +8,7 @@ use App\Dob;
 use Video;
 use App\contactUS;
 use Messerli90\IGDB\Facades\IGDB;
+use App\Blogs;
 
 class PagesController extends Controller
 {
@@ -77,15 +78,34 @@ class PagesController extends Controller
     //Coming Soon
     public function comingsoon() {
         $game = IGDB::searchGames('fallout');
+        //$game  = json_decode($game, true);
         //dd($game);
-        return view('comingsoon', compact('game'));
+
+        //Get first three Blog posts
+        $blognew = new Blogs();
+        $blognew = $blognew->take(3)->get();
+
+        //Get Other blogs
+        $blogold = new Blogs();
+        $blogold = $blogold->skip(3)->take(4)->get();
+
+        return view('comingsoon', compact('game', 'blognew', 'blogold'));
     }
 
     //Game Page
     public function singleGame(Request $request) {
         $id = $request->get('id');
         $game = IGDB::getGame($id);
+        $game  = json_decode($game, true);
         //dd($game);
         return view('singlegame', compact('game'));
+    }
+
+    //Search Game
+    public function searchGame(Request $request) {
+        $name = $request->get('game');
+        $game = IGDB::searchGames($name);
+        $game  = json_decode($game, true);
+        return view('searchGameResults', compact('game'));
     }
 }

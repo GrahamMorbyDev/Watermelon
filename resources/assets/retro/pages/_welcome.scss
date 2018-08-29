@@ -1,3 +1,47 @@
+//Site Header
+header {
+  padding: 30px;
+
+  .socialLinks {
+    list-style: none;
+    margin-top: 20px;
+
+    li {
+      float: left;
+      font-size: 40px;
+      padding: 10px;
+
+      a {
+        color: $denim;
+
+        &:hover {
+          color: darken($denim, 30%);
+          transition: all 0.3s ease;
+        }
+        &:active {
+          color: darken($denim, 25%);
+        }
+      }
+    }
+  }
+}
+//End of Site header
+
+//New items
+.carousel-img-responsive {
+  width: 100%;
+}
+
+.newsBlock {
+  margin-bottom: 30px;
+
+  .newsItem {
+    padding: 20px;
+    margin-bottom: 5px;
+  }
+}
+//End of news items
+
 .pricing {
   text-align: center;
   h3 {
@@ -9,6 +53,7 @@
     list-style: none;
   }
 }
+
 .flavour {
   i {
     font-size: 4em;
@@ -31,15 +76,18 @@
   padding: 20px;
   border: 2px solid #cccccc;
 }
+
 .product-item {
   padding: 15px;
   background: #fff;
   margin-top: 20px;
   position: relative;
 }
+
 .product-item:hover {
   box-shadow: 5px 5px rgba(234, 234, 234, 0.9);
 }
+
 .product-item:after {
   content: ".";
   display: block;
@@ -47,8 +95,9 @@
   clear: both;
   visibility: hidden;
   font-size: 0;
-  line-height:0;
+  line-height: 0;
 }
+
 .sticker {
   position: absolute;
   top: 0;
@@ -56,16 +105,19 @@
   width: 63px;
   height: 63px;
 }
+
 .sticker-new {
   background: url(http://keenthemes.com/assets/bootsnipp/new.png) no-repeat;
   left: auto;
   right: 0;
 }
+
 .pi-img-wrapper {
   position: relative;
 }
+
 .pi-img-wrapper div {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 0;
   top: 0;
@@ -74,9 +126,11 @@
   height: 100%;
   text-align: center;
 }
-.product-item:hover>.pi-img-wrapper>div {
+
+.product-item:hover > .pi-img-wrapper > div {
   display: block;
 }
+
 .pi-img-wrapper div .btn {
   padding: 3px 10px;
   color: #fff;
@@ -89,6 +143,7 @@
   line-height: 1.4;
   font-size: 12px;
 }
+
 .product-item .btn:hover {
   background: $denim;
   border-color: #c8c8c8;
@@ -100,18 +155,22 @@
   padding-bottom: 4px;
   text-transform: uppercase;
 }
+
 .product-item h3 a {
   color: #3e4d5c;
 }
+
 .product-item h3 a:hover {
   color: $denim;
 }
+
 .pi-price {
   color: $gold;
   font-size: 18px;
   float: left;
   padding-top: 1px;
 }
+
 .product-item .add2cart {
   float: right;
   color: #a8aeb3;
@@ -119,8 +178,33 @@
   padding: 3px 6px;
   text-transform: uppercase;
 }
+
 .product-item .add2cart:hover {
   color: #fff;
   background: $denim;
   border-color: $denim;
+}
+
+.gameView {
+  p {
+    font-size: 12px;
+    min-height: 40px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
+
+.searchbox {
+  border-top: 2px solid $denim;
+  margin-top: 35px;
+
+  input {
+    height: 50px;
+    border-color: $denim;
+
+  }
+  placeholder {
+    font-family: 'Anton', sans-serif;
+  }
 }

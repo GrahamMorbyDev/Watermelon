@@ -32,6 +32,15 @@
 }
 
 .btn-default {
-  background-color: $white;
-  border: $white;
+  @include button-bg($denim, $denim);
+  color: white;
+  border-radius: 0;
+  &:active {
+    @include button-bg($denim, $denim);
+    color: white;
+  }
+  &:focus {
+    @include button-bg($denim, $denim);
+    color: white;
+  }
 }

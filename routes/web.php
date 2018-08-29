@@ -31,7 +31,10 @@ Route::get('faq', 'PagesController@faq');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{slug}', 'BlogController@showBlog');
+
+//Gaming routes
 Route::post('get/single/game', 'PagesController@singleGame');
+Route::post('search/game', 'PagesController@searchGame');
 
 //Verotel Routes
 Route::get('/verotel/postback', 'VerotelController@postback');

@@ -30,71 +30,99 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 <div id="app">
-    <!-- Nav bar -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <!-- header -->
+    <header>
         <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/welcome') }}">
-                    {{ config('app.name', 'Placeholder') }}
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{URL::asset('/')}}">Home</a></li>
-                    <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
-                    {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
-                    <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
-                    <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
-                    <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        {{--<li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Subscribe</a></li>--}}
-                    @else
-                       {{-- <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
-                        <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>--}}
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <img src="{{URL::asset('images/logo.png')}}" alt="Retro Gamer Crate" class="img-responsive">
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 pull-right">
+                        <ul class="socialLinks">
+                            <li><a href="https://twitter.com/retrogamercrate" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCBFFEMIr4D2ot_84isxJ7-g" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-twitch"></i></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- Nav bar Eind -->
+    </header>
+    <!-- end of header -->
+    
+    <!-- Nav bar -->
+    <div class="container-fluid">
+      <div class="row">
+          <nav class="navbar navbar-default">
+              <div class="container">
+                  <div class="navbar-header">
+                      <!-- Collapsed Hamburger -->
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                          <span class="sr-only">Toggle Navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                      <!-- Left Side Of Navbar -->
+                      <ul class="nav navbar-nav">
+                          <li><a href="{{URL::asset('/')}}">Home</a></li>
+                      <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
+                          {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
+                          <li><a href="{{URL::asset('/blog')}}">Latest News</a></li>
+                          <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
+                          <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
+                          <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
+                      </ul>
+
+                      <!-- Right Side Of Navbar -->
+                      <ul class="nav navbar-nav navbar-right">
+                          <!-- Authentication Links -->
+                          @if (Auth::guest())
+                              {{--<li><a href="{{ route('login') }}">Login</a></li>
+                              <li><a href="{{ route('register') }}">Subscribe</a></li>--}}
+                          @else
+                              {{-- <li><a href="{{ URL::asset('/members/videos') }}">Videos</a></li>
+                               <li><a href="{{ URL::asset('/members/imagessets') }}">Images</a></li>--}}
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                      {{ Auth::user()->name }} <span class="caret"></span>
+                                  </a>
+
+                                  <ul class="dropdown-menu" role="menu">
+                                      <li>
+                                          <a href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                              Logout
+                                          </a>
+
+                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                              {{ csrf_field() }}
+                                          </form>
+                                      </li>
+                                  </ul>
+                              </li>
+                          @endif
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </div>  
+    </div>
+    
+    <!-- Nav bar End -->
+    <!--Header -->
+    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/header.jpg")}}"
+         style="height: 400px; margin-top: -25px;">
+    </div>
+    <!-- header finish -->
     <div class="flash-message">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
             @if(Session::has('alert-' . $msg))
@@ -121,7 +149,7 @@
                     <li><a href="{{URL::asset('/')}}">Home</a></li>
                 <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
                     {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
-                    <li><a href="{{URL::asset('/blog')}}">Blog</a></li>
+                    <li><a href="{{URL::asset('/blog')}}">Latest News</a></li>
                     <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
                     <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
                     <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
@@ -129,11 +157,11 @@
             </div>
             <div class="col-md-4">
                 <h2>Facebook</h2>
-                {{--<div class="fb-page" data-href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" data-tabs="timeline" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/">Retro Gamer Crate</a></blockquote></div>            </div>--}}
+                <div class="fb-page" data-href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" data-tabs="timeline" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/">Retro Gamer Crate</a></blockquote></div>            </div>
             <div class="col-md-4">
                 <h2>Twitter</h2>
-                {{--<a class="twitter-timeline"  href="https://twitter.com/retrogamercrate" data-widget-id="551840756865191936">Tweets by @retrogamercrate</a>--}}
-                {{--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>--}}
+                <a class="twitter-timeline"  href="https://twitter.com/retrogamercrate" data-widget-id="551840756865191936">Tweets by @retrogamercrate</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
     </div>
         <div class="row" style="padding: 50px;"></div>
@@ -144,6 +172,7 @@
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/parallax.js')}}"></script>
 </body>
