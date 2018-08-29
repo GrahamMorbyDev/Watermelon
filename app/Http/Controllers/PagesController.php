@@ -96,7 +96,7 @@ class PagesController extends Controller
     public function singleGame(Request $request) {
         $id = $request->get('id');
         $game = IGDB::getGame($id);
-        $game  = json_decode($game, true);
+        //$game  = json_decode($game, true);
         //dd($game);
         return view('singlegame', compact('game'));
     }
@@ -105,7 +105,7 @@ class PagesController extends Controller
     public function searchGame(Request $request) {
         $name = $request->get('game');
         $game = IGDB::searchGames($name);
-        $game  = json_decode($game, true);
+        //$game  = json_decode($game, true);
         return view('searchGameResults', compact('game'));
     }
 }
