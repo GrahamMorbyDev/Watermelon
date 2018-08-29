@@ -25,8 +25,8 @@
                             <div class="item {{ $loop->first ? ' active' : '' }}">
                                 <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" class="carousel-img-responsive"
                                      alt="{{$blog->title}}">
-                                <div class="carousel-caption">
-                                    <h3>{{$blog->title}}</h3>
+                                <div class="carousel-caption" style="background-color: rgba(204,204,204, .3);">
+                                    <h3 style="color: white">{{$blog->title}}</h3>
                                     <p>{{$blog->description}}</p>
                                     <a href="{{URL::asset('blog/' . $blog->slug)}}" class="btn btn-default">Read More</a>
                                 </div>
