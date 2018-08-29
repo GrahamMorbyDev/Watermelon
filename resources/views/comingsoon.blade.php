@@ -23,8 +23,10 @@
                         <div class="carousel-inner">
                             @foreach($blognew as $blog)
                             <div class="item {{ $loop->first ? ' active' : '' }}">
+                                <div style="height: 500px !important; ">
                                 <img src="{{URL::asset("storage/" . $blog->featuredimage)}}" class="carousel-img-responsive"
-                                     alt="{{$blog->title}}">
+                                     alt="{{$blog->title}}" style="overflow: hidden">
+                                </div>
                                 <div class="carousel-caption" style="background-color: rgba(204,204,204, .3);">
                                     <h3 style="color: white">{{$blog->title}}</h3>
                                     <p>{{$blog->description}}</p>
