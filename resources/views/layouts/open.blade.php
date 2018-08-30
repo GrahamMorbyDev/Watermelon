@@ -11,8 +11,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="@yield('description')">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="{{ asset('js/parallax.js')}}"></script>
@@ -84,7 +85,7 @@
                       <!-- Left Side Of Navbar -->
                       <ul class="nav navbar-nav">
                           <li><a href="{{URL::asset('/')}}">Home</a></li>
-                      <!--<li><a href="{{URL::asset('/about')}}">About Us</a></li>-->
+                          <li><a href="{{URL::asset('/about')}}">About Us</a></li>
                           {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
                           <li><a href="{{URL::asset('/blog')}}">Latest News</a></li>
                           <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>

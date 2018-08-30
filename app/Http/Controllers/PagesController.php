@@ -83,11 +83,11 @@ class PagesController extends Controller
 
         //Get first three Blog posts
         $blognew = new Blogs();
-        $blognew = $blognew->take(3)->get();
+        $blognew = $blognew->take(3)->latest()->get();
 
         //Get Other blogs
         $blogold = new Blogs();
-        $blogold = $blogold->skip(3)->take(4)->get();
+        $blogold = $blogold->skip(3)->latest()->take(4)->get();
 
         return view('comingsoon', compact('game', 'blognew', 'blogold'));
     }

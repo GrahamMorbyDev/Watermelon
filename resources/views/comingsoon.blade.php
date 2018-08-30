@@ -1,8 +1,8 @@
 @extends('layouts.open')
-
+@section('title', 'Welcome to Retro Gamer Crate')
+@section('description', 'Welcome to retro gamer crate, your no 1 resource for all things retro gaming, with news , reviews and the Home of the Retro Crate')
 @section('content')
     <div class="container">
-
         {{-- News --}}
         <div class="row">
             <div class="col-md-12 globalPadding">

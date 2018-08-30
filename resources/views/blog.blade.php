@@ -1,5 +1,6 @@
 @extends('layouts.open')
-
+@section('title', $blog->title)
+@section('description', str_limit($blog->body, 100, ('...')))
 @section('content')
     <div class="container">
         <div class="row">
