@@ -76,11 +76,13 @@
         </div>
         <div class="row globalPadding">
             <div class="col-md-12">
-                {{--  @foreach ($game as $games)
+                {{-- @foreach ($game as $games)
                       <div class="col-md-2">
                           <img src="" alt="">
-                          <p>{{ $games['name']}}</p>
-                          <p>{{$games['cover']['url']}}</p>
+                          <p>{{ $games->name}}</p>
+                          @foreach ($games->cover as $cover)
+                              <p>{{$cover['url']}}</p>
+                          @endforeach
                       </div>
                   @endforeach--}}
                 <div class="col-md-2 text-center gameView">
