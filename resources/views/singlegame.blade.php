@@ -74,9 +74,9 @@
                 @if(isset($game->screenshots))
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="col-md-4"><img style="width:100%; height:auto;" src="https://images.igdb.com/igdb/image/upload/t_screenshot_huge/{{$game->screenshots[0]->cloudinary_id}}"></div>
-                            <div class="col-md-4"><img style="width:100%; height:auto;" src="https://images.igdb.com/igdb/image/upload/t_screenshot_huge/{{$game->screenshots[1]->cloudinary_id}}"></div>
-                            <div class="col-md-4"><img style="width:100%; height:auto;" src="https://images.igdb.com/igdb/image/upload/t_screenshot_huge/{{$game->screenshots[2]->cloudinary_id}}"></div>
+                            @foreach($game->screenshots as $screenshot)
+                            <div class="col-md-4"><img style="width:100%; height:auto; padding: 5px" src="https://images.igdb.com/igdb/image/upload/t_screenshot_huge/{{$screenshot->cloudinary_id}}"></div>
+                            @endforeach
                         </div>
                     </div>
                 @endif

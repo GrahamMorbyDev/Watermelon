@@ -77,7 +77,7 @@ class PagesController extends Controller
     }
     //Coming Soon
     public function comingsoon() {
-        $game = IGDB::searchGames('fallout');
+        $game = IGDB::searchGames('Zelda');
         //$game  = json_decode($game, true);
         //dd($game);
 

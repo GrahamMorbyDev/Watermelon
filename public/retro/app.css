@@ -14959,6 +14959,10 @@ header .socialLinks li a:active {
   border-color: #8e44ad;
 }
 
+.gameView {
+  padding: 10px;
+}
+
 .gameView p {
   font-size: 12px;
   min-height: 40px;
@@ -14980,6 +14984,11 @@ header .socialLinks li a:active {
 
 .searchbox placeholder {
   font-family: 'Anton', sans-serif;
+}
+
+img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .notice {
