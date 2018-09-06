@@ -86,10 +86,9 @@
                       <ul class="nav navbar-nav">
                           <li><a href="{{URL::asset('/')}}">Home</a></li>
                           <li><a href="{{URL::asset('/about')}}">About Us</a></li>
+                          <li><a href="{{URL::asset('/crate')}}">The Retro Crate</a></li>
                           {{--<li><a href="{{URL::asset('/faq')}}">FAQ</a></li>--}}
                           <li><a href="{{URL::asset('/blog')}}">Latest News</a></li>
-                          <li><a href="https://twitter.com/retrogamercrate" target="_blank">Twitter</a></li>
-                          <li><a href="https://www.facebook.com/Retro-Gamer-Crate-230596207603522/" target="_blank">Facebook</a></li>
                           <li><a href="{{URL::asset('/contact')}}">Contact</a></li>
                       </ul>
 

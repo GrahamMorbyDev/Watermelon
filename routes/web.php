@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('', 'PagesController@comingsoon');
 //Route::get('', 'PagesController@disclaimer');
 //Route::post('storedb', 'PagesController@storeDob');
-Route::get('welcome', 'PagesController@index');
+Route::get('welcome', 'PagesController@comingsoon');
 Route::get('about', 'PagesController@about');
 Route::get('whatwedo', 'PagesController@whatwedo');
 Route::get('updates', 'PagesController@updates');
@@ -31,6 +31,7 @@ Route::get('faq', 'PagesController@faq');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'BlogController@showArticleList');
 Route::get('/blog/{slug}', 'BlogController@showBlog');
+Route::get('/crate', 'PagesController@crate');
 
 //Gaming routes
 Route::post('get/single/game', 'PagesController@singleGame');

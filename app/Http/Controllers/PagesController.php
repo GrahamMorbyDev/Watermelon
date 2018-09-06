@@ -78,8 +78,6 @@ class PagesController extends Controller
     //Coming Soon
     public function comingsoon() {
         $game = IGDB::searchGames('Zelda');
-        //$game  = json_decode($game, true);
-        //dd($game);
 
         //Get first three Blog posts
         $blognew = new Blogs();
@@ -97,7 +95,6 @@ class PagesController extends Controller
         $id = $request->get('id');
         $game = IGDB::getGame($id);
 
-        //dd($game);
         return view('singlegame', compact('game'));
     }
 
@@ -105,7 +102,13 @@ class PagesController extends Controller
     public function searchGame(Request $request) {
         $name = $request->get('game');
         $game = IGDB::searchGames($name);
-        //dd($game);
+
         return view('searchGameResults', compact('game'));
+    }
+
+    //Crate Page
+    public function crate() {
+        $game = IGDB::searchGames('Super Mario');
+        return view('crate', compact('game'));
     }
 }

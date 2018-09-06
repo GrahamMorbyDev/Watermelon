@@ -1,18 +1,10 @@
 @extends('layouts.open')
 
 @section('content')
-
-    <!--Header -->
-    <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="{{asset("images/nflheader.jpg")}}"
-         style="height: 700px; margin-top: -25px;">
-    </div>
-    <!-- header finish -->
-
     <!-- Contact Us Form -->
     <div class="container globalPadding">
         <div class="row">
             <div class="col-lg-12">
-                <hr>
                 <hr>
                 <h1>Contact Us</h1>
                 @if(Session::has('success'))
@@ -36,7 +28,7 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-warning">Submit</button>
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
         </div>
